@@ -11,7 +11,6 @@ import { format } from "date-fns"
 import { Badge } from "@/components/ui/badge"
 import { Check, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import type React from "react"
 
 export default function ProfilePlansPage() {
   const t = useTranslations("DashboardProfilePlansPage")
@@ -102,15 +101,16 @@ export default function ProfilePlansPage() {
             <p className="text-slate-400 text-center mb-6">{userPlan.description}</p>
 
             <ul className="space-y-4 mb-6">
-              {activeSubscriptionPlan.metadata?.features &&
-                (Object.values(activeSubscriptionPlan.metadata.features).map((feature: any, index: number) => (
-                  <li key={index} className="flex items-center">
-                    <div className="w-5 h-5 bg-green-500/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                      <Check className="w-3 h-3 text-green-400" />
-                    </div>
-                    <span className="text-slate-300 flex-1">{String(feature)}</span>
-                  </li>
-                )) as React.ReactNode)}
+              {activeSubscriptionPlan.metadata?.features
+                ? Object.values(activeSubscriptionPlan.metadata.features).map((feature: any, index: number) => (
+                    <li key={index} className="flex items-center">
+                      <div className="w-5 h-5 bg-green-500/20 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                        <Check className="w-3 h-3 text-green-400" />
+                      </div>
+                      <span className="text-slate-300 flex-1">{String(feature)}</span>
+                    </li>
+                  ))
+                : null}
             </ul>
 
             <p className="text-slate-400 text-center mb-6">
