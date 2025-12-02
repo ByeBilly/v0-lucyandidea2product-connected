@@ -1,0 +1,18 @@
+{
+  "pageTitle": "Task Results",
+  "pageDescription": "View and manage your generated task results.",
+  "searchPlaceholder": "Search results...",
+  "search": "Search",
+  "filter": "Filter",
+  "all": "All",
+  "image": "Image",
+  "loading": "Loading...",
+  "video": "Video",
+  "noMatchingRecords": "No matching results found.",
+  "tryDifferentKeywords": "Try different keywords or filters.",
+  "noRecordsYet": "No results yet.",
+  "startYourFirstCreation": "Start your first creation to see results here!",
+  "previous": "Previous",
+  "next": "Next",
+  "breakLabel": "..."
+}

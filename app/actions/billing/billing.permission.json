@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "module": "billing",
+    "description": "Billing module core feature permission configuration",
+    "owner": "billing-team",
+    "version": "1.0.0",
+    "lastUpdated": "2025-06-06"
+  },
+  "permissions": {
+    "action": {
+      "listSubscriptionPlans": {
+        "title": "Query subscription plan list",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Get subscription plan list"
+      },
+      "createSubscriptionPlan": {
+        "title": "Create subscription plan",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Create new subscription plan"
+      },
+      "updateSubscriptionPlan": {
+        "title": "Update subscription plan",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Update existing subscription plan"
+      },
+      "getSubscriptionPlan": {
+        "title": "Get subscription plan details",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Get subscription plan details by ID"
+      },
+      "listPremiumPackages": {
+        "title": "Query premium package list",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Get premium package list"
+      },
+      "getPremiumPackage": {
+        "title": "Get premium package details",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Get premium package details by ID"
+      },
+      "createPremiumPackage": {
+        "title": "Create premium package",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Create new premium package"
+      },
+      "updatePremiumPackage": {
+        "title": "Update premium package",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Update existing premium package"
+      },
+      "stripeCheckoutSession": {
+        "title": "Create Stripe Checkout Session",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Create Stripe Checkout Session"
+      },
+      "updateTransactionStatus": {
+        "title": "Update transaction status",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Update transaction status"
+      },
+      "getUserTransactions": {
+        "title": "Get user transaction records",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Get user transaction records"
+      },
+      "getUserSubscriptionPlan": {
+        "title": "Get User Subscription Plan",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Get User Subscription Plan"
+      },
+      "unibeeCheckoutUrl": {
+        "title": "Unibee Checkout Url",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Unibee Checkout Url"
+      },
+      "unibeeSyncSubscriptionPlan": {
+        "title": "Unibee Sync Subscription Plan",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Unibee Sync Subscription Plan"
+      },
+      "unibeeSyncTransactionStatus": {
+        "title": "Unibee Sync Transaction Status",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "Unibee Sync Transaction Status"
+      },
+      "listActiveSubscriptionPlans": {
+        "title": "List Active Subscription Plans",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw",
+        "description": "List Active Subscription Plans"
+      }
+    },
+    "component": {}
+  }
+}

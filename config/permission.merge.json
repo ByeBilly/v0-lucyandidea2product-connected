@@ -1,0 +1,450 @@
+{
+  "permissions": {
+    "page": {
+      "/lucy": {
+        "title": "Lucy Page",
+        "description": "Access to Lucy creative companion",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "redirect"
+      }
+    },
+    "api": {},
+    "component": {
+      "lucyCinemaMode": {
+        "title": "Lucy Cinema Mode",
+        "description": "Access to cinema mode feature",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "hide"
+      }
+    },
+    "action": {
+      "sign_in": {
+        "title": "User Login",
+        "description": "User login with email and password",
+        "authStatus": "anonymous",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "oauth_sign_in": {
+        "title": "OAuth Login",
+        "description": "User login with third-party OAuth",
+        "authStatus": "anonymous",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getCurrentUserProfile": {
+        "title": "Get Current User Information",
+        "description": "Get current user information - returns empty when not logged in, simplifying initialization",
+        "authStatus": "anonymous",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "listUserProfile": {
+        "title": "Get User List",
+        "description": "Get user list information",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "updateAccount": {
+        "title": "Update Account Information",
+        "description": "Update user account information",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "updateAccountByAdmin": {
+        "title": "Update Account By Admin",
+        "description": "Update user account by admin",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "deleteAccount": {
+        "title": "Delete Account",
+        "description": "Delete user account",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "register_user": {
+        "title": "User Registration",
+        "description": "New user account registration",
+        "authStatus": "anonymous",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "verify_email": {
+        "title": "Verify Email",
+        "description": "Verify user registration email",
+        "authStatus": "anonymous",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "request_password_reset": {
+        "title": "Request Password Reset",
+        "description": "Request user password reset",
+        "authStatus": "anonymous",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "update_password_from_reset": {
+        "title": "Update Password via Reset Token",
+        "description": "Update user password using reset token",
+        "authStatus": "anonymous",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "update_password": {
+        "title": "Update Password",
+        "description": "Update the current logged-in user's password",
+        "authStatus": "anonymous",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "listSubscriptionPlans": {
+        "title": "Query subscription plan list",
+        "description": "Get subscription plan list",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "createSubscriptionPlan": {
+        "title": "Create subscription plan",
+        "description": "Create new subscription plan",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "updateSubscriptionPlan": {
+        "title": "Update subscription plan",
+        "description": "Update existing subscription plan",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getSubscriptionPlan": {
+        "title": "Get subscription plan details",
+        "description": "Get subscription plan details by ID",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "listPremiumPackages": {
+        "title": "Query premium package list",
+        "description": "Get premium package list",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getPremiumPackage": {
+        "title": "Get premium package details",
+        "description": "Get premium package details by ID",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "createPremiumPackage": {
+        "title": "Create premium package",
+        "description": "Create new premium package",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "updatePremiumPackage": {
+        "title": "Update premium package",
+        "description": "Update existing premium package",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "stripeCheckoutSession": {
+        "title": "Create Stripe Checkout Session",
+        "description": "Create Stripe Checkout Session",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "updateTransactionStatus": {
+        "title": "Update transaction status",
+        "description": "Update transaction status",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getUserTransactions": {
+        "title": "Get user transaction records",
+        "description": "Get user transaction records",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getUserSubscriptionPlan": {
+        "title": "Get User Subscription Plan",
+        "description": "Get User Subscription Plan",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "unibeeCheckoutUrl": {
+        "title": "Unibee Checkout Url",
+        "description": "Unibee Checkout Url",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "unibeeSyncSubscriptionPlan": {
+        "title": "Unibee Sync Subscription Plan",
+        "description": "Unibee Sync Subscription Plan",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "unibeeSyncTransactionStatus": {
+        "title": "Unibee Sync Transaction Status",
+        "description": "Unibee Sync Transaction Status",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "listActiveSubscriptionPlans": {
+        "title": "List Active Subscription Plans",
+        "description": "List Active Subscription Plans",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "uploadFile": {
+        "title": "Upload File",
+        "description": "Upload File",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "createRole": {
+        "title": "Create role",
+        "description": "Create role",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "updateRole": {
+        "title": "Update role",
+        "description": "Update role information",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "deleteRole": {
+        "title": "Delete role",
+        "description": "Delete role",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getRoles": {
+        "title": "Get role list",
+        "description": "Get all role list",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getRoleById": {
+        "title": "Get role by ID",
+        "description": "Get role details by role ID",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getRolePermissions": {
+        "title": "Get role permissions",
+        "description": "Get permission list for a specified role",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "queryPermissionsForRole": {
+        "title": "Query role permissions",
+        "description": "Query permissions owned by a role",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "rebindPermissionsToRole": {
+        "title": "Rebind role permissions",
+        "description": "Rebind permissions for a role",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getAllPermissionConfigs": {
+        "title": "Get all permission configurations",
+        "description": "Get all permission configurations in the system",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getPagePermissionConfigs": {
+        "title": "Get paginated permission configurations",
+        "description": "Get paginated permission configurations",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getPermissionDiffs": {
+        "title": "Get permission differences",
+        "description": "Get differences between permission configuration and database",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "syncPermissions": {
+        "title": "Synchronize permissions to database",
+        "description": "Synchronize permission configurations to database",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "updatePermission": {
+        "title": "Update permissions",
+        "description": "Update permission configuration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getTasks": {
+        "title": "Query task list",
+        "description": "Get task list",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "getTaskResults": {
+        "title": "Query task result list",
+        "description": "Get task result list",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "taskCallRemain": {
+        "title": "taskCallRemain",
+        "description": "taskCallRemain",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "toolCall": {
+        "title": "Tool Call",
+        "description": "Call Tool",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "toolStatus": {
+        "title": "Tool Status Query",
+        "description": "Query Tool Status",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "listBillableMetrics": {
+        "title": "List Billable Metrics",
+        "description": "List Billable Metrics",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "createBillableMetric": {
+        "title": "Create Billable Metric",
+        "description": "Create Billable Metric",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "deleteBillableMetric": {
+        "title": "Delete Billable Metric",
+        "description": "Delete Billable Metric",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "updateBillableMetric": {
+        "title": "Update Billable Metric",
+        "description": "Update Billable Metric",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucySendMessage": {
+        "title": "Send Message to Lucy",
+        "description": "Send a chat message to Lucy AI",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGenerateImage": {
+        "title": "Generate Image via Lucy",
+        "description": "Generate an image using Lucy's Gemini integration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGenerateVideo": {
+        "title": "Generate Video via Lucy",
+        "description": "Generate a video using Lucy's Gemini integration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyAnimateImage": {
+        "title": "Animate Image via Lucy",
+        "description": "Animate an uploaded image using Lucy's Gemini integration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGenerateAudio": {
+        "title": "Generate Audio via Lucy",
+        "description": "Generate voiceover/audio using Lucy's Gemini integration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGetChatHistory": {
+        "title": "Get Lucy Chat History",
+        "description": "Retrieve chat history for the current user",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGetAssets": {
+        "title": "Get Lucy Assets",
+        "description": "Retrieve generated assets for the current user",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyDeleteAsset": {
+        "title": "Delete Lucy Asset",
+        "description": "Delete a generated asset",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      }
+    }
+  },
+  "generatedAt": "2025-12-01T01:09:11.928Z",
+  "sourceFiles": [
+    "S:\\dev\\idea2product\\app\\actions\\auth\\auth.permission.json",
+    "S:\\dev\\idea2product\\app\\actions\\billing\\billing.permission.json",
+    "S:\\dev\\idea2product\\app\\actions\\common\\common.permission.json",
+    "S:\\dev\\idea2product\\app\\actions\\permission\\permission.permission.json",
+    "S:\\dev\\idea2product\\app\\actions\\task\\task.permission.json",
+    "S:\\dev\\idea2product\\app\\actions\\tool\\tool.permission.json",
+    "S:\\dev\\idea2product\\app\\actions\\unibee\\unibee.permission.json",
+    "S:\\dev\\idea2product\\app\\actions\\lucy\\lucy.permission.json"
+  ],
+  "totalConfigs": 61
+}

@@ -1,0 +1,1669 @@
+{
+  "ActivityList": {},
+  "ActivityLogPage": {
+    "activityLogTitle": "Activity Log",
+    "recentActivityTitle": "Recent Activity",
+    "timeJustNow": "just now",
+    "timeMinutesAgo": "{minutes} minutes ago",
+    "timeHoursAgo": "{hours} hours ago",
+    "timeDaysAgo": "{days} days ago",
+    "actionSignUp": "You signed up",
+    "actionSignIn": "You signed in",
+    "actionSignOut": "You signed out",
+    "actionUpdatePassword": "You changed your password",
+    "actionDeleteAccount": "You deleted your account",
+    "actionUpdateAccount": "You updated your account",
+    "actionCreateTeam": "You created a new team",
+    "actionRemoveTeamMember": "You removed a team member",
+    "actionInviteTeamMember": "You invited a team member",
+    "actionAcceptInvitation": "You accepted an invitation",
+    "actionUnknown": "Unknown action occurred",
+    "fromIp": " from IP {ipAddress}",
+    "noActivityYetTitle": "No activity yet",
+    "noActivityYetDescription": "When you perform actions like signing in or updating your account, they'll appear here.",
+    "typeImageToText": "Text-to-Image",
+    "promptCatRainbowCyberpunk": "A cute kitten sitting on a rainbow bridge, cyberpunk style, high definition, 4K",
+    "typeImageToImage": "Image-to-Image",
+    "promptImageToWatercolor": "Convert this image to watercolor style",
+    "promptFutureCityNight": "Future city night view, neon lights flashing, sci-fi style",
+    "promptAncientChineseLandscape": "Ancient Chinese landscape painting, ink wash style, profound artistic conception",
+    "promptPortraitOilPainting": "Portrait, oil painting style, Renaissance period",
+    "promptCosmicStarrySky": "Cosmic starry sky, Milky Way, deep space photography style"
+  },
+  "AdminActions": {
+    "updateUserRoleLog": "[Simulated Server Action] Updating user {userId} role to {newRole}",
+    "userRoleUpdated": "User {userId} role updated to {newRole}"
+  },
+  "AdminDashboardPage": {
+    "failedToFetchStats": "Failed to fetch dashboard statistics.",
+    "unexpectedErrorFetchingStats": "An unexpected error occurred while fetching statistics.",
+    "failedToFetchActivities": "Failed to fetch recent activities.",
+    "unexpectedErrorFetchingActivities": "An unexpected error occurred while fetching activities.",
+    "title": "Admin Dashboard",
+    "systemOverview": "System Overview",
+    "loadingStats": "Loading statistics...",
+    "error": "Error",
+    "totalRoles": "Total Roles",
+    "totalRolesDescription": "Number of roles configured in the system.",
+    "totalPermissions": "Total Permissions",
+    "totalPermissionsDescription": "Number of permissions available in the system.",
+    "quickAccess": "Quick Access",
+    "roleManagement": "Role Management",
+    "roleManagementDescription": "Manage user roles and their assignments.",
+    "permissionManagement": "Permission Management",
+    "permissionManagementDescription": "Configure and assign permissions to roles.",
+    "recentActivities": "Recent Activities",
+    "loadingActivities": "Loading activities..."
+  },
+  "AdminHeader": {
+    "defaultUserName": "Administrator",
+    "adminPanelTitle": "Admin Panel",
+    "welcome": "Welcome"
+  },
+  "AdminLayout": {
+    "adminPanelTitle": "Admin Panel",
+    "navigation": "Navigation",
+    "adminUserName": "Admin"
+  },
+  "AdminPremiumPackageDetailPage": {
+    "createNewPremiumPackage": "Create New Premium Package",
+    "editPremiumPackage": "Edit Premium Package",
+    "createNewPremiumPackageDescription": "Create a new premium package.",
+    "editPremiumPackageDescription": "Edit an existing premium package.",
+    "loadPremiumPackageFailed": "Failed to load premium package",
+    "unknownError": "Unknown error",
+    "loadingForm": "Loading form..."
+  },
+  "AdminPremiumPackagesPage": {
+    "title": "Premium Packages",
+    "description": "Manage premium packages offered to users.",
+    "createNewPremiumPackage": "Create New Premium Package",
+    "loadingPremiumPackages": "Loading premium packages..."
+  },
+  "AdminRolesPage": {
+    "loadDataFailed": "Failed to load data.",
+    "roleUpdateSuccess": "Role updated successfully.",
+    "roleCreateSuccess": "Role created successfully.",
+    "saveRoleFailed": "Failed to save role.",
+    "confirmDeleteRole": "Are you sure you want to delete role '{roleName}'?",
+    "roleDeleteSuccess": "Role deleted successfully.",
+    "deleteRoleFailed": "Failed to delete role.",
+    "loadRolePermissionsFailed": "Failed to load role permissions.",
+    "permissionAssignmentSuccess": "Permissions assigned successfully.",
+    "assignPermissionsFailed": "Failed to assign permissions.",
+    "success": "Success",
+    "error": "Error",
+    "roleNotFound": "Role not found",
+    "loading": "Loading...",
+    "roleManagementTitle": "Role Management",
+    "roleManagementDescription": "Manage system roles and permission assignments",
+    "createRoleButton": "Create Role",
+    "editRole": "Edit Role",
+    "createNewRole": "Create New Role"
+  },
+  "AdminSubscriptionPlanDetailPage": {
+    "createNewSubscriptionPlan": "Create New Subscription Plan",
+    "editSubscriptionPlan": "Edit Subscription Plan",
+    "loadSubscriptionPlanFailed": "Failed to load subscription plan",
+    "unknownError": "Unknown error",
+    "loadingForm": "Loading form..."
+  },
+  "AdminUsersPage": {
+    "userManagement": {
+      "title": "User Management",
+      "description": "Manage user profiles",
+      "table": {
+        "id": "ID",
+        "email": "Email",
+        "username": "Username",
+        "fullName": "Full Name",
+        "roles": "Roles",
+        "createdAt": "Created At",
+        "updatedAt": "Updated At",
+        "actions": "Actions"
+      }
+    },
+    "roles": {
+      "admin": "Admin",
+      "editor": "Editor",
+      "viewer": "Viewer"
+    },
+    "simulateUpdateUserRoleLog": "Simulating update user role for user {userId} to {newRole}",
+    "userRoleUpdatedAlert": "User {userId} role updated to {newRole} successfully!",
+    "failedToLoadUsers": "Failed to load users:"
+  },
+  "AiChatInterface": {
+    "you_prefix": "You",
+    "ai_prefix": "AI",
+    "ai_response_prefix": "Here is a simulated AI response to your message: \"",
+    "ai_response_suffix": "\"",
+    "start_chat_message": "Start chatting with the AI...",
+    "input_placeholder": "Type your message here...",
+    "send_button": "Send"
+  },
+  "AiGenerator": {
+    "controlPanelTitle": "AI Image Generator",
+    "textToImageTab": "Text to Image",
+    "imageToImageTab": "Image Editing",
+    "textToImagePromptLabel": "Describe the image you want",
+    "textToImagePlaceholder": "E.g., A cute cat playing in a sunny garden, photorealistic style",
+    "imageToImageUploadLabel": "Upload an image to edit",
+    "uploadedImageAlt": "Uploaded image",
+    "imageToImageModifyPromptLabel": "Describe the modifications you want",
+    "imageToImageModifyPromptPlaceholder": "E.g., Change the background to snow mountains, add snowflakes",
+    "generatingText": "Generating...",
+    "startGeneratingButton": "Generate Image",
+    "resultTitle": "Generated Result",
+    "generatingStatus": "Generating your image",
+    "generatingHint": "This may take a few seconds",
+    "generatedImageAlt": "AI generated image",
+    "downloadButton": "Download",
+    "shareButton": "Share",
+    "waitingForCreation": "Waiting for creation",
+    "creationHint": "Fill in your description on the left and click 'Generate Image'",
+    "fileSizeExceedsLimit": "File size exceeds limit (5MB)",
+    "uploadingImage": "Uploading image...",
+    "uploadSuccessDescription": "Image uploaded successfully",
+    "uploadErrorDescription": "Failed to upload image, please try again"
+  },
+  "AlertDialog": {},
+  "ApiStripeWebhookRoute": {
+    "stripeWebhookSecretNotSet": "Stripe Webhook Secret is not set in environment variables.",
+    "stripeWebhookSecretNotConfigured": "Stripe Webhook Secret not configured.",
+    "webhookSignatureVerificationFailed": "Webhook signature verification failed: ",
+    "webhookError": "Webhook Error: ",
+    "checkoutSessionCompleted": "Checkout session completed: ",
+    "checkoutSessionMissingSessionId": "Checkout session {sessionId} is missing metadata.sessionId.",
+    "invoicePaymentSucceeded": "Invoice payment succeeded: ",
+    "chargeFailed": "Charge failed: ",
+    "chargeMissingSessionId": "Charge {chargeId} is missing metadata.sessionId.",
+    "chargeRefunded": "Charge refunded: ",
+    "chargeRefundedMissingSessionId": "Charge {chargeId} is missing metadata.sessionId.",
+    "unhandledEventType": "Unhandled event type ",
+    "ok": "OK"
+  },
+  "AppLayout": {
+    "title": "My Application",
+    "description": "Welcome to our application"
+  },
+  "AuthAutoLogin": {
+    "typeRequired": "Type is required.",
+    "invalidAutoLoginParameters": "Invalid auto login parameters",
+    "autoLoginFailed": "Auto login failed",
+    "profileOperationFailed": "User registration successful but Profile operation failed: "
+  },
+  "AuthConfirmPage": {
+    "invalidVerificationLink": "Invalid verification link. Please request a new verification email.",
+    "failedToVerifyEmail": "Failed to verify email. Please try again.",
+    "emailVerifiedSuccessfully": "Email verified successfully! You can now sign in.",
+    "unexpectedErrorOccurred": "An unexpected error occurred. Please try again.",
+    "verifyingYourEmail": "Verifying your email",
+    "verifyingYourEmailEllipsis": "Verifying your email...",
+    "backToLoginPage": "Back to login page",
+    "goToLoginPage": "Go to login page"
+  },
+  "AuthForgotPasswordPage": {
+    "returnToSignIn": "Return to sign in",
+    "forgotPasswordTitle": "Forgot Password",
+    "forgotPasswordDescription": "Enter your email to receive a password reset OTP.",
+    "resetPasswordDescription": "Enter the OTP sent to your email and your new password.",
+    "emailLabel": "Email",
+    "sendingOtp": "Sending OTP...",
+    "resendOtp": "Resend OTP",
+    "emailPlaceholder": "Enter your email",
+    "otpLabel": "OTP",
+    "otpPlaceholder": "Enter OTP",
+    "newPasswordLabel": "New Password",
+    "newPasswordPlaceholder": "Enter new password",
+    "confirmNewPasswordLabel": "Confirm New Password",
+    "confirmNewPasswordPlaceholder": "Confirm new password",
+    "errorPrefix": "Error:",
+    "resettingPassword": "Resetting Password...",
+    "sendOtpButton": "Send OTP",
+    "resetPasswordButton": "Reset Password"
+  },
+  "AuthGetUserInfo": {
+    "profileFetchFailed": "Failed to fetch user profile."
+  },
+  "AuthLayout": {
+    "authLayoutLoaded": "AuthLayout loaded, current path:"
+  },
+  "AuthListUserProfile": {
+    "errorFetchingUserProfiles": "Error fetching all user profiles:"
+  },
+  "AuthLoginPage": {
+    "welcomeBack": "Welcome back",
+    "signInToAccount": "Sign in to your account",
+    "userLoggedIn": "User already logged in, redirecting...",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "Email address",
+    "passwordLabel": "Password",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "passwordPlaceholder": "Password",
+    "forgotPassword": "Forgot your password?",
+    "loading": "Loading...",
+    "signInButton": "Sign in",
+    "orSignInWith": "Or continue with",
+    "signInWithGoogle": "Sign in with Google",
+    "google": "Google",
+    "signInWithGitHub": "Sign in with GitHub",
+    "github": "GitHub",
+    "newUserPrompt": "Not a member?",
+    "createAccountButton": "Create an account",
+    "formDataEntries": "FormData entries:",
+    "anErrorOccurred": "An error occurred. Please try again.",
+    "errorPrefix": "Error:",
+    "anErrorOccurredDuringRegistration": "An error occurred during registration",
+    "pleaseAgreeToTerms": "Please agree to the terms of service and privacy policy.",
+    "agreeToTerms": "I agree to the",
+    "termsOfService": "Terms of Service",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
+    "goHome": "Go Home",
+    "or": "or"
+  },
+  "AuthRegisterPage": {
+    "title": "Join AI Genesis",
+    "subtitle": "Start your AI creation journey",
+    "nameLabel": "Username",
+    "namePlaceholder": "Enter your username",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "your@email.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Create a strong password",
+    "confirmPasswordLabel": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter password",
+    "agreeToTerms": "I agree to the",
+    "termsOfService": "Terms of Service",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
+    "signUpButton": "Create Account",
+    "signingUp": "Signing Up...",
+    "existingUserPrompt": "Already have an account?",
+    "signInExistingAccountButton": "Sign in now",
+    "userLoggedIn": "User already logged in, redirecting...",
+    "anErrorOccurred": "An error occurred",
+    "pleaseAgreeToTerms": "Please agree to the Terms of Service and Privacy Policy",
+    "goHome": "Go Home"
+  },
+  "AuthRegisterUser": {
+    "email": {
+      "invalid": "Please enter a valid email address",
+      "required": "Email is required",
+      "tooLong": "Email is too long"
+    },
+    "password": {
+      "minLength": "Password must contain at least 8 characters",
+      "uppercase": "Password must contain at least one uppercase letter",
+      "lowercase": "Password must contain at least one lowercase letter",
+      "number": "Password must contain at least one number",
+      "specialChar": "Password must contain at least one special character",
+      "tooLong": "Password is too long"
+    },
+    "name": {
+      "minLength": "Name must contain at least 2 characters",
+      "tooLong": "Name is too long"
+    },
+    "errors": {
+      "userAlreadyRegistered": "User already registered",
+      "emailAlreadyRegisteredMessage": "The email address is already registered. Please try logging in or using a different email.",
+      "registrationFailed": "Registration failed. Please try again.",
+      "noUserInfoRetrieved": "Registration failed, no user information retrieved.",
+      "profileOperationFailedPrefix": "User registration successful but Profile operation failed: ",
+      "invalidToken": "Invalid token.",
+      "emailVerificationFailed": "Email verification failed"
+    }
+  },
+  "AuthResetPasswordWithOtp": {
+    "all_fields_required": "All fields are required.",
+    "passwords_do_not_match": "Passwords do not match.",
+    "invalid_or_expired_otp": "Invalid or expired OTP.",
+    "failed_to_update_password": "Failed to update password.",
+    "password_reset_successfully": "Password has been reset successfully."
+  },
+  "AuthResetPassword": {
+    "email_invalid": "Invalid email address.",
+    "email_required": "Email is required.",
+    "password_reset_request_failed": "Failed to send password reset email. Please try again.",
+    "password_reset_link_sent": "If an account exists for this email, a password reset link has been sent.",
+    "reset_token_required": "Reset token is required.",
+    "password_min_length": "Password must be at least 8 characters long.",
+    "confirm_password_required": "Please confirm your password.",
+    "passwords_do_not_match": "Passwords do not match.",
+    "invalid_or_expired_reset_token": "Invalid or expired reset token. Please try again.",
+    "password_update_failed": "Failed to update password. Please try again.",
+    "password_reset_success": "Password has been successfully reset. You can now sign in with your new password.",
+    "old_new_password_required": "Old password and new password are required.",
+    "verify_old_password_failed": "Failed to verify old password. Please try again.",
+    "password_updated_successfully": "Password updated successfully.",
+    "password_update_generic_failed": "Failed to update password."
+  },
+  "AuthSendPasswordResetOtp": {
+    "emailRequired": "Email is required.",
+    "unexpectedError": "An unexpected error occurred.",
+    "otpSentSuccess": "Password reset OTP sent successfully. Please check your inbox."
+  },
+  "AuthSendResetPasswordEmail": {
+    "emailRequired": "Email is required.",
+    "passwordResetLinkSent": "Your password reset link has been sent to your email.",
+    "unexpectedError": "An unexpected error occurred.",
+    "passwordResetEmailSuccess": "Password reset email sent successfully. Please check your inbox."
+  },
+  "AuthSignIn": {
+    "email": {
+      "invalid": "Invalid email address.",
+      "required": "Email is required",
+      "tooLong": "Email is too long"
+    },
+    "password": {
+      "tooShort": "Password must be at least 8 characters long",
+      "tooLong": "Password is too long"
+    },
+    "signIn": {
+      "failed": "Invalid email or password. Please try again.",
+      "noUser": "Registration failed, no user information retrieved.",
+      "profileCreationFailed": "User registration successful but Profile operation failed: "
+    },
+    "oauth": {
+      "signInFailed": "Failed to sign in with ",
+      "urlMissing": "Could not get OAuth URL for "
+    }
+  },
+  "AuthUpdateProfile": {
+    "fullNameRequired": "Full name is required",
+    "invalidUrlFormat": "Invalid URL format",
+    "usernameRequired": "Username is required",
+    "userNotAuthenticated": "User not authenticated.",
+    "userProfileNotFound": "User profile not found.",
+    "failedToUpdateProfile": "Failed to update profile.",
+    "updatedUserProfileNotFound": "Updated user profile not found.",
+    "errorUpdatingProfile": "Error updating profile:",
+    "failedToUpdateAccount": "Failed to update account.",
+    "failedToSignOutBeforeAccountDeletion": "Failed to sign out before account deletion.",
+    "accountDeletionNotImplemented": "Account deletion not yet implemented on the server side."
+  },
+  "Auth": {
+    "loginForm": {
+      "title": "Login",
+      "emailLabel": "Email:",
+      "emailPlaceholder": "Enter your email",
+      "passwordLabel": "Password:",
+      "passwordPlaceholder": "Enter your password",
+      "loginButton": "Login",
+      "loggingIn": "Logging in..."
+    }
+  },
+  "AutoLoginPage": {
+    "autoLoginTitle": "Automatic Login",
+    "loggingIn": "Logging in, please wait...",
+    "autoLoginSuccess": "Login successful! Redirecting to homepage in {count} seconds...",
+    "autoLoginFailed": "Auto-login failed. Please try again.",
+    "invalidParams": "Invalid auto login parameters.",
+    "goHome": "Go to Homepage",
+    "anErrorOccurred": "An error occurred. Please try again.",
+    "errorPrefix": "Error: "
+  },
+  "BillingCreatePremiumPackage": {
+    "failedToCreatePremiumPackage": "Failed to create premium package"
+  },
+  "BillingCreateSubscriptionPlan": {
+    "failedToCreateSubscriptionPlan": "Failed to create subscription plan"
+  },
+  "BillingGetPremiumPackage": {
+    "premiumPackageNotFound": "Premium package with ID {id} not found.",
+    "failedToGetPremiumPackage": "Failed to get premium package."
+  },
+  "BillingGetSubscriptionPlan": {
+    "subscriptionPlanNotFound": "Subscription plan with ID {id} not found.",
+    "failedToGetSubscriptionPlan": "Failed to get subscription plan."
+  },
+  "BillingGetUserSubscriptionPlan": {
+    "subscriptionPlanNotFound": "Subscription plan not found. Please check if it has expired. If you just subscribed, please refresh the page and wait for the order to complete."
+  },
+  "BillingGetUserTransactions": {
+    "errorFetchingUserTransactions": "Error fetching user transactions:"
+  },
+  "BillingHistory": {
+    "title": "Billing History",
+    "invoiceId": "Invoice ID",
+    "date": "Date",
+    "amount": "Amount",
+    "status": "Status"
+  },
+  "BillingIndex": {
+    "exportAllBillingComponents": "Unified export of all billing-related components"
+  },
+  "BillingListPremiumPackages": {
+    "failedToListPremiumPackages": "Failed to list premium packages."
+  },
+  "BillingListSubscriptionPlans": {
+    "failedToListSubscriptionPlans": "Failed to list subscription plans."
+  },
+  "BillingPage": {
+    "title": "Billing Overview",
+    "revenueAnalysisTitle": "Revenue Analysis",
+    "totalRevenue": "Total Revenue",
+    "monthlyRecurringRevenue": "Monthly Recurring Revenue (MRR)",
+    "newSubscriptions": "New Subscriptions",
+    "churnRate": "Churn Rate",
+    "cannotLoadRevenueAnalysis": "Unable to load revenue analysis data.",
+    "availablePlansTitle": "Available Plans",
+    "month": "Month",
+    "year": "Year",
+    "selectPlan": "Select Plan",
+    "noAvailableBillingPlans": "No available billing plans."
+  },
+  "BillingStripeCheckoutSession": {
+    "validationError": {
+      "premiumPackageAndSubscriptionPlanRequired": "Premium package ID and subscription plan ID are required for update.",
+      "premiumPackagePriceTooLow": "Premium package price must be greater than 50.",
+      "subscriptionPlanPriceTooLow": "Subscription plan price must be greater than 50."
+    },
+    "notFound": {
+      "premiumPackageNotFound": "Premium package with ID {premiumPackageId} not found.",
+      "subscriptionPlanNotFound": "Subscription plan with ID {subscriptionPlanId} not found.",
+      "stripeProductNotFound": "Stripe product not found."
+    },
+    "databaseError": {
+      "failedToUpdatePremiumPackage": "Failed to update premium package."
+    }
+  },
+  "BillingSubscribePlanPage": {
+    "subscribeNow": "Subscribe Now",
+    "currentPlanButton": "Current Plan",
+    "contactSalesButton": "Contact Sales",
+    "freePlanName": "Free",
+    "proPlanName": "Pro",
+    "enterprisePlanName": "Enterprise",
+    "loadError": "Failed to load subscription plans.",
+    "stripeLoadError": "Failed to load Stripe.",
+    "planNotFound": "Subscription plan not found:",
+    "contactSales": "Contact Sales",
+    "contactSalesMessage": "Please contact our sales team for enterprise plans.",
+    "stripeSessionError": "Failed to create Stripe checkout session.",
+    "subscriptionFailed": "Subscription failed:",
+    "loadingPlans": "Loading subscription plans...",
+    "chooseYourPlanTitle": "Choose Your",
+    "subscriptionPlan": "Subscription Plan",
+    "unlockAiCreation": "Unlock the full potential of AI creation with our flexible subscription plans.",
+    "mostPopular": "Most Popular",
+    "month": "month",
+    "year": "year",
+    "trialInfo": "Start your free trial today! No credit card required.",
+    "securePayment": "Secure Payment",
+    "instantActivation": "Instant Activation",
+    "customerSupport": "24/7 Customer Support",
+    "submitting": "Submitting...",
+    "hasSubscribeSubmitting": "You have a subscription plan that is being submitted. Please wait for the submission to complete."
+  },
+  "BillingUpdatePremiumPackage": {
+    "premium_package_id_required": "Premium package ID is required for update.",
+    "premium_package_not_found": "Premium package with ID {id} not found.",
+    "failed_to_update_premium_package": "Failed to update premium package."
+  },
+  "BillingUpdateSubscriptionPlan": {
+    "updateSubscriptionPlan": {
+      "idRequired": "Subscription plan ID is required for update.",
+      "notFound": "Subscription plan with ID {id} not found.",
+      "failedToUpdate": "Failed to update subscription plan."
+    }
+  },
+  "BillingUpdateTransactionStatus": {
+    "planNotFound": "Plan not found.",
+    "failedToUpdateTransactionStatus": "Failed to update transaction status.",
+    "syncStarted": "Payment status updating...",
+    "subscriptionPlanNotFound": "Subscription plan not found.",
+    "transactionNotFound": "Transaction not found."
+  },
+  "Breadcrumbs": {
+    "home": "Home",
+    "admin": "Admin",
+    "users": "Users",
+    "roles": "Roles",
+    "dashboard": "Dashboard",
+    "premium-packages": "Premium Packages",
+    "permissions": "Permissions",
+    "subscriptions": "Subscriptions",
+    "settings": "Settings",
+    "profile": "Profile",
+    "test": "Test",
+    "confirm": "Confirm",
+    "register": "Register",
+    "ariaLabel": "Breadcrumb"
+  },
+  "Checkbox": {},
+  "CommonUpload": {
+    "noFileProvided": "No file provided.",
+    "fileTypeNotAllowed": "File type not allowed. Please upload a supported image, video, audio, or document file.",
+    "fileSizeExceedsLimit": "File size exceeds the 50MB limit."
+  },
+  "Common": {
+    "title": "Welcome to My App",
+    "description": "This is a Next.js application.",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "success": "Operation successful!",
+    "error": "An error occurred.",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "CreateSubscriptionPlanDialog": {
+    "createNewSubscriptionPlan": "Create New Subscription Plan"
+  },
+  "DashboardLayout": {
+    "sidebar": {
+      "title": "Dashboard Title",
+      "overview": "Overview",
+      "settings": "Settings",
+      "reports": "Reports"
+    },
+    "footer": {
+      "copyright": "© 2024 Your Company"
+    },
+    "header": {
+      "welcome": "Welcome",
+      "user": "User Profile"
+    }
+  },
+  "DashboardPage": {
+    "heroTitle": "Launch your SaaS in minutes",
+    "heroSubtitle": "with Next.js",
+    "heroDescription": "A Next.js SaaS boilerplate with authentication, subscriptions, and a beautiful UI. Built with Next.js, NextAuth.js, Stripe, and Tailwind CSS.",
+    "deployButton": "Deploy your own",
+    "feature1Title": "Modern Stack",
+    "feature1Description": "Leverage the power of modern web technologies for optimal performance and developer experience.",
+    "feature2Title": "Database",
+    "feature2Description": "Robust database solution with an intuitive ORM for efficient data management and scalability.",
+    "feature3Title": "Payments",
+    "feature3Description": "Seamless payment processing and subscription management with industry-leading Stripe integration.",
+    "ctaTitle": "Ready to get started?",
+    "ctaDescription": "Explore the codebase on GitHub or deploy your own instance today.",
+    "viewCodeButton": "View on GitHub",
+    "usageDataTitle": "Simulated Usage Data",
+    "simulateUsageDataComment": "Simulate usage data display",
+    "title": "Dashboard",
+    "systemOverview": "System Overview",
+    "loadingStats": "Loading statistics...",
+    "error": "Error",
+    "failedToFetchStats": "Failed to fetch stats",
+    "unexpectedErrorFetchingStats": "An unexpected error occurred while fetching stats",
+    "failedToFetchActivities": "Failed to fetch activities",
+    "unexpectedErrorFetchingActivities": "An unexpected error occurred while fetching activities",
+    "totalRoles": "Total Roles",
+    "totalRolesDescription": "Number of roles defined in the system",
+    "totalPermissions": "Total Permissions",
+    "totalPermissionsDescription": "Number of permissions defined in the system",
+    "quickAccess": "Quick Access",
+    "roleManagement": "Role Management",
+    "roleManagementDescription": "Manage user roles in the system",
+    "permissionManagement": "Permission Management",
+    "permissionManagementDescription": "Manage permissions in the system",
+    "recentActivities": "Recent Activities",
+    "loadingActivities": "Loading activities..."
+  },
+  "DashboardProfilePlansPage": {
+    "myPlansTitle": "My Plans",
+    "loading": "Loading...",
+    "error": "Error",
+    "currentPlan": "Current Plan",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "activeSubscriptionTitle": "Active Subscription",
+    "expires": "Expires",
+    "unknown": "Unknown",
+    "manageSubscription": "Manage Subscription",
+    "noActiveSubscription": "No active subscription found.",
+    "purchasedPremiumPackagesTitle": "Purchased Premium Packages",
+    "noPurchasedPremiumPackages": "No purchased premium packages found.",
+    "activeSubscriptionAreaComment": "Active Subscription Area",
+    "purchasedPremiumPackagesAreaComment": "Purchased Premium Packages Area",
+    "premiumPackageValidityComment": "Can add validity period or usage of premium package"
+  },
+  "DashboardProfileSecurityPage": {
+    "title": "Account Security",
+    "updatePasswordButton": "Update Password",
+    "oldPasswordLabel": "Current Password",
+    "newPasswordLabel": "New Password",
+    "confirmNewPasswordLabel": "Confirm New Password",
+    "resetPasswordButton": "Change Password",
+    "resetting": "Changing password...",
+    "passwordMismatchTitle": "Error!",
+    "passwordMismatchDescription": "New password and confirm new password do not match.",
+    "passwordResetSuccessTitle": "Success!",
+    "passwordResetSuccessDescription": "Your password has been changed successfully.",
+    "passwordResetErrorTitle": "Error!",
+    "passwordResetErrorDescription": "Failed to change password. Please try again."
+  },
+  "DashboardProfileSettingsPage": {
+    "settings": "Settings",
+    "notificationSettings": "Notification Settings",
+    "manageNotificationPreferences": "Manage your notification preferences",
+    "languagePreference": "Language Preference",
+    "chooseYourPreferredLanguage": "Choose your preferred language",
+    "signOut": "Sign Out"
+  },
+  "DashboardSettingsLayout": {
+    "settings": "Settings",
+    "toggleSidebar": "Toggle sidebar",
+    "team": "Team",
+    "general": "General",
+    "activity": "Activity",
+    "security": "Security"
+  },
+  "Dialog": {
+    "closeButtonLabel": "Close"
+  },
+  "DraftPrivacyPage": {
+    "privacyPolicy": "Privacy Policy",
+    "introductionTitle": "1. Introduction",
+    "introductionText": "This Privacy Policy describes how we collect, use, and disclose your personal information when you use our services.",
+    "informationWeCollectTitle": "2. Information We Collect",
+    "informationWeCollectText": "We collect information you provide directly to us, such as when you create an account, use our services, or communicate with us. This may include:",
+    "personalIdentificationInfo": "Personal identification information (Name, email address, etc.)",
+    "usageData": "Usage data (how you use our services)",
+    "technicalData": "Technical data (IP address, browser type, etc.)",
+    "howWeUseYourInformationTitle": "3. How We Use Your Information",
+    "howWeUseYourInformationText": "We use the information we collect for various purposes, including to:",
+    "provideMaintainImproveServices": "Provide, maintain, and improve our services.",
+    "processTransactions": "Process your transactions and send you related information.",
+    "communicateWithYou": "Communicate with you, including responding to your inquiries and sending you updates.",
+    "monitorAnalyzeTrends": "Monitor and analyze trends, usage, and activities in connection with our services.",
+    "detectInvestigatePrevent": "Detect, investigate, and prevent fraudulent transactions and other illegal activities.",
+    "sharingYourInformationTitle": "4. Sharing Your Information",
+    "sharingYourInformationText": "We may share your personal information with third parties in the following circumstances:",
+    "serviceProviders": "With service providers who perform services on our behalf.",
+    "legalRequest": "In response to a legal request or process.",
+    "protectOurPremium": "To protect our premium, property, or safety, or the premium, property, or safety of others.",
+    "mergerAcquisition": "In connection with a merger, sale of company assets, financing, or acquisition of all or a portion of our business by another company.",
+    "dataSecurityTitle": "5. Data Security",
+    "dataSecurityText": "We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.",
+    "yourChoicesTitle": "6. Your Choices",
+    "yourChoicesText": "You may review, update, or delete your account information by logging into your account settings. You may also opt out of receiving promotional communications from us by following the instructions in those communications.",
+    "childrensPrivacyTitle": "7. Children's Privacy",
+    "childrensPrivacyText": "Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that a child under 13 has provided us with personal information, we will take steps to delete such information.",
+    "internationalDataTransfersTitle": "8. International Data Transfers",
+    "internationalDataTransfersText": "Your information may be transferred to, and maintained on, computers located outside of your state, province, country, or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction.",
+    "yourPremiumTitle": "9. Your Premium (e.g., GDPR, CCPA)",
+    "yourPremiumText": "Depending on your jurisdiction, you may have certain premium regarding your personal information, including the right to access, correct, or delete your data. Please contact us to exercise these premium.",
+    "changesToPrivacyPolicyTitle": "10. Changes to This Privacy Policy",
+    "changesToPrivacyPolicyText": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes.",
+    "contactUsTitle": "11. Contact Us",
+    "contactUsText": "If you have any questions about this Privacy Policy, please contact us at [Your Contact Email].",
+    "lastUpdated": "Last updated: June 8, 2025"
+  },
+  "DraftTermsPage": {
+    "title": "Terms of Service",
+    "section1_title": "1. Acceptance of Terms",
+    "section1_content": "By accessing or using our services, you agree to be bound by these Terms of Service and all terms incorporated by reference. If you do not agree to all of these terms, do not use our services.",
+    "section2_title": "2. Changes to Terms",
+    "section2_content": "We reserve the right to modify or update these Terms at any time. We will notify you of any changes by posting the new Terms on this page. Your continued use of the services after any such changes constitutes your acceptance of the new Terms.",
+    "section3_title": "3. User Accounts",
+    "section3_content1": "You may need to create an account to access certain features of our services. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.",
+    "section3_content2": "You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.",
+    "section4_title": "4. User Conduct",
+    "section4_content1": "You agree not to use our services for any unlawful purpose or in any way that could harm, disable, overburden, or impair the services.",
+    "section4_content2": "Prohibited activities include, but are not limited to:",
+    "section4_list_item1": "Uploading or transmitting any content that is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable.",
+    "section4_list_item2": "Attempting to gain unauthorized access to any part of the services, other accounts, computer systems, or networks connected to the services.",
+    "section4_list_item3": "Interfering with or disrupting the integrity or performance of the services or data contained therein.",
+    "section5_title": "5. Intellectual Property",
+    "section5_content1": "All content, trademarks, service marks, trade names, and logos on our services are proprietary to us or our licensors and are protected by intellectual property laws.",
+    "section5_content2": "You may not use, reproduce, distribute, modify, or create derivative works of any content from our services without our express written permission.",
+    "section6_title": "6. Disclaimers",
+    "section6_content1": "Our services are provided \"as is\" and \"as available\" without any warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement.",
+    "section6_content2": "We do not warrant that the services will be uninterrupted, error-free, secure, or free from viruses or other harmful components.",
+    "section7_title": "7. Limitation of Liability",
+    "section7_content": "To the fullest extent permitted by applicable law, in no event shall we be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the services; (b) any conduct or content of any third party on the services; (c) any content obtained from the services; and (d) unauthorized access, use, or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence), or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.",
+    "section8_title": "8. Governing Law",
+    "section8_content": "These Terms shall be governed and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.",
+    "section9_title": "9. Contact Us",
+    "section9_content": "If you have any questions about these Terms, please contact us at [Your Contact Email].",
+    "last_updated": "Last updated: June 8, 2025"
+  },
+  "DropdownMenu": {},
+  "EditUserDialog": {
+    "form": {
+      "roles": {
+        "atLeastOneRequired": "At least one role is required"
+      }
+    },
+    "errors": {
+      "loadRolesFailed": "Failed to load roles",
+      "updateFailed": "Failed to update user"
+    },
+    "success": "User updated successfully",
+    "rolesLabel": "Roles",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "save": "Save",
+    "title": "Edit User {email}"
+  },
+  "ForgotPasswordPage": {
+    "forgotPasswordTitle": "Forgot Your Password?",
+    "forgotPasswordDescription": "Enter your email address below to receive a verification code.",
+    "resetPasswordDescription": "Enter the verification code sent to your email and your new password.",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "otpLabel": "Verification Code",
+    "otpPlaceholder": "Enter verification code",
+    "newPasswordLabel": "New Password",
+    "newPasswordPlaceholder": "Enter your new password",
+    "confirmNewPasswordLabel": "Confirm New Password",
+    "confirmNewPasswordPlaceholder": "Confirm your new password",
+    "sendingOtp": "Sending code...",
+    "sendOtpButton": "Send Verification Code",
+    "resettingPassword": "Resetting password...",
+    "resetPasswordButton": "Reset Password",
+    "returnToSignIn": "Return to Sign In",
+    "anErrorOccurred": "An error occurred.",
+    "errorPrefix": "Error:",
+    "passwordResetSuccess": "Password has been reset successfully.",
+    "resendOtp": "Resend Code"
+  },
+  "Form": {},
+  "GeneralSettingsPage": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "generalSettingsTitle": "General Settings",
+    "accountInformationTitle": "Account Information",
+    "savingButton": "Saving...",
+    "saveChangesButton": "Save Changes"
+  },
+  "Header": {
+    "defaultUserName": "Guest",
+    "adminPanelTitle": "Admin Panel",
+    "welcome": "Welcome"
+  },
+  "HealthStatus": {
+    "fetchHealthStatusFailed": "Failed to fetch health status:",
+    "unknownError": "Unknown error",
+    "fetchHealthStatusError": "Error fetching health status:",
+    "loadingHealthStatus": "Loading health status...",
+    "error": "Error",
+    "noHealthStatusData": "No health status data",
+    "healthy": "Healthy",
+    "unhealthy": "Unhealthy",
+    "serviceHealthStatus": "Service Health Status",
+    "unknownService": "Unknown Service",
+    "status": "Status",
+    "latency": "Latency",
+    "lastChecked": "Last Checked",
+    "details": "Details"
+  },
+  "HistoryCard": {
+    "generatedImageAlt": "Generated Image",
+    "statusCompleted": "Completed",
+    "statusFailed": "Failed",
+    "noTitleOrDescription": "No title or description",
+    "download": "Download",
+    "share": "Share",
+    "delete": "Delete"
+  },
+  "HistoryListItem": {
+    "pageTitle": "Generation History",
+    "pageDescription": "View all your AI generation records",
+    "searchPlaceholder": "Search generation records...",
+    "filter": "Filter",
+    "all": "All",
+    "completed": "Completed",
+    "failed": "Failed",
+    "noMatchingRecords": "No matching records found",
+    "noRecordsYet": "No generation records yet",
+    "tryDifferentKeywords": "Try searching with different keywords",
+    "startYourFirstCreation": "Start your first AI creation",
+    "generatedImageAlt": "Generated image",
+    "statusCompleted": "Completed",
+    "statusFailed": "Failed",
+    "download": "Download",
+    "share": "Share",
+    "delete": "Delete",
+    "noTitleOrDescription": "No title or description"
+  },
+  "HomePage": {
+    "simulateUsageDataComment": "// Simulate fetching usage data",
+    "simulateDisplayUsageDataComment": "// Simulate displaying usage data",
+    "heroTitlePart1": "Build Your Next",
+    "heroTitlePart2": "AI-Powered Application",
+    "heroDescriptionLine1": "Transform your ideas into reality with our cutting-edge AI platform.",
+    "heroDescriptionLine2": "Designed for developers, by developers.",
+    "startButton": "Get Started",
+    "viewPlansButton": "View Plans",
+    "featuresTitle": "Why Choose Our Platform",
+    "featuresDescription": "Experience the future of AI development with our comprehensive platform.",
+    "feature1Title": "Lightning Fast",
+    "feature1Description": "Our AI models deliver instant results with industry-leading speed and accuracy.",
+    "feature2Title": "Scalable Infrastructure",
+    "feature2Description": "Built on robust cloud architecture that scales with your needs.",
+    "feature3Title": "Enterprise-Grade Security",
+    "feature3Description": "Your data is protected with military-grade encryption and compliance standards.",
+    "stat1Value": "99.9%",
+    "stat1Label": "Uptime",
+    "stat2Value": "10M+",
+    "stat2Label": "API Calls",
+    "stat3Value": "50K+",
+    "stat3Label": "Developers",
+    "stat4Value": "24/7",
+    "stat4Label": "Support",
+    "ctaTitle": "Ready to launch your SaaS?",
+    "ctaDescription": "Our template provides everything you need to get your SaaS up and running quickly. Don't waste time on boilerplate - focus on what makes your product unique.",
+    "viewCodeButton": "View the code",
+    "usageDataTitle": "Usage Data (Simulated)",
+    "deployButton": "Deploy your own"
+  },
+  "Index": {
+    "title": "Welcome to My App",
+    "description": "This is a Next.js application.",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "add": "Add",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "success": "Operation successful!",
+    "error": "An error occurred.",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "LocaleLayout": {
+    "get_messages_timezone_and_current_time": "Get message data, timezone, and current time"
+  },
+  "LocaleProvider": {
+    "defaultLocale": "en"
+  },
+  "LoginForm": {
+    "title": "Login",
+    "emailLabel": "Email:",
+    "emailPlaceholder": "Enter your email",
+    "passwordLabel": "Password:",
+    "passwordPlaceholder": "Enter your password",
+    "loginButton": "Login",
+    "loggingIn": "Logging in..."
+  },
+  "LoginPage": {
+    "signInTitle": "Sign in to your account",
+    "userLoggedIn": "User already logged in, redirecting...",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "Email address",
+    "passwordLabel": "Password",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "Enter your full name",
+    "passwordPlaceholder": "Password",
+    "forgotPassword": "Forgot your password?",
+    "loading": "Loading...",
+    "signInButton": "Sign in",
+    "orSignInWith": "Or continue with",
+    "signInWithGoogle": "Sign in with Google",
+    "google": "Google",
+    "signInWithGitHub": "Sign in with GitHub",
+    "github": "GitHub",
+    "newUserPrompt": "Not a member?",
+    "createAccountButton": "Create an account",
+    "formDataEntries": "FormData entries:",
+    "anErrorOccurred": "An error occurred. Please try again.",
+    "errorPrefix": "Error:",
+    "anErrorOccurredDuringRegistration": "An error occurred during registration",
+    "pleaseAgreeToTerms": "Please agree to the terms of service and privacy policy.",
+    "agreeToTerms": "I agree to the",
+    "termsOfService": "Terms of Service",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
+    "goHome": "Go Home"
+  },
+  "LoginViewModel": {
+    "fetchingUserLog": "[DI Mock] LoginViewModel fetching user with ID: {userId} (mocked)",
+    "attemptingLoginLog": "[DI Mock] Attempting to log in user: {email}"
+  },
+  "Metadata": {
+    "title": "Next.js SaaS Starter",
+    "description": "Get started quickly with Next.js, Postgres, and Stripe.",
+    "keywords": "Next.js, SaaS, Starter, Boilerplate, React, Postgres, Stripe, Authentication, Payments, Dashboard"
+  },
+  "Navbar": {
+    "brandName": "AI Generator",
+    "home": "Home",
+    "history": "History",
+    "resultList": "Result List",
+    "subscribePlan": "Subscribe Plan",
+    "premiumPackage": "Premium Package",
+    "userAvatarAlt": "User Avatar",
+    "profile": "Profile",
+    "myPlans": "My Plans",
+    "logout": "Logout",
+    "login": "Login",
+    "subscribe": "Subscribe",
+    "billable-metrics": "Billable Metrics"
+  },
+  "NavigationMenu": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "roles": "Roles",
+    "permissions": "Permissions",
+    "premium-packages": "Premium Packages",
+    "subscription-plan": "Subscription Plan",
+    "settings": "Settings",
+    "billable-metrics": "Billable Metrics"
+  },
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "backToHome": "Back to Home",
+    "notFoundHeading": "Oops! Page Not Found",
+    "notFoundMessage": "We can't seem to find the page you're looking for.",
+    "suggestedAction": "Please check the URL or go back to the homepage."
+  },
+  "PermissionAssignmentModal": {
+    "manageRolePermissions": "Manage Permissions for {roleName}",
+    "cancel": "Cancel",
+    "save": "Save"
+  },
+  "PermissionCreateRole": {
+    "createRoleFailed": "Failed to create role"
+  },
+  "PermissionDeleteRole": {
+    "role_not_found": "Role to delete not found",
+    "delete_role_failed": "Failed to delete role, role might not exist"
+  },
+  "PermissionEditForm": {
+    "anonymous": "Anonymous",
+    "authenticated": "Authenticated",
+    "inactive": "Inactive",
+    "active": "Active",
+    "active2FA": "Active (2FA)",
+    "hide": "Hide",
+    "disable": "Disable",
+    "redirect": "Redirect",
+    "throw": "Throw",
+    "editPermission": "Edit Permission",
+    "editPermissionDescription": "Make changes to the permission here. Click save when you're done.",
+    "key": "Key",
+    "title": "Title",
+    "description": "Description",
+    "authStatus": "Auth Status",
+    "authStatusDescription": "Authentication status required for this permission.",
+    "activeStatus": "Active Status",
+    "activeStatusDescription": "Active status required for this permission.",
+    "rejectAction": "Reject Action",
+    "rejectActionDescription": "Action to take when permission is rejected.",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "saveChanges": "Save changes",
+    "titleRequired": "Title is required"
+  },
+  "PermissionGetAllPermissionConfigs": {
+    "errorFetchingAllPermissionConfigs": "Error fetching all permission configs:"
+  },
+  "PermissionGetPagePermissionConfigs": {
+    "errorFetchingPermissionConfigs": "Error fetching all permission configs:"
+  },
+  "PermissionGetPermissionDiffs": {
+    "permission_diffs_title": "Get Permission Configuration Differences List",
+    "permission_diffs_description_line1": "This is an important operation and maintenance management interface, requiring accurate comparison logic.",
+    "permission_diffs_description_line2": "The returned difference data structure should be clear and easy to read.",
+    "get_permission_diffs_failed": "Failed to get permission differences:"
+  },
+  "PermissionGetRoleById": {
+    "userNotAuthenticated": "User not authenticated.",
+    "invalidRoleIdProvided": "Invalid role ID provided.",
+    "roleNotFound": "Role with ID {roleId} not found.",
+    "failedToRetrieveRole": "Failed to retrieve role by ID {roleId}."
+  },
+  "PermissionGetRolePermissions": {
+    "roleNotFound": "Role not found",
+    "getRolePermissionsFailed": "Failed to get role permissions"
+  },
+  "PermissionGetRoles": {
+    "failedToGetRolesListLog": "Failed to get roles list:",
+    "failedToGetRolesList": "Failed to get roles list"
+  },
+  "PermissionQueryPermissionsForRole": {
+    "queryPermissionsForRole": "Query all permission associations for a role",
+    "roleId": "Role ID",
+    "permissionAssociationsList": "Permission associations list",
+    "unauthorizedUserNotLoggedIn": "Unauthorized: User not logged in",
+    "roleNotFound": "Role not found",
+    "queryRolePermissionsFailed": "Query role permissions failed"
+  },
+  "PermissionRebindPermissionsToRole": {
+    "roleIdRequired": "Role ID is required",
+    "permissionIdInvalidUuid": "Permission ID must be a valid UUID",
+    "atLeastOnePermissionIdRequired": "At least one permission ID is required",
+    "parameterValidationFailed": "Parameter validation failed",
+    "failedToBindPermissionsLog": "Failed to bind permissions:",
+    "failedToBindPermissions": "Failed to bind permissions"
+  },
+  "PermissionSyncDialog": {
+    "confirmSyncTitle": "Confirm Synchronization",
+    "confirmSyncDescription": "Please review the changes below before synchronizing permissions.",
+    "newPermissions": "New Permissions",
+    "updatedPermissions": "Updated Permissions",
+    "deletedPermissions": "Deleted Permissions",
+    "noChangesDetected": "No changes detected.",
+    "cancel": "Cancel",
+    "syncing": "Synchronizing...",
+    "confirmSync": "Confirm Sync"
+  },
+  "PermissionSyncPermissionsToDatabase": {
+    "syncFailedLog": "Failed to synchronize permission configurations:",
+    "syncFailedError": "Failed to synchronize permission configurations"
+  },
+  "PermissionTable": {
+    "key": "Key",
+    "target": "Target",
+    "scope": "Scope",
+    "authStatus": "Auth Status",
+    "activeStatus": "Active Status",
+    "rejectAction": "Reject Action",
+    "title": "Title",
+    "description": "Description",
+    "actions": "Actions",
+    "edit": "Edit",
+    "paginationSummary": "Showing {total} entries, page {currentPage} of {totalPages}",
+    "previousPage": "Previous",
+    "nextPage": "Next"
+  },
+  "PermissionUpdatePermission": {
+    "permission_not_found": "Permission to update not found",
+    "permission_key_prefix": "Permission key '",
+    "permission_key_suffix": "' can't be updated",
+    "update_permission_failed_db_error": "Failed to update permission, permission may not exist or database error occurred",
+    "failed_to_update_permission_log": "Failed to update permission:",
+    "failed_to_update_permission_generic": "Failed to update permission"
+  },
+  "PermissionUpdateRole": {
+    "roleNotFound": "Role to update not found",
+    "unableToDetermineRoleId": "Unable to determine role ID for update",
+    "updateRoleFailed": "Failed to update role, role might not exist",
+    "failedToUpdateRole": "Failed to update role"
+  },
+  "PermissionsPage": {
+    "failedToFetchPermissions": "Failed to fetch permissions",
+    "error": "Error",
+    "failedToLoadPermissions": "Failed to load permissions.",
+    "failedToUpdatePermission": "Failed to update permission",
+    "success": "Success",
+    "permissionUpdatedSuccessfully": "Permission updated successfully.",
+    "failedToSyncPermissions": "Failed to sync permissions",
+    "permissionsSyncedSuccessfully": "Permissions synced successfully.",
+    "failedToFetchPermissionDiffs": "Failed to fetch permission diffs",
+    "failedToLoadPermissionDiffs": "Failed to load permission diffs.",
+    "permissionManagementTitle": "Permission Management",
+    "syncSystemPermissions": "Sync System Permissions",
+    "loadingPermissions": "Loading permissions...",
+    "editPermission": "Edit Permission"
+  },
+  "PremiumPackageForm": {
+    "nameRequired": "Name is required",
+    "nameRequiredForNewPackages": "Name is required for new premium packages.",
+    "currencyUsd": "USD",
+    "currencyCny": "CNY",
+    "premiumPackageUpdatedSuccessfully": "Premium package updated successfully.",
+    "premiumPackageCreatedSuccessfully": "Premium package created successfully.",
+    "failedToSavePremiumPackage": "Failed to save premium package.",
+    "common": {
+      "success": "Success",
+      "error": "Error",
+      "name": "Name",
+      "namePlaceholder": "Enter name",
+      "description": "Description",
+      "descriptionPlaceholder": "Enter description",
+      "price": "Price",
+      "pricePlaceholder": "Enter price",
+      "currency": "Currency",
+      "currencyPlaceholder": "Enter currency",
+      "isActive": "Is Active",
+      "save": "Save"
+    }
+  },
+  "PremiumPackageTable": {
+    "errorLoadingPremiumPackages": "Failed to load premium packages.",
+    "error": "Error",
+    "confirmDelete": "Are you sure you want to delete this premium package?",
+    "success": "Success",
+    "deleteSuccess": "Premium package deleted successfully.",
+    "loading": "Loading...",
+    "table": {
+      "name": "Name",
+      "description": "Description",
+      "price": "Price",
+      "currency": "Currency",
+      "isActive": "Active",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "actions": "Actions"
+    },
+    "noPremiumPackages": "No premium packages found.",
+    "yes": "Yes",
+    "no": "No",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "PremiumPackagesPage": {
+    "title": "Premium Packages Management",
+    "description": "Manage your application's premium packages.",
+    "createNewPremiumPackage": "Create New Premium Package",
+    "loadingPremiumPackages": "Loading premium packages...",
+    "editPremiumPackage": "Edit Premium Package",
+    "createNewPremiumPackageDescription": "Create a new premium package for your application.",
+    "editPremiumPackageDescription": "Edit an existing premium package.",
+    "loadPremiumPackageFailed": "Failed to load premium package",
+    "unknownError": "Unknown error",
+    "loadingForm": "Loading form..."
+  },
+  "PricingPage": {
+    "loadError": "Failed to load subscription plans. Please try again later.",
+    "loadingPlans": "Loading subscription plans...",
+    "chooseYourPlanTitle": "Choose Your",
+    "subscriptionPlan": "Subscription Plan",
+    "unlockAiCreation": "Unlock the unlimited possibilities of AI creation, choose the professional plan that best suits your needs.",
+    "mostPopular": "Most Popular",
+    "month": "month",
+    "year": "year",
+    "day": "day",
+    "contactSales": "Contact Sales",
+    "contactSalesMessage": "Please contact our sales team for enterprise solutions.",
+    "trialInfo": "All plans support a 7-day free trial, cancel anytime.",
+    "securePayment": "Secure Payment",
+    "instantActivation": "Instant Activation",
+    "customerSupport": "24/7 Customer Support",
+    "freePlanName": "Free",
+    "currentPlanButton": "Current Plan",
+    "proPlanName": "Pro",
+    "subscribeNowButton": "Subscribe Now",
+    "enterprisePlanName": "Enterprise",
+    "contactSalesButton": "Contact Sales"
+  },
+  "ProfileInfo": {
+    "title": "Personal Information",
+    "fullNameLabel": "Full Name",
+    "usernameLabel": "Username",
+    "avatarUrlLabel": "Avatar URL",
+    "saveButton": "Save Changes",
+    "editButton": "Edit",
+    "emailLabel": "Email",
+    "rolesLabel": "Roles",
+    "updatedAtLabel": "Updated At",
+    "createdAtLabel": "Created At",
+    "saving": "Saving...",
+    "loading": "Loading personal information...",
+    "updateSuccessTitle": "Success!",
+    "updateSuccessDescription": "Your profile has been updated successfully.",
+    "updateErrorTitle": "Error!",
+    "updateErrorDescription": "Failed to update profile. Please try again.",
+    "noFileSelected": "No file selected for upload.",
+    "uploadSuccessTitle": "Upload Success!",
+    "uploadSuccessDescription": "Avatar uploaded successfully.",
+    "uploadErrorDescription": "Failed to upload avatar. Please try again.",
+    "currentAvatar": "Current Avatar",
+    "uploadAvatarLabel": "Upload New Avatar",
+    "fileSizeExceedsLimit": "File size exceeds the 2MB limit.",
+    "unsetValue": "Not Set"
+  },
+  "ProfileOrders": {
+    "myOrdersTitle": "My Orders",
+    "loading": "Loading...",
+    "error": "Error",
+    "transactionHistoryTitle": "Transaction History",
+    "transactionHistoryCaption": "A list of your recent transactions.",
+    "transactionId": "Transaction ID",
+    "itemName": "Item",
+    "amount": "Amount",
+    "type": "Type",
+    "status": "Status",
+    "transactionDate": "Date",
+    "noTransactions": "No transactions found",
+    "unknownItem": "Unknown Item",
+    "subscription": "Subscription",
+    "premium_package": "Premium Package",
+    "completed": "Completed",
+    "pending": "Pending",
+    "cancelled": "Cancelled",
+    "failed": "Failed"
+  },
+  "ProfilePage": {
+    "navigationTitle": "Navigation",
+    "navigation": "Navigation",
+    "personalInfo": "Personal Info",
+    "accountSecurity": "Account Security",
+    "myPlans": "My Plans",
+    "myTransactions": "Transaction History",
+    "settings": "Settings",
+    "welcomeTitle": "Welcome to your Profile Center",
+    "welcomeMessage": "You can manage your personal information and account security here.",
+    "notificationSettings": "Notification Settings",
+    "manageNotificationPreferences": "Manage your notification preferences.",
+    "languagePreference": "Language Preference",
+    "chooseYourPreferredLanguage": "Choose your preferred language.",
+    "signOut": "Sign Out"
+  },
+  "ProfilePlans": {
+    "myPlansTitle": "My Plans",
+    "activeSubscriptionTitle": "Active Subscription",
+    "expires": "Expires",
+    "unknown": "Unknown",
+    "noActiveSubscription": "No active subscription found.",
+    "purchasedPremiumPackagesTitle": "Purchased Premium Packages",
+    "noPurchasedPremiumPackages": "No purchased premium packages found.",
+    "loading": "Loading...",
+    "error": "Error"
+  },
+  "ProfileTransactions": {
+    "myTransactionsTitle": "Transaction History",
+    "transactionHistoryCaption": "A list of your recent transactions.",
+    "transactionId": "Transaction ID",
+    "itemName": "Item Name",
+    "amount": "Amount",
+    "amountSymbol": "$",
+    "type": "Type",
+    "status": "Status",
+    "transactionDate": "Date",
+    "unknownItem": "Unknown Item",
+    "noTransactions": "No transactions found",
+    "noTransactionsDescription": "You have not made any transactions yet.",
+    "loading": "Loading...",
+    "error": "Error",
+    "errorTitle": "Error Occurred",
+    "retry": "Retry",
+    "previous": "Previous",
+    "next": "Next",
+    "subscription": "Subscription",
+    "premium_package": "Premium Package",
+    "completed": "Completed",
+    "pending": "Pending",
+    "failed": "Failed",
+    "cancelled": "Cancelled"
+  },
+  "QuickAccessCard": {
+    "title": "Quick Access Card Title",
+    "description": "Quick Access Card Description"
+  },
+  "ResetPasswordPage": {
+    "missingResetToken": "Missing reset token. Please use the link from your email.",
+    "resetPasswordTitle": "Reset Your Password",
+    "returnToSignIn": "Return to Sign In",
+    "newPasswordLabel": "New Password",
+    "enterNewPasswordPlaceholder": "Enter your new password",
+    "confirmNewPasswordLabel": "Confirm New Password",
+    "confirmNewPasswordPlaceholder": "Confirm your new password",
+    "updatingPassword": "Updating password...",
+    "updatePasswordButton": "Update Password"
+  },
+  "RoleForm": {
+    "roleName": "Role Name",
+    "roleType": "Role Type",
+    "userRole": "User Role",
+    "teamUserRole": "Team User Role",
+    "teamAdminRole": "Team Admin Role",
+    "systemAdminRole": "System Admin Role",
+    "description": "Description",
+    "cancel": "Cancel",
+    "update": "Update",
+    "create": "Create"
+  },
+  "RoleTable": {
+    "userRole": "User Role",
+    "teamUserRole": "Team User Role",
+    "teamAdminRole": "Team Admin Role",
+    "systemAdminRole": "System Admin Role",
+    "roleName": "Role Name",
+    "roleType": "Role Type",
+    "description": "Description",
+    "actions": "Actions",
+    "managePermissions": "Manage Permissions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "noRoles": "No roles found.",
+    "noDescription": "N/A"
+  },
+  "SecuritySettingsPage": {
+    "securitySettingsTitle": "Security Settings",
+    "passwordSectionTitle": "Change Password",
+    "currentPasswordLabel": "Current Password",
+    "newPasswordLabel": "New Password",
+    "confirmNewPasswordLabel": "Confirm New Password",
+    "passwordUpdateSuccess": "Password updated successfully!",
+    "updatingPasswordButton": "Updating Password...",
+    "updatePasswordButton": "Update Password",
+    "deleteAccountSectionTitle": "Delete Account",
+    "deleteAccountWarning": "Deleting your account will permanently remove your account and all related data. This action is irreversible.",
+    "deleteAccountConfirmPasswordLabel": "Confirm Password",
+    "deletingAccountButton": "Deleting Account...",
+    "deleteAccountButton": "Delete Account"
+  },
+  "SignUpForm": {
+    "title": "Sign Up",
+    "usernameLabel": "Username:",
+    "usernamePlaceholder": "Enter your username",
+    "emailLabel": "Email:",
+    "emailPlaceholder": "Enter your email",
+    "passwordLabel": "Password:",
+    "passwordPlaceholder": "Enter your password",
+    "registerButton": "Register"
+  },
+  "SignUpPage": {
+    "title": "Join AI Genesis",
+    "subtitle": "Start your AI creation journey",
+    "nameLabel": "Username",
+    "namePlaceholder": "Enter your username",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "your@email.com",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Create a strong password",
+    "confirmPasswordLabel": "Confirm Password",
+    "confirmPasswordPlaceholder": "Re-enter password",
+    "agreeToTerms": "I agree to the",
+    "termsOfService": "Terms of Service",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
+    "signUpButton": "Create Account",
+    "signingUp": "Signing Up...",
+    "existingUserPrompt": "Already have an account?",
+    "signInExistingAccountButton": "Sign in now",
+    "userLoggedIn": "User already logged in, redirecting...",
+    "anErrorOccurred": "An error occurred",
+    "pleaseAgreeToTerms": "Please agree to the Terms of Service and Privacy Policy",
+    "goHome": "Go Home"
+  },
+  "StatisticCard": {},
+  "SubscribeConfirmPage": {
+    "status": {
+      "success": {
+        "title": "Subscription Successful!",
+        "welcome": "Welcome to AI Genesis Pro",
+        "confirmationEmail": "Subscription confirmation email has been sent to your inbox"
+      },
+      "pending": {
+        "title": "Payment Processing",
+        "message": "We're processing your payment. This may take a few moments..."
+      },
+      "failed": {
+        "title": "Subscription Failed",
+        "message": "Sorry, we couldn't complete your subscription.",
+        "errorTitle": "Payment Processing Failed"
+      },
+      "canceled": {
+        "title": "Subscription Canceled",
+        "message": "Your subscription has been canceled."
+      },
+      "refunded": {
+        "title": "Subscription Refunded",
+        "message": "Your transaction has been refunded."
+      }
+    },
+    "transaction": {
+      "syncSuccess": "Payment status updated successfully",
+      "syncCanceled": "Subscription has been canceled",
+      "syncRefunded": "Subscription has been refunded",
+      "noPlanId": "Missing plan ID, unable to process payment status",
+      "updateFailed": "Failed to update transaction status, please try again later",
+      "networkError": "Network error, please check your internet connection"
+    },
+    "subscriptionDetails": {
+      "title": "Your Subscription Details",
+      "plan": "Plan",
+      "price": "Price",
+      "nextBilling": "Next Billing Date",
+      "featuresTitle": "You now have access to:",
+      "features": {
+        "dailyGenerations": "100 daily AI generations",
+        "hdOutput": "HD resolution output",
+        "priorityQueue": "Priority generation queue",
+        "noWatermark": "No watermark downloads"
+      }
+    },
+    "payment": {
+      "reasonsTitle": "Possible Reasons",
+      "reasons": {
+        "invalidInfo": "Incorrect payment information",
+        "insufficientFunds": "Insufficient funds",
+        "networkIssue": "Network connection issue",
+        "serviceUnavailable": "Payment service temporarily unavailable"
+      },
+      "solutionsTitle": "Suggested Solutions",
+      "solutions": {
+        "verifyInfo": "1. Verify your payment information",
+        "checkBalance": "2. Confirm sufficient balance in your account",
+        "retryLater": "3. Try again in a few minutes",
+        "contactSupport": "4. Contact customer support for assistance"
+      }
+    },
+    "actions": {
+      "startCreating": "Start Creating",
+      "manageSubscription": "Manage Subscription",
+      "retryPayment": "Retry Payment",
+      "backToHome": "Back to Homepage",
+      "cancel": "Cancel",
+      "contactSupport": "Contact Support"
+    }
+  },
+  "SubscribePage": {
+    "subscribeNow": "Subscribe Now",
+    "currentPlan": "Current Plan",
+    "contactSales": "Contact Sales",
+    "contactSalesMessage": "Please contact the sales team for enterprise subscription details.",
+    "loadError": "Failed to fetch subscription plans, please try again later.",
+    "stripeLoadError": "Stripe.js failed to load.",
+    "planNotFound": "Subscription plan ID not found:",
+    "stripeSessionError": "Stripe session ID not obtained.",
+    "subscriptionFailed": "Subscription failed:",
+    "loadingPlans": "Loading plans...",
+    "chooseYourPlanTitle": "Choose Your",
+    "subscriptionPlan": "Subscription Plan",
+    "unlockAiCreation": "Unlock the infinite possibilities of AI creation, choose the subscription plan that best suits you.",
+    "mostPopular": "Most Popular",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "freePlanName": "Free Plan",
+    "proPlanName": "Pro Plan",
+    "enterprisePlanName": "Enterprise Plan",
+    "trialInfo": "All plans include a 7-day free trial, cancel anytime.",
+    "securePayment": "Secure Payment",
+    "instantActivation": "Instant Activation",
+    "customerSupport": "24/7 Customer Support"
+  },
+  "SubscriptionAdminPage": {
+    "title": "Subscription Plan Management",
+    "loadingUsageStats": "Loading usage statistics...",
+    "createNewSubscriptionPlan": "Create New Subscription Plan",
+    "loadingSubscriptionPlanList": "Loading subscription plan list...",
+    "syncSubscriptionButton": "Sync Subscription Plans",
+    "syncing": "Syncing...",
+    "syncSuccess": "Sync successful",
+    "syncSuccessDescription": "Subscription plans have been successfully synced.",
+    "syncFailed": "Sync failed",
+    "syncFailedDescription": "Failed to sync subscription plans. Please try again later."
+  },
+  "SubscriptionCard": {
+    "mostPopular": "Most Popular",
+    "currentPlan": "Current Plan",
+    "submitting": "Submitting...",
+    "monthly": "month",
+    "yearly": "year",
+    "annual": "year",
+    "checkMark": "✅",
+    "colon": ":"
+  },
+  "SubscriptionPlanDetailPage": {
+    "createNewSubscriptionPlan": "Create New Subscription Plan",
+    "editSubscriptionPlan": "Edit Subscription Plan",
+    "loadSubscriptionPlanFailed": "Failed to load subscription plan",
+    "unknownError": "Unknown error",
+    "loadingForm": "Loading form..."
+  },
+  "SubscriptionPlanForm": {
+    "pricePositiveError": "Price must be a positive number",
+    "success": "Success",
+    "updateSuccess": "Subscription plan updated successfully.",
+    "subscriptionPlanCreated": "Subscription plan created successfully.",
+    "updateFailed": "Failed to update subscription plan.",
+    "createFailed": "Failed to create subscription plan.",
+    "error": "Error",
+    "name": "Name",
+    "namePlaceholder": "Enter plan name",
+    "description": "Description",
+    "descriptionPlaceholder": "Enter plan description",
+    "price": "Price",
+    "pricePlaceholder": "Enter price",
+    "currency": "Currency",
+    "currencyPlaceholder": "Enter currency (e.g., usd)",
+    "billingInterval": "Billing Interval",
+    "month": "Month",
+    "year": "Year",
+    "public": "Public",
+    "updateButton": "Update Plan",
+    "createButton": "Create Plan"
+  },
+  "SubscriptionPlanList": {
+    "errorLoadingPlans": "Failed to load subscription plans.",
+    "error": "Error",
+    "success": "Subscription plan updated successfully.",
+    "deleteSuccess": "Subscription plan deleted successfully.",
+    "errorDeletingPlan": "Failed to delete subscription plan.",
+    "loading": "Loading...",
+    "name": "Name",
+    "price": "Price",
+    "interval": "Interval",
+    "public": "Public",
+    "trial": "Trial",
+    "sortOrder": "Sort Order",
+    "actions": "Actions",
+    "noPlans": "No subscription plans found.",
+    "yes": "Yes",
+    "no": "No",
+    "notApplicable": "N/A",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "Tabs": {},
+  "TaskGetTaskResults": {
+    "errorFetchingTaskResults": "Error fetching task results:"
+  },
+  "TaskGetTasks": {
+    "errorFetchingTasks": "Error fetching tasks:"
+  },
+  "TaskHistoryClient": {
+    "pageTitle": "Task History",
+    "pageDescription": "View your task history and manage your creations.",
+    "searchPlaceholder": "Search tasks...",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "loading": "Loading...",
+    "completed": "Completed",
+    "failed": "Failed",
+    "noMatchingRecords": "No matching records found.",
+    "noRecordsYet": "No records yet.",
+    "tryDifferentKeywords": "Try different keywords or filters.",
+    "startYourFirstCreation": "Start your first creation now!",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "TaskHistoryPage": {
+    "currentPageDefault": "1"
+  },
+  "TaskResultCard": {
+    "status": "Status: ",
+    "noMessage": "No message",
+    "contentLoadError": "Content cannot be loaded",
+    "taskResult": "Task Result"
+  },
+  "TaskResultGridClient": {
+    "pageTitle": "Task Results",
+    "pageDescription": "View and manage your generated task results.",
+    "searchPlaceholder": "Search results...",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "image": "Image",
+    "loading": "Loading...",
+    "video": "Video",
+    "noMatchingRecords": "No matching results found.",
+    "tryDifferentKeywords": "Try different keywords or filters.",
+    "noRecordsYet": "No results yet.",
+    "startYourFirstCreation": "Start your first creation to see results here!",
+    "previous": "Previous",
+    "next": "Next",
+    "breakLabel": "..."
+  },
+  "TestPage": {
+    "title": "Test Page",
+    "description": "If you can see this page, the routing is working.",
+    "backToHome": "Back to Home",
+    "loginPage": "Login Page"
+  },
+  "UsageChart": {},
+  "UsageStats": {
+    "errorLoadingUsageStats": "Failed to load usage statistics.",
+    "error": "Error",
+    "usageStatsTitle": "Usage Statistics",
+    "loading": "Loading...",
+    "cannotLoadUsageStats": "Cannot load usage statistics.",
+    "totalSubscriptions": "Total Subscriptions",
+    "activeSubscriptions": "Active Subscriptions",
+    "trialSubscriptions": "Trial Subscriptions"
+  },
+  "UserTable": {
+    "toast": {
+      "updateSuccess": "User updated successfully."
+    },
+    "table": {
+      "id": "ID",
+      "email": "Email",
+      "username": "Username",
+      "fullName": "Full Name",
+      "roles": "Roles",
+      "createdAt": "Created At",
+      "updatedAt": "Updated At",
+      "actions": "Actions"
+    },
+    "loading": "Loading...",
+    "noUsersFound": "No users found.",
+    "actions": {
+      "edit": "Edit"
+    }
+  },
+  "LucyPage": {
+    "metaTitle": "Lucy - Your Creative Companion",
+    "metaDescription": "Create personalized songs, videos, and audio content with Lucy, your AI-powered creative companion.",
+    "pageTitle": "Lucy",
+    "pageSubtitle": "Your creative companion",
+    "yourCreations": "Your Creations",
+    "yourCreationsDescription": "Images, videos & audio",
+    "emptyCreations": "Your generated content will appear here",
+    "cinemaMode": "Cinema Mode",
+    "credits": "Credits",
+    "welcomeTitle": "Hi there! 👋 I'm Lucy, your creative companion.",
+    "welcomeMessage": "I can help you create personalized songs, videos, and audio content. No technical skills needed - just tell me what you'd like to make!",
+    "welcomeHint": "Try saying: \"Write me a birthday song for my mom\" or \"Create a funny video about my cat\"",
+    "inputPlaceholder": "Tell Lucy what you'd like to create...",
+    "send": "Send",
+    "copyLyrics": "Copy Lyrics",
+    "lyricsCopied": "Copied!",
+    "sunoInstructions": "Now click below to create your song on Suno:",
+    "openSuno": "Open Suno (250 free credits!)",
+    "sunoHint": "On Suno: paste → pick style → Create!",
+    "generating": "Generating...",
+    "generatingImage": "Creating your image...",
+    "generatingVideo": "Creating your video clip...",
+    "generatingAudio": "Creating your audio...",
+    "insufficientCredits": "Not enough credits",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "readAloud": "Read aloud",
+    "stopReading": "Stop reading",
+    "download": "Download",
+    "share": "Share",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this?",
+    "costDisplay": "Cost: {cost} credits"
+  }
+}

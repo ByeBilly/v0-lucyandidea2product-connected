@@ -1,0 +1,18 @@
+{
+  "myPlansTitle": "My Plans",
+  "loading": "Loading...",
+  "error": "Error",
+  "currentPlan": "Current Plan",
+  "monthly": "Monthly",
+  "annual": "Annual",
+  "activeSubscriptionTitle": "Active Subscription",
+  "expires": "Expires",
+  "unknown": "Unknown",
+  "manageSubscription": "Manage Subscription",
+  "noActiveSubscription": "No active subscription found.",
+  "purchasedPremiumPackagesTitle": "Purchased Premium Packages",
+  "noPurchasedPremiumPackages": "No purchased premium packages found.",
+  "activeSubscriptionAreaComment": "Active Subscription Area",
+  "purchasedPremiumPackagesAreaComment": "Purchased Premium Packages Area",
+  "premiumPackageValidityComment": "Can add validity period or usage of premium package"
+}

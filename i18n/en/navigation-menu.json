@@ -1,0 +1,10 @@
+{
+  "dashboard": "Dashboard",
+  "users": "Users",
+  "roles": "Roles",
+  "permissions": "Permissions",
+  "premium-packages": "Premium Packages",
+  "subscription-plan": "Subscription Plan",
+  "settings": "Settings",
+  "billable-metrics": "Billable Metrics"
+}
