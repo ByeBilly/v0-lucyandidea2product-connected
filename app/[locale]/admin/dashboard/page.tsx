@@ -7,9 +7,6 @@ import { useTranslations } from "next-intl"
 const DashboardPage = () => {
   const t = useTranslations("AdminDashboardPage")
 
-  const roleIcon = FaUserCog
-  const permissionIcon = FaShieldAlt
-
   return (
     <div className="container mx-auto py-8">
       <h1 className="text-3xl font-bold mb-6">{t("title")}</h1>
@@ -22,13 +19,13 @@ const DashboardPage = () => {
             title={t("roleManagement")}
             description={t("roleManagementDescription")}
             href="/admin/roles"
-            icon={roleIcon}
+            icon={<FaUserCog />}
           />
           <QuickAccessCard
             title={t("permissionManagement")}
             description={t("permissionManagementDescription")}
             href="/admin/permissions"
-            icon={permissionIcon}
+            icon={<FaShieldAlt />}
           />
         </div>
       </section>
