@@ -25,6 +25,10 @@ export default function HomePage() {
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16 space-y-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm mb-4">
+              <Star className="h-4 w-4 fill-blue-400" />
+              <span>Early access launching soon - Join 1000+ on the waitlist</span>
+            </div>
             <div className="space-y-4">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                 <span className="text-white">{t("heroTitlePart1")}</span>
@@ -184,6 +188,85 @@ export default function HomePage() {
               <div className="text-slate-400">{t("stat4Label")}</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Learn More Section */}
+      <section className="py-20 bg-slate-900/50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Learn More</h2>
+            <p className="text-slate-400 text-lg">Explore our platform and get started with AI creation</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Card className="bg-slate-800/50 backdrop-blur-xl border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-white">Compare Platforms</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-slate-300">
+                  Understand the differences between Lucy and mform to choose the right platform for your needs.
+                </p>
+                <Button asChild variant="outline" className="w-full border-slate-600 hover:bg-slate-700 bg-transparent">
+                  <Link href="/features">
+                    View Features <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800/50 backdrop-blur-xl border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-white">Browse Gallery</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-slate-300">
+                  See what others are creating and get inspired by community-generated content.
+                </p>
+                <Button asChild variant="outline" className="w-full border-slate-600 hover:bg-slate-700 bg-transparent">
+                  <Link href="/gallery">
+                    Explore Gallery <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-800/50 backdrop-blur-xl border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
+              <CardHeader>
+                <CardTitle className="text-white">Get Help</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <p className="text-slate-300">
+                  Find answers to common questions and learn how to get the most out of our platform.
+                </p>
+                <Button asChild variant="outline" className="w-full border-slate-600 hover:bg-slate-700 bg-transparent">
+                  <Link href="/help">
+                    Visit Help Center <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer CTA */}
+      <section className="py-20">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+            Join the waitlist today and be among the first to experience the future of AI-powered creation
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="h-14 px-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+          >
+            <Link href="/waitlist">
+              Join Waitlist Now <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </div>
       </section>
     </div>

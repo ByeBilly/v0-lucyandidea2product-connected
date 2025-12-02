@@ -10,6 +10,7 @@ import { getAssets, getCinemaData } from "@/app/actions/lucy"
 import { LUCY_INTRO_MESSAGE, LUCY_PLACEHOLDER_PROMPTS } from "../constants"
 import type { Asset, LucyChatInterfaceProps } from "../types"
 import type { GeneratedAsset } from "../../mform/types"
+import { DemoModeBanner } from "./demo-mode-banner"
 
 // ============================================
 // MAIN COMPONENT
@@ -203,6 +204,10 @@ export function LucyChatInterface({ userId, userCredits = 100 }: LucyChatInterfa
             </span>
           </div>
         </header>
+
+        <div className="p-4">
+          <DemoModeBanner />
+        </div>
 
         <div className="flex-1 overflow-y-auto p-4">
           <div className="max-w-3xl mx-auto space-y-2">

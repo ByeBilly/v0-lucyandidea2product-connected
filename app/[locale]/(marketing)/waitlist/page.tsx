@@ -15,6 +15,7 @@ export default function WaitlistPage() {
   const [name, setName] = useState("")
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [position, setPosition] = useState<number | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -31,6 +32,7 @@ export default function WaitlistPage() {
 
       if (response.ok) {
         setIsSubmitted(true)
+        setPosition(data.position || null)
         toast.success("Successfully joined the waitlist!")
       } else {
         toast.error(data.error || "Failed to join waitlist")
@@ -51,11 +53,53 @@ export default function WaitlistPage() {
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
             <CardTitle className="text-3xl md:text-4xl font-bold text-white mb-4">You're on the list!</CardTitle>
+            {position && (
+              <div className="mb-4">
+                <p className="text-2xl font-bold text-blue-400">You're #{position} in line</p>
+              </div>
+            )}
             <CardDescription className="text-lg text-slate-300">
               We'll notify you as soon as VisionaryDirector launches.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6 pb-12">
+            <div className="bg-slate-900/50 rounded-lg p-6 space-y-4">
+              <h3 className="text-white font-semibold text-center text-lg">Share & Move Up the List</h3>
+              <p className="text-slate-400 text-center text-sm">
+                Share VisionaryDirector with friends to get early access faster
+              </p>
+              <div className="flex gap-3 justify-center">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="bg-[#1DA1F2] hover:bg-[#1a8cd8] text-white border-0"
+                >
+                  <a
+                    href={`https://twitter.com/intent/tweet?text=${encodeURIComponent("I just joined the waitlist for VisionaryDirector - a revolutionary AI creation platform! Join me:")}&url=${encodeURIComponent("https://visionarydirector.com/waitlist")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Share on Twitter
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="sm"
+                  className="bg-[#0077B5] hover:bg-[#006399] text-white border-0"
+                >
+                  <a
+                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent("https://visionarydirector.com/waitlist")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Share on LinkedIn
+                  </a>
+                </Button>
+              </div>
+            </div>
+
             <div className="text-center space-y-4">
               <p className="text-slate-400">
                 Get ready to experience the future of AI-powered creativity. We can't wait to show you what we've built.

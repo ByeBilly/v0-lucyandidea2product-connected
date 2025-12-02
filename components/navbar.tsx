@@ -43,6 +43,12 @@ export default function Navbar() {
           <Link href="/" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
             {t("home")}
           </Link>
+          <Link href="/about" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
+            About
+          </Link>
+          <Link href="/features" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
+            Features
+          </Link>
           <Link href="/lucy" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
             Lucy
           </Link>
@@ -69,6 +75,9 @@ export default function Navbar() {
             className="text-slate-300 hover:text-white transition-colors duration-200 font-medium"
           >
             {t("subscribePlan")}
+          </Link>
+          <Link href="/help" className="text-slate-300 hover:text-white transition-colors duration-200 font-medium">
+            Help
           </Link>
         </div>
 
@@ -148,6 +157,18 @@ export default function Navbar() {
               {t("home")}
             </Link>
             <Link
+              href="/about"
+              className="block text-slate-300 hover:text-white transition-colors duration-200 font-medium"
+            >
+              About
+            </Link>
+            <Link
+              href="/features"
+              className="block text-slate-300 hover:text-white transition-colors duration-200 font-medium"
+            >
+              Features
+            </Link>
+            <Link
               href="/lucy"
               className="block text-slate-300 hover:text-white transition-colors duration-200 font-medium"
             >
@@ -172,10 +193,22 @@ export default function Navbar() {
               {t("history")}
             </Link>
             <Link
+              href="/task/result"
+              className="block text-slate-300 hover:text-white transition-colors duration-200 font-medium"
+            >
+              {t("resultList")}
+            </Link>
+            <Link
               href="/subscribe-plan"
               className="block text-slate-300 hover:text-white transition-colors duration-200 font-medium"
             >
               {t("subscribePlan")}
+            </Link>
+            <Link
+              href="/help"
+              className="block text-slate-300 hover:text-white transition-colors duration-200 font-medium"
+            >
+              Help
             </Link>
           </div>
         </div>
