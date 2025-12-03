@@ -3,13 +3,9 @@
 import QuickAccessCard from "@/components/admin/quick-access-card"
 import { FaUserCog, FaShieldAlt } from "react-icons/fa"
 import { useTranslations } from "next-intl"
-import React from "react"
 
 const DashboardPage = () => {
   const t = useTranslations("AdminDashboardPage")
-
-  const userCogIcon = React.createElement(FaUserCog)
-  const shieldIcon = React.createElement(FaShieldAlt)
 
   return (
     <div className="container mx-auto py-8">
@@ -23,13 +19,13 @@ const DashboardPage = () => {
             title={t("roleManagement")}
             description={t("roleManagementDescription")}
             href="/admin/roles"
-            icon={userCogIcon}
+            icon={<FaUserCog />}
           />
           <QuickAccessCard
             title={t("permissionManagement")}
             description={t("permissionManagementDescription")}
             href="/admin/permissions"
-            icon={shieldIcon}
+            icon={<FaShieldAlt />}
           />
         </div>
       </section>
