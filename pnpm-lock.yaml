@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@aws-sdk/client-rds-data':
         specifier: latest
-        version: 3.940.0
+        version: 3.943.0
       '@cloudflare/workers-types':
         specifier: latest
         version: 4.20251202.0
@@ -22,7 +22,7 @@ importers:
         version: 10.1.0
       '@google/genai':
         specifier: latest
-        version: 1.30.0(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)
+        version: 1.30.0(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)
       '@hookform/resolvers':
         specifier: latest
         version: 5.2.2(react-hook-form@7.67.0(react@19.1.0))
@@ -37,13 +37,13 @@ importers:
         version: 0.15.15
       '@modelcontextprotocol/sdk':
         specifier: latest
-        version: 1.23.0(zod@4.1.13)
+        version: 1.24.1(zod@4.1.13)
       '@neondatabase/serverless':
         specifier: latest
         version: 1.0.2
       '@op-engineering/op-sqlite':
         specifier: latest
-        version: 15.1.4(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+        version: 15.1.6(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       '@opentelemetry/api':
         specifier: latest
         version: 1.9.0
@@ -110,6 +110,9 @@ importers:
       '@types/sql.js':
         specifier: latest
         version: 1.4.9
+      '@upstash/ratelimit':
+        specifier: latest
+        version: 2.0.7(@upstash/redis@1.35.7)
       '@upstash/redis':
         specifier: latest
         version: 1.35.7
@@ -151,10 +154,10 @@ importers:
         version: 17.2.3
       drizzle-orm:
         specifier: latest
-        version: 0.44.7(5be2c535bb92a0da7c36768a9eff1035)
+        version: 0.44.7(06a1334af53204eff1ab02ff99831262)
       expo-sqlite:
         specifier: latest
-        version: 16.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+        version: 16.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       fs:
         specifier: latest
         version: 0.0.1-security
@@ -360,48 +363,48 @@ packages:
   '@aws-crypto/util@5.2.0':
     resolution: {integrity: sha512-4RkU9EsI6ZpBve5fseQlGNUWKMa1RLPQ1dnjnQoe07ldfIzcsGb5hC5W0Dm7u423KWzawlrpbjXBrXCEv9zazQ==}
 
-  '@aws-sdk/client-rds-data@3.940.0':
-    resolution: {integrity: sha512-68NH61MvS48CVPfzBNCPdCG4KnNjM+Uj/3DSw7rT9PJvdML9ARS4M2Uqco9POPw+Aj20KBumsEUd6FMVcYBXAA==}
+  '@aws-sdk/client-rds-data@3.943.0':
+    resolution: {integrity: sha512-q4q4on/piYorAJYYQhBj/nLw7V3JbwDo5Wm12qVPKS9Jtc6m6CYFckYgOnSd8O7RrEXI/Zgq+wKSaGb+CUeGBQ==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/client-sso@3.940.0':
-    resolution: {integrity: sha512-SdqJGWVhmIURvCSgkDditHRO+ozubwZk9aCX9MK8qxyOndhobCndW1ozl3hX9psvMAo9Q4bppjuqy/GHWpjB+A==}
+  '@aws-sdk/client-sso@3.943.0':
+    resolution: {integrity: sha512-kOTO2B8Ks2qX73CyKY8PAajtf5n39aMe2spoiOF5EkgSzGV7hZ/HONRDyADlyxwfsX39Q2F2SpPUaXzon32IGw==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/core@3.940.0':
-    resolution: {integrity: sha512-KsGD2FLaX5ngJao1mHxodIVU9VYd1E8810fcYiGwO1PFHDzf5BEkp6D9IdMeQwT8Q6JLYtiiT1Y/o3UCScnGoA==}
+  '@aws-sdk/core@3.943.0':
+    resolution: {integrity: sha512-8CBy2hI9ABF7RBVQuY1bgf/ue+WPmM/hl0adrXFlhnhkaQP0tFY5zhiy1Y+n7V+5f3/ORoHBmCCQmcHDDYJqJQ==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-provider-env@3.940.0':
-    resolution: {integrity: sha512-/G3l5/wbZYP2XEQiOoIkRJmlv15f1P3MSd1a0gz27lHEMrOJOGq66rF1Ca4OJLzapWt3Fy9BPrZAepoAX11kMw==}
+  '@aws-sdk/credential-provider-env@3.943.0':
+    resolution: {integrity: sha512-WnS5w9fK9CTuoZRVSIHLOMcI63oODg9qd1vXMYb7QGLGlfwUm4aG3hdu7i9XvYrpkQfE3dzwWLtXF4ZBuL1Tew==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-provider-http@3.940.0':
-    resolution: {integrity: sha512-dOrc03DHElNBD6N9Okt4U0zhrG4Wix5QUBSZPr5VN8SvmjD9dkrrxOkkJaMCl/bzrW7kbQEp7LuBdbxArMmOZQ==}
+  '@aws-sdk/credential-provider-http@3.943.0':
+    resolution: {integrity: sha512-SA8bUcYDEACdhnhLpZNnWusBpdmj4Vl67Vxp3Zke7SvoWSYbuxa+tiDiC+c92Z4Yq6xNOuLPW912ZPb9/NsSkA==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-provider-ini@3.940.0':
-    resolution: {integrity: sha512-gn7PJQEzb/cnInNFTOaDoCN/hOKqMejNmLof1W5VW95Qk0TPO52lH8R4RmJPnRrwFMswOWswTOpR1roKNLIrcw==}
+  '@aws-sdk/credential-provider-ini@3.943.0':
+    resolution: {integrity: sha512-BcLDb8l4oVW+NkuqXMlO7TnM6lBOWW318ylf4FRED/ply5eaGxkQYqdGvHSqGSN5Rb3vr5Ek0xpzSjeYD7C8Kw==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-provider-login@3.940.0':
-    resolution: {integrity: sha512-fOKC3VZkwa9T2l2VFKWRtfHQPQuISqqNl35ZhcXjWKVwRwl/o7THPMkqI4XwgT2noGa7LLYVbWMwnsgSsBqglg==}
+  '@aws-sdk/credential-provider-login@3.943.0':
+    resolution: {integrity: sha512-9iCOVkiRW+evxiJE94RqosCwRrzptAVPhRhGWv4osfYDhjNAvUMyrnZl3T1bjqCoKNcETRKEZIU3dqYHnUkcwQ==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-provider-node@3.940.0':
-    resolution: {integrity: sha512-M8NFAvgvO6xZjiti5kztFiAYmSmSlG3eUfr4ZHSfXYZUA/KUdZU/D6xJyaLnU8cYRWBludb6K9XPKKVwKfqm4g==}
+  '@aws-sdk/credential-provider-node@3.943.0':
+    resolution: {integrity: sha512-14eddaH/gjCWoLSAELVrFOQNyswUYwWphIt+PdsJ/FqVfP4ay2HsiZVEIYbQtmrKHaoLJhiZKwBQRjcqJDZG0w==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-provider-process@3.940.0':
-    resolution: {integrity: sha512-pILBzt5/TYCqRsJb7vZlxmRIe0/T+FZPeml417EK75060ajDGnVJjHcuVdLVIeKoTKm9gmJc9l45gon6PbHyUQ==}
+  '@aws-sdk/credential-provider-process@3.943.0':
+    resolution: {integrity: sha512-GIY/vUkthL33AdjOJ8r9vOosKf/3X+X7LIiACzGxvZZrtoOiRq0LADppdiKIB48vTL63VvW+eRIOFAxE6UDekw==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-provider-sso@3.940.0':
-    resolution: {integrity: sha512-q6JMHIkBlDCOMnA3RAzf8cGfup+8ukhhb50fNpghMs1SNBGhanmaMbZSgLigBRsPQW7fOk2l8jnzdVLS+BB9Uw==}
+  '@aws-sdk/credential-provider-sso@3.943.0':
+    resolution: {integrity: sha512-1c5G11syUrru3D9OO6Uk+ul5e2lX1adb+7zQNyluNaLPXP6Dina6Sy6DFGRLu7tM8+M7luYmbS3w63rpYpaL+A==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/credential-provider-web-identity@3.940.0':
-    resolution: {integrity: sha512-9QLTIkDJHHaYL0nyymO41H8g3ui1yz6Y3GmAN1gYQa6plXisuFBnGAbmKVj7zNvjWaOKdF0dV3dd3AFKEDoJ/w==}
+  '@aws-sdk/credential-provider-web-identity@3.943.0':
+    resolution: {integrity: sha512-VtyGKHxICSb4kKGuaqotxso8JVM8RjCS3UYdIMOxUt9TaFE/CZIfZKtjTr+IJ7M0P7t36wuSUb/jRLyNmGzUUA==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/middleware-host-header@3.936.0':
@@ -416,20 +419,20 @@ packages:
     resolution: {integrity: sha512-l4aGbHpXM45YNgXggIux1HgsCVAvvBoqHPkqLnqMl9QVapfuSTjJHfDYDsx1Xxct6/m7qSMUzanBALhiaGO2fA==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/middleware-user-agent@3.940.0':
-    resolution: {integrity: sha512-nJbLrUj6fY+l2W2rIB9P4Qvpiy0tnTdg/dmixRxrU1z3e8wBdspJlyE+AZN4fuVbeL6rrRrO/zxQC1bB3cw5IA==}
+  '@aws-sdk/middleware-user-agent@3.943.0':
+    resolution: {integrity: sha512-956n4kVEwFNXndXfhSAN5wO+KRgqiWEEY+ECwLvxmmO8uQ0NWOa8l6l65nTtyuiWzMX81c9BvlyNR5EgUeeUvA==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/nested-clients@3.940.0':
-    resolution: {integrity: sha512-x0mdv6DkjXqXEcQj3URbCltEzW6hoy/1uIL+i8gExP6YKrnhiZ7SzuB4gPls2UOpK5UqLiqXjhRLfBb1C9i4Dw==}
+  '@aws-sdk/nested-clients@3.943.0':
+    resolution: {integrity: sha512-anFtB0p2FPuyUnbOULwGmKYqYKSq1M73c9uZ08jR/NCq6Trjq9cuF5TFTeHwjJyPRb4wMf2Qk859oiVfFqnQiw==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/region-config-resolver@3.936.0':
     resolution: {integrity: sha512-wOKhzzWsshXGduxO4pqSiNyL9oUtk4BEvjWm9aaq6Hmfdoydq6v6t0rAGHWPjFwy9z2haovGRi3C8IxdMB4muw==}
     engines: {node: '>=18.0.0'}
 
-  '@aws-sdk/token-providers@3.940.0':
-    resolution: {integrity: sha512-k5qbRe/ZFjW9oWEdzLIa2twRVIEx7p/9rutofyrRysrtEnYh3HAWCngAnwbgKMoiwa806UzcTRx0TjyEpnKcCg==}
+  '@aws-sdk/token-providers@3.943.0':
+    resolution: {integrity: sha512-cRKyIzwfkS+XztXIFPoWORuaxlIswP+a83BJzelX4S1gUZ7FcXB4+lj9Jxjn8SbQhR4TPU3Owbpu+S7pd6IRbQ==}
     engines: {node: '>=18.0.0'}
 
   '@aws-sdk/types@3.936.0':
@@ -447,8 +450,8 @@ packages:
   '@aws-sdk/util-user-agent-browser@3.936.0':
     resolution: {integrity: sha512-eZ/XF6NxMtu+iCma58GRNRxSq4lHo6zHQLOZRIeL/ghqYJirqHdenMOwrzPettj60KWlv827RVebP9oNVrwZbw==}
 
-  '@aws-sdk/util-user-agent-node@3.940.0':
-    resolution: {integrity: sha512-dlD/F+L/jN26I8Zg5x0oDGJiA+/WEQmnSE27fi5ydvYnpfQLwThtQo9SsNS47XSR/SOULaaoC9qx929rZuo74A==}
+  '@aws-sdk/util-user-agent-node@3.943.0':
+    resolution: {integrity: sha512-gn+ILprVRrgAgTIBk2TDsJLRClzIOdStQFeFTcN0qpL8Z4GBCqMFhw7O7X+MM55Stt5s4jAauQ/VvoqmCADnQg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       aws-crt: '>=1.0.0'
@@ -1809,8 +1812,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@modelcontextprotocol/sdk@1.23.0':
-    resolution: {integrity: sha512-MCGd4K9aZKvuSqdoBkdMvZNcYXCkZRYVs/Gh92mdV5IHbctX9H9uIvd4X93+9g8tBbXv08sxc/QHXTzf8y65bA==}
+  '@modelcontextprotocol/sdk@1.24.1':
+    resolution: {integrity: sha512-YTg4v6bKSst8EJM8NXHC3nGm8kgHD08IbIBbognUeLAgGLVgLpYrgQswzLQd4OyTL4l614ejhqsDrV1//t02Qw==}
     engines: {node: '>=18'}
     peerDependencies:
       '@cfworker/json-schema': ^4.1.1
@@ -1910,8 +1913,8 @@ packages:
     engines: {node: '>=10'}
     deprecated: This functionality has been moved to @npmcli/fs
 
-  '@op-engineering/op-sqlite@15.1.4':
-    resolution: {integrity: sha512-n50TwcFi2+/NNg7AOjoo7H1Zq2lm17Q4T2pRNV9Ln6n3boFGz2YIa1+OtNNrVG6dxaX5G+N7U98kn9d197Pp1g==}
+  '@op-engineering/op-sqlite@15.1.6':
+    resolution: {integrity: sha512-6goCIQz78K4eUldtfLumIIcESIo3zkm26MrMGBzYMqTdMZvTGShW6NvHZNQmQbxIxGs+yYAVGAfdjVpQhdGFiw==}
     peerDependencies:
       react: '*'
       react-native: '*'
@@ -3288,6 +3291,15 @@ packages:
     resolution: {integrity: sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g==}
     cpu: [x64]
     os: [win32]
+
+  '@upstash/core-analytics@0.0.10':
+    resolution: {integrity: sha512-7qJHGxpQgQr9/vmeS1PktEwvNAF7TI4iJDi8Pu2CFZ9YUGHZH4fOP5TfYlZ4aVxfopnELiE4BS4FBjyK7V1/xQ==}
+    engines: {node: '>=16.0.0'}
+
+  '@upstash/ratelimit@2.0.7':
+    resolution: {integrity: sha512-qNQW4uBPKVk8c4wFGj2S/vfKKQxXx1taSJoSGBN36FeiVBBKHQgsjPbKUijZ9Xu5FyVK+pfiXWKIsQGyoje8Fw==}
+    peerDependencies:
+      '@upstash/redis': ^1.34.3
 
   '@upstash/redis@1.35.7':
     resolution: {integrity: sha512-bdCdKhke+kYUjcLLuGWSeQw7OLuWIx3eyKksyToLBAlGIMX9qiII0ptp8E0y7VFE1yuBxBd/3kSzJ8774Q4g+A==}
@@ -5462,6 +5474,9 @@ packages:
   jiti@2.6.1:
     resolution: {integrity: sha512-ekilCSN1jwRvIbgeg/57YFh8qQDNbwDb9xT/qu2DAHbFFZUicIl4ygVaAvzveMhMVr3LnpSKTNnwt8PoOfmKhQ==}
     hasBin: true
+
+  jose@6.1.3:
+    resolution: {integrity: sha512-0TpaTfihd4QMNwrz/ob2Bp7X04yuxJkjRGi4aKmOqwhov54i6u79oCv7T+C7lo70MKH6BesI3vscD1yb/yzKXQ==}
 
   js-base64@3.7.8:
     resolution: {integrity: sha512-hNngCeKxIUQiEUN3GPJOkz4wF/YvdUdbNL9hsBcMQTkKzboD7T/q3OYOuuPZLUE6dBxSGpwhk5mwuDud7JVAow==}
@@ -7898,21 +7913,21 @@ snapshots:
       '@smithy/util-utf8': 2.3.0
       tslib: 2.8.1
 
-  '@aws-sdk/client-rds-data@3.940.0':
+  '@aws-sdk/client-rds-data@3.943.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/core': 3.940.0
-      '@aws-sdk/credential-provider-node': 3.940.0
+      '@aws-sdk/core': 3.943.0
+      '@aws-sdk/credential-provider-node': 3.943.0
       '@aws-sdk/middleware-host-header': 3.936.0
       '@aws-sdk/middleware-logger': 3.936.0
       '@aws-sdk/middleware-recursion-detection': 3.936.0
-      '@aws-sdk/middleware-user-agent': 3.940.0
+      '@aws-sdk/middleware-user-agent': 3.943.0
       '@aws-sdk/region-config-resolver': 3.936.0
       '@aws-sdk/types': 3.936.0
       '@aws-sdk/util-endpoints': 3.936.0
       '@aws-sdk/util-user-agent-browser': 3.936.0
-      '@aws-sdk/util-user-agent-node': 3.940.0
+      '@aws-sdk/util-user-agent-node': 3.943.0
       '@smithy/config-resolver': 4.4.3
       '@smithy/core': 3.18.6
       '@smithy/fetch-http-handler': 5.3.6
@@ -7942,20 +7957,20 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/client-sso@3.940.0':
+  '@aws-sdk/client-sso@3.943.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/core': 3.940.0
+      '@aws-sdk/core': 3.943.0
       '@aws-sdk/middleware-host-header': 3.936.0
       '@aws-sdk/middleware-logger': 3.936.0
       '@aws-sdk/middleware-recursion-detection': 3.936.0
-      '@aws-sdk/middleware-user-agent': 3.940.0
+      '@aws-sdk/middleware-user-agent': 3.943.0
       '@aws-sdk/region-config-resolver': 3.936.0
       '@aws-sdk/types': 3.936.0
       '@aws-sdk/util-endpoints': 3.936.0
       '@aws-sdk/util-user-agent-browser': 3.936.0
-      '@aws-sdk/util-user-agent-node': 3.940.0
+      '@aws-sdk/util-user-agent-node': 3.943.0
       '@smithy/config-resolver': 4.4.3
       '@smithy/core': 3.18.6
       '@smithy/fetch-http-handler': 5.3.6
@@ -7985,7 +8000,7 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/core@3.940.0':
+  '@aws-sdk/core@3.943.0':
     dependencies:
       '@aws-sdk/types': 3.936.0
       '@aws-sdk/xml-builder': 3.930.0
@@ -8001,17 +8016,17 @@ snapshots:
       '@smithy/util-utf8': 4.2.0
       tslib: 2.8.1
 
-  '@aws-sdk/credential-provider-env@3.940.0':
+  '@aws-sdk/credential-provider-env@3.943.0':
     dependencies:
-      '@aws-sdk/core': 3.940.0
+      '@aws-sdk/core': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/property-provider': 4.2.5
       '@smithy/types': 4.9.0
       tslib: 2.8.1
 
-  '@aws-sdk/credential-provider-http@3.940.0':
+  '@aws-sdk/credential-provider-http@3.943.0':
     dependencies:
-      '@aws-sdk/core': 3.940.0
+      '@aws-sdk/core': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/fetch-http-handler': 5.3.6
       '@smithy/node-http-handler': 4.4.5
@@ -8022,16 +8037,16 @@ snapshots:
       '@smithy/util-stream': 4.5.6
       tslib: 2.8.1
 
-  '@aws-sdk/credential-provider-ini@3.940.0':
+  '@aws-sdk/credential-provider-ini@3.943.0':
     dependencies:
-      '@aws-sdk/core': 3.940.0
-      '@aws-sdk/credential-provider-env': 3.940.0
-      '@aws-sdk/credential-provider-http': 3.940.0
-      '@aws-sdk/credential-provider-login': 3.940.0
-      '@aws-sdk/credential-provider-process': 3.940.0
-      '@aws-sdk/credential-provider-sso': 3.940.0
-      '@aws-sdk/credential-provider-web-identity': 3.940.0
-      '@aws-sdk/nested-clients': 3.940.0
+      '@aws-sdk/core': 3.943.0
+      '@aws-sdk/credential-provider-env': 3.943.0
+      '@aws-sdk/credential-provider-http': 3.943.0
+      '@aws-sdk/credential-provider-login': 3.943.0
+      '@aws-sdk/credential-provider-process': 3.943.0
+      '@aws-sdk/credential-provider-sso': 3.943.0
+      '@aws-sdk/credential-provider-web-identity': 3.943.0
+      '@aws-sdk/nested-clients': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/credential-provider-imds': 4.2.5
       '@smithy/property-provider': 4.2.5
@@ -8041,10 +8056,10 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/credential-provider-login@3.940.0':
+  '@aws-sdk/credential-provider-login@3.943.0':
     dependencies:
-      '@aws-sdk/core': 3.940.0
-      '@aws-sdk/nested-clients': 3.940.0
+      '@aws-sdk/core': 3.943.0
+      '@aws-sdk/nested-clients': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/property-provider': 4.2.5
       '@smithy/protocol-http': 5.3.5
@@ -8054,14 +8069,14 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/credential-provider-node@3.940.0':
+  '@aws-sdk/credential-provider-node@3.943.0':
     dependencies:
-      '@aws-sdk/credential-provider-env': 3.940.0
-      '@aws-sdk/credential-provider-http': 3.940.0
-      '@aws-sdk/credential-provider-ini': 3.940.0
-      '@aws-sdk/credential-provider-process': 3.940.0
-      '@aws-sdk/credential-provider-sso': 3.940.0
-      '@aws-sdk/credential-provider-web-identity': 3.940.0
+      '@aws-sdk/credential-provider-env': 3.943.0
+      '@aws-sdk/credential-provider-http': 3.943.0
+      '@aws-sdk/credential-provider-ini': 3.943.0
+      '@aws-sdk/credential-provider-process': 3.943.0
+      '@aws-sdk/credential-provider-sso': 3.943.0
+      '@aws-sdk/credential-provider-web-identity': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/credential-provider-imds': 4.2.5
       '@smithy/property-provider': 4.2.5
@@ -8071,20 +8086,20 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/credential-provider-process@3.940.0':
+  '@aws-sdk/credential-provider-process@3.943.0':
     dependencies:
-      '@aws-sdk/core': 3.940.0
+      '@aws-sdk/core': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/property-provider': 4.2.5
       '@smithy/shared-ini-file-loader': 4.4.0
       '@smithy/types': 4.9.0
       tslib: 2.8.1
 
-  '@aws-sdk/credential-provider-sso@3.940.0':
+  '@aws-sdk/credential-provider-sso@3.943.0':
     dependencies:
-      '@aws-sdk/client-sso': 3.940.0
-      '@aws-sdk/core': 3.940.0
-      '@aws-sdk/token-providers': 3.940.0
+      '@aws-sdk/client-sso': 3.943.0
+      '@aws-sdk/core': 3.943.0
+      '@aws-sdk/token-providers': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/property-provider': 4.2.5
       '@smithy/shared-ini-file-loader': 4.4.0
@@ -8093,10 +8108,10 @@ snapshots:
     transitivePeerDependencies:
       - aws-crt
 
-  '@aws-sdk/credential-provider-web-identity@3.940.0':
+  '@aws-sdk/credential-provider-web-identity@3.943.0':
     dependencies:
-      '@aws-sdk/core': 3.940.0
-      '@aws-sdk/nested-clients': 3.940.0
+      '@aws-sdk/core': 3.943.0
+      '@aws-sdk/nested-clients': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/property-provider': 4.2.5
       '@smithy/shared-ini-file-loader': 4.4.0
@@ -8126,9 +8141,9 @@ snapshots:
       '@smithy/types': 4.9.0
       tslib: 2.8.1
 
-  '@aws-sdk/middleware-user-agent@3.940.0':
+  '@aws-sdk/middleware-user-agent@3.943.0':
     dependencies:
-      '@aws-sdk/core': 3.940.0
+      '@aws-sdk/core': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@aws-sdk/util-endpoints': 3.936.0
       '@smithy/core': 3.18.6
@@ -8136,20 +8151,20 @@ snapshots:
       '@smithy/types': 4.9.0
       tslib: 2.8.1
 
-  '@aws-sdk/nested-clients@3.940.0':
+  '@aws-sdk/nested-clients@3.943.0':
     dependencies:
       '@aws-crypto/sha256-browser': 5.2.0
       '@aws-crypto/sha256-js': 5.2.0
-      '@aws-sdk/core': 3.940.0
+      '@aws-sdk/core': 3.943.0
       '@aws-sdk/middleware-host-header': 3.936.0
       '@aws-sdk/middleware-logger': 3.936.0
       '@aws-sdk/middleware-recursion-detection': 3.936.0
-      '@aws-sdk/middleware-user-agent': 3.940.0
+      '@aws-sdk/middleware-user-agent': 3.943.0
       '@aws-sdk/region-config-resolver': 3.936.0
       '@aws-sdk/types': 3.936.0
       '@aws-sdk/util-endpoints': 3.936.0
       '@aws-sdk/util-user-agent-browser': 3.936.0
-      '@aws-sdk/util-user-agent-node': 3.940.0
+      '@aws-sdk/util-user-agent-node': 3.943.0
       '@smithy/config-resolver': 4.4.3
       '@smithy/core': 3.18.6
       '@smithy/fetch-http-handler': 5.3.6
@@ -8187,10 +8202,10 @@ snapshots:
       '@smithy/types': 4.9.0
       tslib: 2.8.1
 
-  '@aws-sdk/token-providers@3.940.0':
+  '@aws-sdk/token-providers@3.943.0':
     dependencies:
-      '@aws-sdk/core': 3.940.0
-      '@aws-sdk/nested-clients': 3.940.0
+      '@aws-sdk/core': 3.943.0
+      '@aws-sdk/nested-clients': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/property-provider': 4.2.5
       '@smithy/shared-ini-file-loader': 4.4.0
@@ -8223,9 +8238,9 @@ snapshots:
       bowser: 2.13.1
       tslib: 2.8.1
 
-  '@aws-sdk/util-user-agent-node@3.940.0':
+  '@aws-sdk/util-user-agent-node@3.943.0':
     dependencies:
-      '@aws-sdk/middleware-user-agent': 3.940.0
+      '@aws-sdk/middleware-user-agent': 3.943.0
       '@aws-sdk/types': 3.936.0
       '@smithy/node-config-provider': 4.3.5
       '@smithy/types': 4.9.0
@@ -9057,7 +9072,7 @@ snapshots:
 
   '@eslint/js@8.49.0': {}
 
-  '@expo/cli@54.0.16(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))':
+  '@expo/cli@54.0.16(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))':
     dependencies:
       '@0no-co/graphql.web': 1.2.0
       '@expo/code-signing-certificates': 0.0.5
@@ -9067,13 +9082,13 @@ snapshots:
       '@expo/env': 2.0.7
       '@expo/image-utils': 0.8.7
       '@expo/json-file': 10.0.7
-      '@expo/mcp-tunnel': 0.1.0(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)
+      '@expo/mcp-tunnel': 0.1.0(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)
       '@expo/metro': 54.1.0(bufferutil@4.0.9)
-      '@expo/metro-config': 54.0.9(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))
+      '@expo/metro-config': 54.0.9(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))
       '@expo/osascript': 2.3.7
       '@expo/package-manager': 1.9.8
       '@expo/plist': 0.4.7
-      '@expo/prebuild-config': 54.0.6(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))
+      '@expo/prebuild-config': 54.0.6(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))
       '@expo/schema-utils': 0.1.7
       '@expo/spawn-async': 1.7.2
       '@expo/ws-tunnel': 1.0.6
@@ -9092,7 +9107,7 @@ snapshots:
       connect: 3.7.0
       debug: 4.4.3
       env-editor: 0.4.2
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       expo-server: 1.0.4
       freeport-async: 2.0.0
       getenv: 2.0.0
@@ -9236,18 +9251,18 @@ snapshots:
       '@babel/code-frame': 7.10.4
       json5: 2.2.3
 
-  '@expo/mcp-tunnel@0.1.0(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)':
+  '@expo/mcp-tunnel@0.1.0(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)':
     dependencies:
       ws: 8.18.3(bufferutil@4.0.9)
       zod: 3.25.76
       zod-to-json-schema: 3.25.0(zod@3.25.76)
     optionalDependencies:
-      '@modelcontextprotocol/sdk': 1.23.0(zod@4.1.13)
+      '@modelcontextprotocol/sdk': 1.24.1(zod@4.1.13)
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
 
-  '@expo/metro-config@54.0.9(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))':
+  '@expo/metro-config@54.0.9(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))':
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/core': 7.28.5
@@ -9271,7 +9286,7 @@ snapshots:
       postcss: 8.4.49
       resolve-from: 5.0.0
     optionalDependencies:
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -9316,7 +9331,7 @@ snapshots:
       base64-js: 1.5.1
       xmlbuilder: 15.1.1
 
-  '@expo/prebuild-config@54.0.6(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))':
+  '@expo/prebuild-config@54.0.6(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))':
     dependencies:
       '@expo/config': 12.0.10
       '@expo/config-plugins': 54.0.2
@@ -9325,7 +9340,7 @@ snapshots:
       '@expo/json-file': 10.0.7
       '@react-native/normalize-colors': 0.81.5
       debug: 4.4.3
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       resolve-from: 5.0.0
       semver: 7.7.3
       xml2js: 0.6.0
@@ -9342,9 +9357,9 @@ snapshots:
 
   '@expo/sudo-prompt@9.3.2': {}
 
-  '@expo/vector-icons@15.0.3(expo-font@14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)':
+  '@expo/vector-icons@15.0.3(expo-font@14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)':
     dependencies:
-      expo-font: 14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo-font: 14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       react: 19.1.0
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)
 
@@ -9409,12 +9424,12 @@ snapshots:
   '@gar/promisify@1.1.3':
     optional: true
 
-  '@google/genai@1.30.0(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)':
+  '@google/genai@1.30.0(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)':
     dependencies:
       google-auth-library: 10.5.0
       ws: 8.18.3(bufferutil@4.0.9)
     optionalDependencies:
-      '@modelcontextprotocol/sdk': 1.23.0(zod@4.1.13)
+      '@modelcontextprotocol/sdk': 1.24.1(zod@4.1.13)
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -9831,7 +9846,7 @@ snapshots:
   '@libsql/win32-x64-msvc@0.5.22':
     optional: true
 
-  '@modelcontextprotocol/sdk@1.23.0(zod@4.1.13)':
+  '@modelcontextprotocol/sdk@1.24.1(zod@4.1.13)':
     dependencies:
       ajv: 8.17.1
       ajv-formats: 3.0.1(ajv@8.17.1)
@@ -9842,6 +9857,7 @@ snapshots:
       eventsource-parser: 3.0.6
       express: 5.2.1
       express-rate-limit: 7.5.1(express@5.2.1)
+      jose: 6.1.3
       pkce-challenge: 5.0.1
       raw-body: 3.0.2
       zod: 4.1.13
@@ -9923,7 +9939,7 @@ snapshots:
       rimraf: 3.0.2
     optional: true
 
-  '@op-engineering/op-sqlite@15.1.4(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)':
+  '@op-engineering/op-sqlite@15.1.6(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)':
     dependencies:
       react: 19.1.0
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)
@@ -11441,6 +11457,15 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.11.1':
     optional: true
 
+  '@upstash/core-analytics@0.0.10':
+    dependencies:
+      '@upstash/redis': 1.35.7
+
+  '@upstash/ratelimit@2.0.7(@upstash/redis@1.35.7)':
+    dependencies:
+      '@upstash/core-analytics': 0.0.10
+      '@upstash/redis': 1.35.7
+
   '@upstash/redis@1.35.7':
     dependencies:
       uncrypto: 0.1.3
@@ -11794,7 +11819,7 @@ snapshots:
       '@babel/plugin-syntax-private-property-in-object': 7.14.5(@babel/core@7.28.5)
       '@babel/plugin-syntax-top-level-await': 7.14.5(@babel/core@7.28.5)
 
-  babel-preset-expo@54.0.7(@babel/core@7.28.5)(@babel/runtime@7.28.4)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-refresh@0.14.2):
+  babel-preset-expo@54.0.7(@babel/core@7.28.5)(@babel/runtime@7.28.4)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-refresh@0.14.2):
     dependencies:
       '@babel/helper-module-imports': 7.27.1
       '@babel/plugin-proposal-decorators': 7.28.0(@babel/core@7.28.5)
@@ -11821,7 +11846,7 @@ snapshots:
       resolve-from: 5.0.0
     optionalDependencies:
       '@babel/runtime': 7.28.4
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
@@ -12394,15 +12419,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.44.7(5be2c535bb92a0da7c36768a9eff1035):
+  drizzle-orm@0.44.7(06a1334af53204eff1ab02ff99831262):
     optionalDependencies:
-      '@aws-sdk/client-rds-data': 3.940.0
+      '@aws-sdk/client-rds-data': 3.943.0
       '@cloudflare/workers-types': 4.20251202.0
       '@electric-sql/pglite': 0.3.14
       '@libsql/client': 0.15.15(bufferutil@4.0.9)
       '@libsql/client-wasm': 0.15.15
       '@neondatabase/serverless': 1.0.2
-      '@op-engineering/op-sqlite': 15.1.4(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      '@op-engineering/op-sqlite': 15.1.6(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       '@opentelemetry/api': 1.9.0
       '@planetscale/database': 1.19.0
       '@prisma/client': 7.0.1(typescript@5.0.2)
@@ -12415,7 +12440,7 @@ snapshots:
       '@xata.io/client': 0.30.1(typescript@5.0.2)
       better-sqlite3: 12.5.0
       bun-types: 1.3.3
-      expo-sqlite: 16.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo-sqlite: 16.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       gel: 2.2.0
       knex: 3.1.0(better-sqlite3@12.5.0)(mysql2@3.15.3)(pg@8.16.3)(sqlite3@5.1.7)
       kysely: 0.28.8
@@ -12915,40 +12940,40 @@ snapshots:
       jest-message-util: 29.7.0
       jest-util: 29.7.0
 
-  expo-asset@12.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0):
+  expo-asset@12.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0):
     dependencies:
       '@expo/image-utils': 0.8.7
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
-      expo-constants: 18.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo-constants: 18.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))
       react: 19.1.0
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)
     transitivePeerDependencies:
       - supports-color
 
-  expo-constants@18.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)):
+  expo-constants@18.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)):
     dependencies:
       '@expo/config': 12.0.10
       '@expo/env': 2.0.7
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)
     transitivePeerDependencies:
       - supports-color
 
-  expo-file-system@19.0.19(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)):
+  expo-file-system@19.0.19(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)):
     dependencies:
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)
 
-  expo-font@14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0):
+  expo-font@14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0):
     dependencies:
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       fontfaceobserver: 2.3.0
       react: 19.1.0
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)
 
-  expo-keep-awake@15.0.7(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react@19.1.0):
+  expo-keep-awake@15.0.7(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react@19.1.0):
     dependencies:
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       react: 19.1.0
 
   expo-modules-autolinking@3.0.22:
@@ -12967,31 +12992,31 @@ snapshots:
 
   expo-server@1.0.4: {}
 
-  expo-sqlite@16.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0):
+  expo-sqlite@16.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0):
     dependencies:
       await-lock: 2.2.2
-      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo: 54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       react: 19.1.0
       react-native: 0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0)
 
-  expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0):
+  expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0):
     dependencies:
       '@babel/runtime': 7.28.4
-      '@expo/cli': 54.0.16(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))
+      '@expo/cli': 54.0.16(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))
       '@expo/config': 12.0.10
       '@expo/config-plugins': 54.0.2
       '@expo/devtools': 0.1.7(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       '@expo/fingerprint': 0.15.3
       '@expo/metro': 54.1.0(bufferutil@4.0.9)
-      '@expo/metro-config': 54.0.9(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))
-      '@expo/vector-icons': 15.0.3(expo-font@14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      '@expo/metro-config': 54.0.9(bufferutil@4.0.9)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))
+      '@expo/vector-icons': 15.0.3(expo-font@14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       '@ungap/structured-clone': 1.3.0
-      babel-preset-expo: 54.0.7(@babel/core@7.28.5)(@babel/runtime@7.28.4)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-refresh@0.14.2)
-      expo-asset: 12.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
-      expo-constants: 18.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))
-      expo-file-system: 19.0.19(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))
-      expo-font: 14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
-      expo-keep-awake: 15.0.7(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.23.0(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react@19.1.0)
+      babel-preset-expo: 54.0.7(@babel/core@7.28.5)(@babel/runtime@7.28.4)(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-refresh@0.14.2)
+      expo-asset: 12.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo-constants: 18.0.10(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))
+      expo-file-system: 19.0.19(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))
+      expo-font: 14.0.9(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
+      expo-keep-awake: 15.0.7(expo@54.0.25(@babel/core@7.28.5)(@modelcontextprotocol/sdk@1.24.1(zod@4.1.13))(bufferutil@4.0.9)(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0))(react@19.1.0)
       expo-modules-autolinking: 3.0.22
       expo-modules-core: 3.0.26(react-native@0.82.1(@babel/core@7.28.5)(@types/react@19.1.4)(bufferutil@4.0.9)(react@19.1.0))(react@19.1.0)
       pretty-format: 29.7.0
@@ -14114,6 +14139,8 @@ snapshots:
   jimp-compact@0.16.1: {}
 
   jiti@2.6.1: {}
+
+  jose@6.1.3: {}
 
   js-base64@3.7.8: {}
 

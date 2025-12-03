@@ -5,6 +5,7 @@ import { LucyChatsEdit } from "@/lib/db/crud/lucy"
 import { LucyMessagesEdit } from "@/lib/db/crud/lucy"
 import type { UserContext } from "@/lib/types/auth/user-context.bean"
 import { chatWithLucy } from "@/features/lucy/services/ai-service"
+import { checkRateLimit } from "@/lib/rate-limiting/redis-limiter"
 
 interface SendMessageInput {
   chatId?: string
@@ -29,6 +30,8 @@ interface SendMessageResult {
     args: Record<string, any>
   }[]
   error?: string
+  rateLimitExceeded?: boolean
+  retryAfter?: number
 }
 
 /**
@@ -40,6 +43,18 @@ export const sendMessage = dataActionWithPermission(
     try {
       if (!userContext.id) {
         return { success: false, chatId: "", userMessageId: "", error: "Not authenticated" }
+      }
+
+      const rateLimit = await checkRateLimit(userContext.id, "chat")
+      if (!rateLimit.allowed) {
+        return {
+          success: false,
+          chatId: input.chatId || "",
+          userMessageId: "",
+          error: `Rate limit exceeded. Try again in ${rateLimit.retryAfter} seconds.`,
+          rateLimitExceeded: true,
+          retryAfter: rateLimit.retryAfter,
+        }
       }
 
       // Get or create chat
@@ -107,7 +122,7 @@ export const sendMessage = dataActionWithPermission(
         })),
       }
     } catch (error: any) {
-      console.error("Lucy sendMessage error:", error)
+      console.error("[v0] Lucy sendMessage error:", error)
       return {
         success: false,
         chatId: input.chatId || "",
