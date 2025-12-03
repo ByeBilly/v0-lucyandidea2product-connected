@@ -1,8 +1,8 @@
 "use client"
 
 import QuickAccessCard from "@/components/admin/quick-access-card"
-import { FaUserCog, FaShieldAlt } from "react-icons/fa"
 import { useTranslations } from "next-intl"
+import { UserCog, Shield } from "lucide-react"
 
 const DashboardPage = () => {
   const t = useTranslations("AdminDashboardPage")
@@ -19,13 +19,13 @@ const DashboardPage = () => {
             title={t("roleManagement")}
             description={t("roleManagementDescription")}
             href="/admin/roles"
-            icon={<FaUserCog className="h-5 w-5" />}
+            icon={<UserCog className="h-5 w-5" />}
           />
           <QuickAccessCard
             title={t("permissionManagement")}
             description={t("permissionManagementDescription")}
             href="/admin/permissions"
-            icon={<FaShieldAlt className="h-5 w-5" />}
+            icon={<Shield className="h-5 w-5" />}
           />
         </div>
       </section>

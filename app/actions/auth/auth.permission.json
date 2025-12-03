@@ -6,84 +6,96 @@
         "authStatus": "anonymous",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "User login with email and password"
+        "description": "User login with email and password",
+        "permissionScope": "action"
       },
       "oauth_sign_in": {
         "title": "OAuth Login",
         "authStatus": "anonymous",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "User login with third-party OAuth"
+        "description": "User login with third-party OAuth",
+        "permissionScope": "action"
       },
       "getCurrentUserProfile": {
         "title": "Get Current User Information",
         "authStatus": "anonymous",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Get current user information - returns empty when not logged in, simplifying initialization"
+        "description": "Get current user information - returns empty when not logged in, simplifying initialization",
+        "permissionScope": "action"
       },
       "listUserProfile": {
         "title": "Get User List",
         "authStatus": "authenticated",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Get user list information"
+        "description": "Get user list information",
+        "permissionScope": "action"
       },
       "updateAccount": {
         "title": "Update Account Information",
         "authStatus": "authenticated",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Update user account information"
+        "description": "Update user account information",
+        "permissionScope": "action"
       },
       "updateAccountByAdmin": {
         "title": "Update Account By Admin",
         "authStatus": "authenticated",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Update user account by admin"
+        "description": "Update user account by admin",
+        "permissionScope": "action"
       },
       "deleteAccount": {
         "title": "Delete Account",
         "authStatus": "authenticated",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Delete user account"
+        "description": "Delete user account",
+        "permissionScope": "action"
       },
       "register_user": {
         "title": "User Registration",
         "authStatus": "anonymous",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "New user account registration"
+        "description": "New user account registration",
+        "permissionScope": "action"
       },
       "verify_email": {
         "title": "Verify Email",
         "authStatus": "anonymous",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Verify user registration email"
+        "description": "Verify user registration email",
+        "permissionScope": "action"
       },
       "request_password_reset": {
         "title": "Request Password Reset",
         "authStatus": "anonymous",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Request user password reset"
+        "description": "Request user password reset",
+        "permissionScope": "action"
       },
       "update_password_from_reset": {
         "title": "Update Password via Reset Token",
         "authStatus": "anonymous",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Update user password using reset token"
+        "description": "Update user password using reset token",
+        "permissionScope": "action"
       },
       "update_password": {
         "title": "Update Password",
         "authStatus": "authenticated",
         "activeStatus": "active",
         "rejectAction": "throw",
-        "description": "Update the current logged-in user's password"
+        "description": "Update the current logged-in user's password",
+        "permissionScope": "action"
       }
     }
   }

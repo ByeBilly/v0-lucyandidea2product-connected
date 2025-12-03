@@ -87,7 +87,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "latest",
-    "react-icons": "latest",
+    "react-icons": "^5.5.0",
     "react-markdown": "latest",
     "react-paginate": "latest",
     "recharts": "latest",
