@@ -19,13 +19,13 @@ const DashboardPage = () => {
             title={t("roleManagement")}
             description={t("roleManagementDescription")}
             href="/admin/roles"
-            icon={<FaUserCog />}
+            icon={<FaUserCog className="h-5 w-5" />}
           />
           <QuickAccessCard
             title={t("permissionManagement")}
             description={t("permissionManagementDescription")}
             href="/admin/permissions"
-            icon={<FaShieldAlt />}
+            icon={<FaShieldAlt className="h-5 w-5" />}
           />
         </div>
       </section>

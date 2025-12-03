@@ -1,11 +1,4 @@
 {
-  "metadata": {
-    "module": "lucy",
-    "description": "Lucy creative companion feature permissions",
-    "owner": "lucy-team",
-    "version": "1.0.0",
-    "lastUpdated": "2025-11-30"
-  },
   "permissions": {
     "page": {
       "/lucy": {
