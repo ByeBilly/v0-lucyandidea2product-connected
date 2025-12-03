@@ -1,11 +1,4 @@
 {
-  "metadata": {
-    "module": "auth",
-    "description": "Core functional permission configuration for the user module",
-    "owner": "auth-team",
-    "version": "1.0.0",
-    "lastUpdated": "2025-12-03"
-  },
   "permissions": {
     "action": {
       "sign_in": {
@@ -92,7 +85,6 @@
         "rejectAction": "throw",
         "description": "Update the current logged-in user's password"
       }
-    },
-    "component": {}
+    }
   }
 }

@@ -43,6 +43,7 @@
     "@radix-ui/react-label": "latest",
     "@radix-ui/react-radio-group": "latest",
     "@radix-ui/react-select": "latest",
+    "@radix-ui/react-slider": "^1.2.1",
     "@radix-ui/react-slot": "latest",
     "@radix-ui/react-tabs": "latest",
     "@radix-ui/react-toast": "^1.2.14",
