@@ -6,7 +6,8 @@
         "description": "Access to Lucy creative companion",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "redirect"
+        "rejectAction": "redirect",
+        "permissionScope": "page"
       }
     },
     "action": {
@@ -15,56 +16,64 @@
         "description": "Send a chat message to Lucy AI",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "throw"
+        "rejectAction": "throw",
+        "permissionScope": "action"
       },
       "lucyGenerateImage": {
         "title": "Generate Image via Lucy",
         "description": "Generate an image using Lucy's Gemini integration",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "throw"
+        "rejectAction": "throw",
+        "permissionScope": "action"
       },
       "lucyGenerateVideo": {
         "title": "Generate Video via Lucy",
         "description": "Generate a video using Lucy's Gemini integration",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "throw"
+        "rejectAction": "throw",
+        "permissionScope": "action"
       },
       "lucyAnimateImage": {
         "title": "Animate Image via Lucy",
         "description": "Animate an uploaded image using Lucy's Gemini integration",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "throw"
+        "rejectAction": "throw",
+        "permissionScope": "action"
       },
       "lucyGenerateAudio": {
         "title": "Generate Audio via Lucy",
         "description": "Generate voiceover/audio using Lucy's Gemini integration",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "throw"
+        "rejectAction": "throw",
+        "permissionScope": "action"
       },
       "lucyGetChatHistory": {
         "title": "Get Lucy Chat History",
         "description": "Retrieve chat history for the current user",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "throw"
+        "rejectAction": "throw",
+        "permissionScope": "action"
       },
       "lucyGetAssets": {
         "title": "Get Lucy Assets",
         "description": "Retrieve generated assets for the current user",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "throw"
+        "rejectAction": "throw",
+        "permissionScope": "action"
       },
       "lucyDeleteAsset": {
         "title": "Delete Lucy Asset",
         "description": "Delete a generated asset",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "throw"
+        "rejectAction": "throw",
+        "permissionScope": "action"
       }
     },
     "component": {
@@ -73,7 +82,8 @@
         "description": "Access to cinema mode feature",
         "authStatus": "authenticated",
         "activeStatus": "inactive",
-        "rejectAction": "hide"
+        "rejectAction": "hide",
+        "permissionScope": "component"
       }
     }
   }

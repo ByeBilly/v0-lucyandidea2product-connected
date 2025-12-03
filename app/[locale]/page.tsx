@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react"
 import { toast } from "sonner"
+import { BUILD_TIME } from "@/lib/build-time"
 
 export default function LandingPage() {
   const [email, setEmail] = useState("")
@@ -46,8 +47,6 @@ export default function LandingPage() {
       setIsLoading(false)
     }
   }
-
-  const buildTime = process.env.NEXT_PUBLIC_BUILD_TIME || new Date().toISOString()
 
   if (isSubmitted) {
     return (
@@ -241,7 +240,7 @@ export default function LandingPage() {
               </div>
               <div>
                 Last Build:{" "}
-                {new Date(buildTime).toLocaleString("en-US", {
+                {new Date(BUILD_TIME).toLocaleString("en-US", {
                   year: "numeric",
                   month: "short",
                   day: "numeric",

@@ -69,7 +69,18 @@
 
 ---
 
-*This file auto-updates with each successful deployment. Manual notes can be added below the line.*
+## False Positive Warnings Explained
+
+The deployment checker shows 40+ warnings about "missing exports" from:
+- lib/types/auth/user-context.bean
+- lib/types/permission/permission-config.dto
+- lib/db/crud/* (all query and edit classes)
+- lib/cache/cache.service
+- utils/drizzle.page
+
+**These are FALSE POSITIVES.** All files exist with correct exports. The warnings appear because v0 cannot properly scan the imported idea2product template files. They do not affect the actual build or deployment.
+
+**Focus on real errors:** Check Vercel deployment logs for actual TypeScript or permission config errors.
 
 ---
 

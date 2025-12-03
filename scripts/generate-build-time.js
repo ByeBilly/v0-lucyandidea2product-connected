@@ -1,22 +1,14 @@
-const fs = require("fs")
-const path = require("path")
+import { writeFileSync } from "fs"
+import { join } from "path"
 
 const buildTime = new Date().toISOString()
-const envPath = path.join(process.cwd(), ".env.production")
 
-// Read existing .env.production if it exists
-let existingEnv = ""
-if (fs.existsSync(envPath)) {
-  existingEnv = fs.readFileSync(envPath, "utf8")
-}
+// Generate a simple JS file that exports the build time
+const content = `// Auto-generated at build time
+export const BUILD_TIME = '${buildTime}'
+`
 
-// Remove any existing BUILD_TIME entry
-const lines = existingEnv.split("\n").filter((line) => !line.startsWith("NEXT_PUBLIC_BUILD_TIME="))
-
-// Add new BUILD_TIME
-lines.push(`NEXT_PUBLIC_BUILD_TIME=${buildTime}`)
-
-// Write back to .env.production
-fs.writeFileSync(envPath, lines.join("\n"))
+const outputPath = join(process.cwd(), "lib", "build-time.ts")
+writeFileSync(outputPath, content)
 
 console.log(`[Build Time] Generated: ${buildTime}`)
