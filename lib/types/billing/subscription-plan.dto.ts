@@ -1,5 +1,5 @@
-import { z } from "zod";
-import { Currency, BillingCycle } from "./enum.bean";
+import { z } from "zod"
+import { Currency, BillingCycle } from "./enum.bean"
 
 export const SubscriptionPlanDtoSchema = z.object({
   id: z.string().uuid(),
@@ -13,9 +13,9 @@ export const SubscriptionPlanDtoSchema = z.object({
   externalId: z.string(),
   externalCheckoutUrl: z.string(),
   isActive: z.boolean().default(true),
-  metadata: z.record(z.any()).nullable(),
+  metadata: z.record(z.string(), z.any()).nullable(),
   createdAt: z.date(),
   updatedAt: z.date(),
-});
+})
 
-export type SubscriptionPlanDto = z.infer<typeof SubscriptionPlanDtoSchema>;
+export type SubscriptionPlanDto = z.infer<typeof SubscriptionPlanDtoSchema>

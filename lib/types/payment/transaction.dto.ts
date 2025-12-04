@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { z } from "zod"
 
 // Transaction status enum
 export const TransactionStatus = {
@@ -8,8 +8,8 @@ export const TransactionStatus = {
   FAILED: "failed", // Failed
   REFUNDED: "refunded", // Refunded
   CANCELED: "canceled", // Canceled
-} as const;
-export type TransactionStatusType = (typeof TransactionStatus)[keyof typeof TransactionStatus];
+} as const
+export type TransactionStatusType = (typeof TransactionStatus)[keyof typeof TransactionStatus]
 
 export const TransactionDtoSchema = z.object({
   id: z.string().uuid(),
@@ -22,9 +22,9 @@ export const TransactionDtoSchema = z.object({
   status: z.string(),
   description: z.string().nullable(),
   currentPeriodEnd: z.date().nullable().optional(), // Add currentPeriodEnd
-  metadata: z.record(z.any()).nullable(),
+  metadata: z.record(z.string(), z.any()).nullable(),
   createdAt: z.date(),
   updatedAt: z.date(),
-});
+})
 
-export type TransactionDto = z.infer<typeof TransactionDtoSchema>;
+export type TransactionDto = z.infer<typeof TransactionDtoSchema>

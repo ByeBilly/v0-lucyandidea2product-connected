@@ -1,5 +1,5 @@
-import { z } from "zod";
-import { Currency } from "./enum.bean";
+import { z } from "zod"
+import { Currency } from "./enum.bean"
 
 export const PremiumPackageDtoSchema = z.object({
   id: z.string().uuid(),
@@ -8,9 +8,9 @@ export const PremiumPackageDtoSchema = z.object({
   price: z.number(),
   currency: z.nativeEnum(Currency),
   isActive: z.boolean().default(true),
-  metadata: z.record(z.any()).nullable(),
+  metadata: z.record(z.string(), z.any()).nullable(),
   createdAt: z.date(),
   updatedAt: z.date(),
-});
+})
 
-export type PremiumPackageDto = z.infer<typeof PremiumPackageDtoSchema>;
+export type PremiumPackageDto = z.infer<typeof PremiumPackageDtoSchema>
