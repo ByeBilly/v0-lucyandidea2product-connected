@@ -1,67 +1,66 @@
-"use server";
+"use server"
 
-import { getTranslations } from 'next-intl/server';
+import { getTranslations } from "next-intl/server"
 
-import { dataActionWithPermission } from "@/lib/permission/guards/action";
-import { PremiumPackageEdit } from "@/lib/db/crud/billing/premium-package.edit";
-import { PremiumPackageMapper } from "@/lib/mappers/billing/premium-package";
-import { AppError } from "@/lib/types/app.error";
-import { PremiumPackageDto, PremiumPackageDtoSchema } from "@/lib/types/billing/premium-package.dto";
-import { NewPremiumPackage } from "@/lib/db/schemas/billing/premium-package";
-import { PremiumPackageQuery } from "@/lib/db/crud/billing/premium-package.query";
-import { SubscriptionPlanQuery } from "@/lib/db/crud/billing/subscription-plan.query";
-import { StripeProductQuery } from "@/lib/db/crud/billing/stripe-product.query";
-import { StripeProductEdit } from "@/lib/db/crud/billing/stripe-product.edit";
-import { NewStripeProduct } from "@/lib/db/schemas/billing/stripe-product";
-import { TransactionEdit } from "@/lib/db/crud/payment/transaction.edit";
-import { NewTransaction } from "@/lib/db/schemas/payment/transaction";
-import { BillingCycle, BillingStatus } from "@/lib/types/billing/enum.bean";
-import Stripe from "stripe";
-import { UserContext } from "@/lib/types/auth/user-context.bean";
-import { createClient } from "@/lib/supabase/server";
-import { UserSubscriptionPlanQuery } from "@/lib/db/crud/billing/user-subscription-plan.query";
+import { dataActionWithPermission } from "@/lib/permission/guards/action"
+import { AppError } from "@/lib/types/app.error"
+import { PremiumPackageQuery } from "@/lib/db/crud/billing/premium-package.query"
+import { SubscriptionPlanQuery } from "@/lib/db/crud/billing/subscription-plan.query"
+import { StripeProductQuery } from "@/lib/db/crud/billing/stripe-product.query"
+import { StripeProductEdit } from "@/lib/db/crud/billing/stripe-product.edit"
+import type { NewStripeProduct } from "@/lib/db/schemas/billing/stripe-product"
+import { TransactionEdit } from "@/lib/db/crud/payment/transaction.edit"
+import { BillingCycle, BillingStatus } from "@/lib/types/billing/enum.bean"
+import Stripe from "stripe"
+import type { UserContext } from "@/lib/types/auth/user-context.bean"
+import { createClient } from "@/lib/supabase/server"
+import { UserSubscriptionPlanQuery } from "@/lib/db/crud/billing/user-subscription-plan.query"
 
 // Initialize Stripe client
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "");
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "")
 
 export const stripeCheckoutSession = dataActionWithPermission(
   "stripeCheckoutSession",
-  async (input: { premiumPackageId?: string; subscriptionPlanId?: string }, userContext: UserContext): Promise<{ sessionId: string }> => {
-    const { premiumPackageId, subscriptionPlanId } = input;
+  async (
+    input: { premiumPackageId?: string; subscriptionPlanId?: string },
+    userContext: UserContext,
+  ): Promise<{ sessionId: string }> => {
+    const { premiumPackageId, subscriptionPlanId } = input
 
-    const t = await getTranslations('BillingStripeCheckoutSession');
+    const t = await getTranslations("BillingStripeCheckoutSession")
     if (!premiumPackageId && !subscriptionPlanId) {
-      throw new AppError("VALIDATION_ERROR", t('validationError.premiumPackageAndSubscriptionPlanRequired'));
+      throw new AppError("VALIDATION_ERROR", t("validationError.premiumPackageAndSubscriptionPlanRequired"))
     }
 
-    
-    const supabase = await createClient();
-    const { data: { user } } = await supabase.auth.getUser();
+    const supabase = await createClient()
+    const {
+      data: { user },
+    } = await supabase.auth.getUser()
 
     if (!user) {
-      throw new AppError("UNAUTHORIZED", t('unauthorized.userNotFound'));
+      throw new AppError("UNAUTHORIZED", t("unauthorized.userNotFound"))
     }
 
-    const existingSubscription = await UserSubscriptionPlanQuery.getByUserIdAndStatus(user.id, BillingStatus.ACTIVE);
+    const existingSubscription = await UserSubscriptionPlanQuery.getByUserIdAndStatus(user.id, BillingStatus.ACTIVE)
     if (existingSubscription) {
-      throw new AppError("VALIDATION_ERROR", "User already has an active subscription, cannot subscribe again.");
+      throw new AppError("VALIDATION_ERROR", "User already has an active subscription, cannot subscribe again.")
     }
 
     try {
-      let stripeProductId;
-      let stripePriceId;
-      let amount;
-      let currency;
+      let stripeProductId: string | undefined
+      let stripePriceId: string | undefined
+      let amount: number | undefined
+      let currency: string | undefined
       if (premiumPackageId) {
-        const premiumPackage = await PremiumPackageQuery.getById(premiumPackageId);
+        const premiumPackage = await PremiumPackageQuery.getById(premiumPackageId)
         if (!premiumPackage) {
-          throw new AppError("NOT_FOUND", t('notFound.premiumPackageNotFound', { premiumPackageId }));
+          throw new AppError("NOT_FOUND", t("notFound.premiumPackageNotFound", { premiumPackageId }))
         }
-        const isTestMode = process.env.STRIPE_SECRET_KEY?.startsWith("sk_test_") ?? false;
-        const stripeAccountId = `${process.env.STRIPE_ACCOUNT_ID}:${isTestMode ? "test" : "live"}`;
-        const priceUnitAmount = Math.round(premiumPackage.price * 100);
+        const isTestMode = process.env.STRIPE_SECRET_KEY?.startsWith("sk_test_") ?? false
+        const stripeAccountId = `${process.env.STRIPE_ACCOUNT_ID}:${isTestMode ? "test" : "live"}`
+        const priceUnitAmount = Math.round(premiumPackage.price * 100)
         if (priceUnitAmount <= 50) {
-          throw new AppError("VALIDATION_ERROR", t('validationError.premiumPackagePriceTooLow'));
+          throw new AppError("VALIDATION_ERROR", t("validationError.premiumPackagePriceTooLow"))
         }
 
         const stripeProduct = await StripeProductQuery.getBySource(
@@ -71,25 +70,25 @@ export const stripeCheckoutSession = dataActionWithPermission(
           premiumPackage.currency,
           priceUnitAmount,
           premiumPackage.name,
-          premiumPackage.description
-        );
+          premiumPackage.description,
+        )
         if (!stripeProduct) {
           const product = await stripe.products.create({
             name: premiumPackage.name,
             description: premiumPackage.description,
-          });
+          })
 
           const price = await stripe.prices.create({
             product: product.id,
             unit_amount: priceUnitAmount,
             currency: premiumPackage.currency,
-          });
-          stripeProductId = product.id;
-          stripePriceId = price.id;
-          amount = priceUnitAmount;
-          currency = premiumPackage.currency;
+          })
+          stripeProductId = product.id
+          stripePriceId = price.id
+          amount = priceUnitAmount
+          currency = premiumPackage.currency
 
-          const stripeProduct: NewStripeProduct = {
+          const stripeProductData: NewStripeProduct = {
             sourceId: premiumPackage.id,
             sourceType: "premium_package",
             stripeAccountId,
@@ -99,24 +98,24 @@ export const stripeCheckoutSession = dataActionWithPermission(
             priceId: stripePriceId,
             priceUnitAmount,
             priceCurrency: premiumPackage.currency,
-          };
-          await StripeProductEdit.create(stripeProduct);
+          }
+          await StripeProductEdit.create(stripeProductData)
         } else {
-          stripeProductId = stripeProduct.productId;
-          stripePriceId = stripeProduct.priceId;
-          amount = stripeProduct.priceUnitAmount;
-          currency = stripeProduct.priceCurrency;
+          stripeProductId = stripeProduct.productId
+          stripePriceId = stripeProduct.priceId
+          amount = stripeProduct.priceUnitAmount
+          currency = stripeProduct.priceCurrency
         }
       } else if (subscriptionPlanId) {
-        const subscriptionPlan = await SubscriptionPlanQuery.getById(subscriptionPlanId);
+        const subscriptionPlan = await SubscriptionPlanQuery.getById(subscriptionPlanId)
         if (!subscriptionPlan) {
-          throw new AppError("NOT_FOUND", t('notFound.subscriptionPlanNotFound', { subscriptionPlanId }));
+          throw new AppError("NOT_FOUND", t("notFound.subscriptionPlanNotFound", { subscriptionPlanId }))
         }
-        const isTestMode = process.env.STRIPE_SECRET_KEY?.startsWith("sk_test_") ?? false;
-        const stripeAccountId = `${process.env.STRIPE_ACCOUNT_ID}:${isTestMode ? "test" : "live"}`;
-        const priceUnitAmount = Math.round(subscriptionPlan.price * 100);
+        const isTestMode = process.env.STRIPE_SECRET_KEY?.startsWith("sk_test_") ?? false
+        const stripeAccountId = `${process.env.STRIPE_ACCOUNT_ID}:${isTestMode ? "test" : "live"}`
+        const priceUnitAmount = Math.round(subscriptionPlan.price * 100)
         if (priceUnitAmount <= 50) {
-          throw new AppError("VALIDATION_ERROR", t('validationError.subscriptionPlanPriceTooLow'));
+          throw new AppError("VALIDATION_ERROR", t("validationError.subscriptionPlanPriceTooLow"))
         }
         const stripeProduct = await StripeProductQuery.getBySource(
           subscriptionPlan.id,
@@ -125,13 +124,13 @@ export const stripeCheckoutSession = dataActionWithPermission(
           subscriptionPlan.currency,
           priceUnitAmount,
           subscriptionPlan.name,
-          subscriptionPlan.description
-        );
+          subscriptionPlan.description,
+        )
         if (!stripeProduct) {
           const product = await stripe.products.create({
             name: subscriptionPlan.name,
             description: subscriptionPlan.description,
-          });
+          })
 
           const price = await stripe.prices.create({
             product: product.id,
@@ -140,13 +139,13 @@ export const stripeCheckoutSession = dataActionWithPermission(
             recurring: {
               interval: subscriptionPlan.billingCycle === BillingCycle.ANNUAL ? "year" : "month",
             },
-          });
-          stripeProductId = product.id;
-          stripePriceId = price.id;
-          amount = priceUnitAmount;
-          currency = subscriptionPlan.currency;
+          })
+          stripeProductId = product.id
+          stripePriceId = price.id
+          amount = priceUnitAmount
+          currency = subscriptionPlan.currency
 
-          const stripeProduct: NewStripeProduct = {
+          const stripeProductData: NewStripeProduct = {
             sourceId: subscriptionPlan.id,
             sourceType: "subscription_plan",
             stripeAccountId,
@@ -157,17 +156,17 @@ export const stripeCheckoutSession = dataActionWithPermission(
             priceUnitAmount,
             priceCurrency: subscriptionPlan.currency,
             priceInterval: subscriptionPlan.billingCycle === BillingCycle.ANNUAL ? "year" : "month",
-          };
-          await StripeProductEdit.create(stripeProduct);
+          }
+          await StripeProductEdit.create(stripeProductData)
         } else {
-          stripeProductId = stripeProduct.productId;
-          stripePriceId = stripeProduct.priceId;
-          amount = stripeProduct.priceUnitAmount;
-          currency = stripeProduct.priceCurrency;
+          stripeProductId = stripeProduct.productId
+          stripePriceId = stripeProduct.priceId
+          amount = stripeProduct.priceUnitAmount
+          currency = stripeProduct.priceCurrency
         }
       }
       if (!stripeProductId || !stripePriceId) {
-        throw new AppError("NOT_FOUND", t('notFound.stripeProductNotFound'));
+        throw new AppError("NOT_FOUND", t("notFound.stripeProductNotFound"))
       }
       const transaction = await TransactionEdit.create({
         userId: userContext.id,
@@ -176,7 +175,7 @@ export const stripeCheckoutSession = dataActionWithPermission(
         amount: amount!,
         currency: currency!,
         status: "pending",
-      });
+      })
 
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
@@ -195,14 +194,14 @@ export const stripeCheckoutSession = dataActionWithPermission(
         },
         success_url: `${process.env.NEXT_PUBLIC_URL || ""}/subscribe-plan/confirm?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${process.env.NEXT_PUBLIC_URL || ""}/subscribe-plan/confirm?session_id={CHECKOUT_SESSION_ID}`,
-      });
-      await TransactionEdit.update(transaction.id, { externalId: session.id });
-      return { sessionId: session.id };
+      })
+      await TransactionEdit.update(transaction.id, { externalId: session.id })
+      return { sessionId: session.id }
     } catch (error: any) {
       if (error instanceof AppError) {
-        throw error;
+        throw error
       }
-      throw new AppError("DATABASE_ERROR", error.message || t('databaseError.failedToUpdatePremiumPackage'));
+      throw new AppError("DATABASE_ERROR", error.message || t("databaseError.failedToUpdatePremiumPackage"))
     }
-  }
-);
+  },
+)
