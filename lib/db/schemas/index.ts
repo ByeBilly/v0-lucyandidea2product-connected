@@ -7,3 +7,5 @@ export * from './task';
 export * from './unibee';
 export * from './common';
 export * from './lucy';
+export * from './marketing';
+

@@ -1,24 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { createClient } from "@supabase/supabase-js"
-
-const getSupabaseClient = () => {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const serviceRoleKey =
-    process.env.NEXT_PRIVATE_SUPABASE_SERVICE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY
-  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-  const supabaseKey = serviceRoleKey || anonKey
-
-  if (!supabaseUrl || !supabaseKey) {
-    throw new Error("Supabase waitlist storage is not configured")
-  }
-
-  return createClient(supabaseUrl, supabaseKey, {
-    auth: {
-      persistSession: false,
-      autoRefreshToken: false,
-    },
-  })
-}
+import { createClient } from "@/lib/supabase/admin"
 
 export async function POST(request: NextRequest) {
   try {
@@ -33,7 +14,8 @@ export async function POST(request: NextRequest) {
     const normalizedEmail = email.trim().toLowerCase()
     const normalizedName = name?.trim() || null
 
-    const supabase = getSupabaseClient()
+    // Use the robust admin client creation from lib/supabase/admin.ts
+    const supabase = await createClient()
 
     // Return existing entry if the email is already on the waitlist
     const { data: existingEntry, error: existingError } = await supabase
@@ -97,43 +79,19 @@ export async function POST(request: NextRequest) {
       error,
     })
 
-    const needsConfig = error instanceof Error && error.message.includes("Supabase waitlist storage")
-
     return NextResponse.json(
       {
-        error: needsConfig
-          ? "Waitlist storage is not configured. Please add Supabase credentials."
-          : "Failed to join waitlist. Please try again.",
+        error: "Failed to join waitlist. Please try again.",
       },
-      { status: needsConfig ? 503 : 500 },
+      { status: 500 },
     )
   }
 }
 
 export async function GET(request: NextRequest) {
   try {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const readableKey =
-      process.env.NEXT_PRIVATE_SUPABASE_SERVICE_KEY ||
-      process.env.SUPABASE_SERVICE_ROLE_KEY ||
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-
-    if (!supabaseUrl || !readableKey) {
-      return NextResponse.json(
-        {
-          signups: [],
-          message: "Supabase not configured. Check server logs for waitlist signups.",
-        },
-        { status: 200 },
-      )
-    }
-
-    const supabase = createClient(supabaseUrl, readableKey, {
-      auth: {
-        persistSession: false,
-        autoRefreshToken: false,
-      },
-    })
+    // Use the robust admin client creation from lib/supabase/admin.ts
+    const supabase = await createClient()
 
     const { data, error } = await supabase
       .from("waitlist")
