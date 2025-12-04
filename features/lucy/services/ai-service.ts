@@ -4,7 +4,7 @@
  * Uses Vercel AI Gateway to access multiple providers
  */
 
-import { generateText, streamText } from "ai"
+import { generateText, streamText, tool } from "ai"
 import { z } from "zod"
 
 export const PRICING = {
@@ -73,18 +73,18 @@ export const chatWithLucy = async (
     model,
     messages: [systemMessage, ...messages],
     tools: {
-      generate_image: {
+      generate_image: tool({
         description: `Generate an image based on a prompt. COST: ${PRICING.generate_image} credits.`,
-        schema: imageGenerationSchema,
-      },
-      generate_video: {
+        inputSchema: imageGenerationSchema,
+      }),
+      generate_video: tool({
         description: `Generate a video clip. COST: ${PRICING.generate_video} credits.`,
-        schema: videoGenerationSchema,
-      },
-      generate_audio: {
+        inputSchema: videoGenerationSchema,
+      }),
+      generate_audio: tool({
         description: `Generate audio/voiceover. COST: ${PRICING.generate_audio} credits.`,
-        schema: audioGenerationSchema,
-      },
+        inputSchema: audioGenerationSchema,
+      }),
     },
     maxToolRoundtrips: 2,
   })
@@ -104,18 +104,18 @@ export const streamLucyResponse = async (
     model,
     messages: [systemMessage, ...messages],
     tools: {
-      generate_image: {
+      generate_image: tool({
         description: `Generate an image based on a prompt. COST: ${PRICING.generate_image} credits.`,
-        schema: imageGenerationSchema,
-      },
-      generate_video: {
+        inputSchema: imageGenerationSchema,
+      }),
+      generate_video: tool({
         description: `Generate a video clip. COST: ${PRICING.generate_video} credits.`,
-        schema: videoGenerationSchema,
-      },
-      generate_audio: {
+        inputSchema: videoGenerationSchema,
+      }),
+      generate_audio: tool({
         description: `Generate audio/voiceover. COST: ${PRICING.generate_audio} credits.`,
-        schema: audioGenerationSchema,
-      },
+        inputSchema: audioGenerationSchema,
+      }),
     },
     maxToolRoundtrips: 2,
   })
