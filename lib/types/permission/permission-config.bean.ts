@@ -73,10 +73,10 @@ export const basePermissionSchema = z.object({
 
 export const permissionConfigSchema = z.object({
   permissions: z.object({
-    page: z.record(basePermissionSchema).optional(),
-    api: z.record(basePermissionSchema).optional(),
-    action: z.record(basePermissionSchema).optional(),
-    component: z.record(basePermissionSchema).optional(),
+    page: z.record(z.string(), basePermissionSchema).optional(),
+    api: z.record(z.string(), basePermissionSchema).optional(),
+    action: z.record(z.string(), basePermissionSchema).optional(),
+    component: z.record(z.string(), basePermissionSchema).optional(),
   }),
 })
 
