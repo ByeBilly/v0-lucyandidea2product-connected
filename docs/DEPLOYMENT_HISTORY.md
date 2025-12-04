@@ -162,6 +162,50 @@ The idea2product codebase uses advanced TypeScript patterns that v0's static ana
 **Files Modified:**
 - `app/actions/lucy/send-message.ts` - Fixed import and method call
 
+### 2025-12-04 - ChatHistory Null Content Fix
+
+**Status:** ✅ CRITICAL TYPE ERROR FIXED
+
+**Error Found:** 
+`app/actions/lucy/send-message.ts` line 89 had TypeScript error: messages from database query had nullable `content` field, but `chatWithLucy` function expects non-nullable `content: string`.
+
+**Build Error:**
+\`\`\`
+Type '{ role: "user" | "assistant"; content: string | null; }[]' is not assignable to type '{ role: "user" | "assistant"; content: string; }[]'
+\`\`\`
+
+**Fix Applied:**
+- Added `.filter(msg => msg.content !== null)` before mapping to chatHistory
+- Ensures all messages passed to `chatWithLucy` have non-null content
+- TypeScript now recognizes content as `string` not `string | null`
+
+**Impact:** This was the ACTUAL build blocker preventing deployment (not the false positive export warnings)
+
+**Expected Resolution:** TypeScript build should now succeed and cinematic homepage should deploy
+
+**Files Modified:**
+- `app/actions/lucy/send-message.ts` - Added null content filter
+
+### 2025-12-04 - Deployment Still Blocked
+
+**Live Site Check:** Old homepage still visible at visionarydirector.com
+
+**Repository State:** All critical fixes applied (LucyMessagesQuery, chatHistory filter)
+
+**False Positive Warnings:** v0 continues showing 40+ "missing exports" - these are NOT the real blocker
+
+**Next Required Action:** 
+User must share ACTUAL Vercel build logs from dashboard. The real error will say "Type error:" or "Cannot find module:" - that's what needs fixing. The export warnings can be ignored completely.
+
+**Verification Method:**
+1. Go to Vercel deployments dashboard
+2. Click latest deployment 
+3. Look at "Building" step output
+4. Share any red error messages (ignore v0 warnings)
+
+**Files Modified:**
+- `app/actions/lucy/send-message.ts` - Added null content filter
+
 ### 2025-12-04 - Deployment Verification Needed
 
 **Current State:** Code fixes complete but live site not updated

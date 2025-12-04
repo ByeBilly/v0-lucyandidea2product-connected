@@ -117,10 +117,10 @@ export const sendMessage = dataActionWithPermission(
         userMessageId: userMessage.id,
         botMessageId,
         botText,
-        functionCalls: toolCalls.map((tc) => ({
+        functionCalls: toolCalls.map((tc: any) => ({
           id: tc.toolCallId,
           name: tc.toolName,
-          args: tc.args as Record<string, any>,
+          args: tc.input || {},
         })),
       }
     } catch (error: any) {
