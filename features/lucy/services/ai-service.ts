@@ -86,7 +86,6 @@ export const chatWithLucy = async (
         inputSchema: audioGenerationSchema,
       }),
     },
-    maxSteps: 2,
   })
 
   return result
@@ -117,7 +116,6 @@ export const streamLucyResponse = async (
         inputSchema: audioGenerationSchema,
       }),
     },
-    maxSteps: 2,
   })
 }
 
