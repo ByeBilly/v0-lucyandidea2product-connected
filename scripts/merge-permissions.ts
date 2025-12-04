@@ -1,20 +1,34 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs";
-import { readdir } from "fs/promises";
-import { dirname, join, relative } from "path";
-import { z } from "zod";
-import type { PermissionFileConfig, PermissionsFileMap, PermissionDetail, MergedPermissionFileConfig } from "../lib/types/permission/permission-config.bean";
-import { permissionConfigSchema, PermissionError } from "../lib/types/permission/permission-config.bean";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "fs"
+import { readdir } from "fs/promises"
+import { dirname, join, relative } from "path"
+import type { z } from "zod"
+import type {
+  PermissionFileConfig,
+  PermissionsFileMap,
+  PermissionDetail,
+  MergedPermissionFileConfig,
+} from "../lib/types/permission/permission-config.bean"
+import { permissionConfigSchema, PermissionError } from "../lib/types/permission/permission-config.bean"
 
 // Ignored file patterns
-export const IGNORE_PATTERNS = ["**/node_modules/**", "**/dist/**", "**/build/**", "**/.git/**", "**/.next/**", "**/coverage/**", "**/tmp/**", "**/.cache/**"];
+export const IGNORE_PATTERNS = [
+  "**/node_modules/**",
+  "**/dist/**",
+  "**/build/**",
+  "**/.git/**",
+  "**/.next/**",
+  "**/coverage/**",
+  "**/tmp/**",
+  "**/.cache/**",
+]
 
 export class PermissionCollector {
-  private rootDir: string;
-  private outputPath: string;
+  private rootDir: string
+  private outputPath: string
 
-  constructor(rootDir: string = process.cwd(), outputPath: string = "config/permission.merge.json") {
-    this.rootDir = rootDir;
-    this.outputPath = outputPath;
+  constructor(rootDir: string = process.cwd(), outputPath = "config/permission.merge.json") {
+    this.rootDir = rootDir
+    this.outputPath = outputPath
   }
 
   /**
@@ -23,31 +37,31 @@ export class PermissionCollector {
    */
   private parsePermissionFile(filePath: string): PermissionFileConfig {
     try {
-      const content = readFileSync(filePath, "utf-8");
-      let config: unknown;
+      const content = readFileSync(filePath, "utf-8")
+      let config: unknown
 
       try {
-        config = JSON.parse(content);
+        config = JSON.parse(content)
       } catch (e) {
-        throw new PermissionError(`Permission configuration file JSON format error: ${filePath}`, { error: e, content });
+        throw new PermissionError(`Permission configuration file JSON format error: ${filePath}`, { error: e, content })
       }
 
       try {
-        const validated = permissionConfigSchema.parse(config);
-        return validated;
+        const validated = permissionConfigSchema.parse(config)
+        return validated
       } catch (e) {
-        const zodError = e as z.ZodError;
+        const zodError = e as z.ZodError
         throw new PermissionError(`Permission configuration file validation failed: ${filePath}`, {
           error: zodError,
           config,
-          validationErrors: zodError.errors,
-        });
+          validationErrors: zodError.issues,
+        })
       }
     } catch (error) {
       if (error instanceof PermissionError) {
-        throw error;
+        throw error
       }
-      throw new PermissionError(`Failed to read permission configuration file: ${filePath}`, { error });
+      throw new PermissionError(`Failed to read permission configuration file: ${filePath}`, { error })
     }
   }
 
@@ -58,37 +72,37 @@ export class PermissionCollector {
    * Recursively searches for permission configuration files
    */
   private async searchFiles(dir: string): Promise<string[]> {
-    const files: string[] = [];
+    const files: string[] = []
 
     try {
-      const entries = await readdir(dir, { withFileTypes: true });
+      const entries = await readdir(dir, { withFileTypes: true })
 
       for (const entry of entries) {
-        const fullPath = join(dir, entry.name);
-        const relativePath = relative(this.rootDir, fullPath);
+        const fullPath = join(dir, entry.name)
+        const relativePath = relative(this.rootDir, fullPath)
 
         // Checks if the file is in the ignore list
         if (
           IGNORE_PATTERNS.some((pattern) => {
-            const regex = new RegExp(pattern.replace(/\*\*/g, ".*"));
-            return regex.test(relativePath);
+            const regex = new RegExp(pattern.replace(/\*\*/g, ".*"))
+            return regex.test(relativePath)
           })
         ) {
-          continue;
+          continue
         }
 
         if (entry.isDirectory()) {
-          const subFiles = await this.searchFiles(fullPath);
-          files.push(...subFiles);
+          const subFiles = await this.searchFiles(fullPath)
+          files.push(...subFiles)
         } else if (entry.name.endsWith(".permission.json")) {
-          files.push(fullPath);
+          files.push(fullPath)
         }
       }
     } catch (error) {
-      console.warn(`⚠️ Cannot access directory ${dir}:`, error);
+      console.warn(`⚠️ Cannot access directory ${dir}:`, error)
     }
 
-    return files;
+    return files
   }
 
   /**
@@ -96,10 +110,10 @@ export class PermissionCollector {
    */
   async collectPermissionFiles(): Promise<string[]> {
     try {
-      const files = await this.searchFiles(this.rootDir);
-      return files;
+      const files = await this.searchFiles(this.rootDir)
+      return files
     } catch (error) {
-      throw new PermissionError("Failed to search for permission configuration files", { error });
+      throw new PermissionError("Failed to search for permission configuration files", { error })
     }
   }
 
@@ -117,48 +131,48 @@ export class PermissionCollector {
       generatedAt: new Date().toISOString(),
       sourceFiles: files,
       totalConfigs: 0,
-    };
+    }
 
     const configMap = new Map<
       string,
       {
-        file: string;
-        type: keyof PermissionsFileMap;
-        key: string;
+        file: string
+        type: keyof PermissionsFileMap
+        key: string
       }
-    >();
+    >()
 
     for (const file of files) {
-      const config = this.parsePermissionFile(file);
-      if (!config) continue;
+      const config = this.parsePermissionFile(file)
+      if (!config) continue
 
       // Checks and merges permissions of each type
-      (Object.keys(config.permissions) as Array<keyof PermissionsFileMap>).forEach((type) => {
-        const permissions = config.permissions[type];
-        if (!permissions) return;
+      ;(Object.keys(config.permissions) as Array<keyof PermissionsFileMap>).forEach((type) => {
+        const permissions = config.permissions[type]
+        if (!permissions) return
 
         Object.entries(permissions).forEach(([key, value]) => {
           // Checks for permission key conflicts
-          const existingConfig = configMap.get(key);
+          const existingConfig = configMap.get(key)
           if (existingConfig) {
             throw new PermissionError(`Permission key conflict: "${key}"`, {
               currentFile: file,
               existingFile: existingConfig.file,
               key,
               type,
-            });
+            })
           }
 
           // Records the source of the permission key
-          configMap.set(key, { file, type, key });
+          configMap.set(key, { file, type, key })
           // Merges permission configurations
-          merged.permissions[type]![key] = value as PermissionDetail;
-          merged.totalConfigs++;
-        });
-      });
+          merged.permissions[type]![key] = value as PermissionDetail
+          merged.totalConfigs++
+        })
+      })
     }
 
-    return merged;
+    return merged
   }
 
   /**
@@ -166,26 +180,26 @@ export class PermissionCollector {
    */
   async generateMergedConfig(): Promise<void> {
     try {
-      const files = await this.collectPermissionFiles();
+      const files = await this.collectPermissionFiles()
 
       if (files.length === 0) {
-        return;
+        return
       }
-      const mergedConfig = this.mergePermissionConfigs(files);
+      const mergedConfig = this.mergePermissionConfigs(files)
 
       // Ensures the output directory exists
-      const outputDir = dirname(this.outputPath);
+      const outputDir = dirname(this.outputPath)
       if (!existsSync(outputDir)) {
-        mkdirSync(outputDir, { recursive: true });
+        mkdirSync(outputDir, { recursive: true })
       }
       // Writes the merged configuration
-      writeFileSync(this.outputPath, JSON.stringify(mergedConfig, null, 2));
+      writeFileSync(this.outputPath, JSON.stringify(mergedConfig, null, 2))
     } catch (error) {
-      console.error("❌ Failed to generate merged permission configuration:", error);
-      throw error;
+      console.error("❌ Failed to generate merged permission configuration:", error)
+      throw error
     }
   }
 }
 
 // Export singleton instance
-export const permissionCollector = new PermissionCollector();
+export const permissionCollector = new PermissionCollector()
