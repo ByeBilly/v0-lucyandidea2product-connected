@@ -75,15 +75,15 @@ export const chatWithLucy = async (
     tools: {
       generate_image: {
         description: `Generate an image based on a prompt. COST: ${PRICING.generate_image} credits.`,
-        parameters: imageGenerationSchema,
+        schema: imageGenerationSchema,
       },
       generate_video: {
         description: `Generate a video clip. COST: ${PRICING.generate_video} credits.`,
-        parameters: videoGenerationSchema,
+        schema: videoGenerationSchema,
       },
       generate_audio: {
         description: `Generate audio/voiceover. COST: ${PRICING.generate_audio} credits.`,
-        parameters: audioGenerationSchema,
+        schema: audioGenerationSchema,
       },
     },
     maxToolRoundtrips: 2,
@@ -106,15 +106,15 @@ export const streamLucyResponse = async (
     tools: {
       generate_image: {
         description: `Generate an image based on a prompt. COST: ${PRICING.generate_image} credits.`,
-        parameters: imageGenerationSchema,
+        schema: imageGenerationSchema,
       },
       generate_video: {
         description: `Generate a video clip. COST: ${PRICING.generate_video} credits.`,
-        parameters: videoGenerationSchema,
+        schema: videoGenerationSchema,
       },
       generate_audio: {
         description: `Generate audio/voiceover. COST: ${PRICING.generate_audio} credits.`,
-        parameters: audioGenerationSchema,
+        schema: audioGenerationSchema,
       },
     },
     maxToolRoundtrips: 2,
@@ -130,10 +130,12 @@ export const generateImage = async (prompt: string, aspectRatio = "16:9") => {
 
 export const generateVideo = async (prompt: string, aspectRatio = "16:9") => {
   // This will call WaveSpeed API for actual generation
+  // For now, placeholder
   throw new Error("Connect to WaveSpeed API for video generation")
 }
 
 export const generateAudio = async (prompt: string, voice = "nova") => {
   // This will call WaveSpeed API for actual generation
+  // For now, placeholder
   throw new Error("Connect to WaveSpeed API for audio generation")
 }
