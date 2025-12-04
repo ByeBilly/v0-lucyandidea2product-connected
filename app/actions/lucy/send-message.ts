@@ -2,7 +2,7 @@
 
 import { dataActionWithPermission } from "@/lib/permission/guards/action"
 import { LucyChatsEdit } from "@/lib/db/crud/lucy"
-import { LucyMessagesEdit } from "@/lib/db/crud/lucy"
+import { LucyMessagesEdit, LucyMessagesQuery } from "@/lib/db/crud/lucy"
 import type { UserContext } from "@/lib/types/auth/user-context.bean"
 import { chatWithLucy } from "@/features/lucy/services/ai-service"
 import { checkRateLimit } from "@/lib/rate-limiting/redis-limiter"
@@ -78,7 +78,7 @@ export const sendMessage = dataActionWithPermission(
       // TODO: Get user's current credits from Unibee
       const currentCredits = 100
 
-      const messages = await LucyMessagesEdit.getByChatId(chatId)
+      const messages = await LucyMessagesQuery.findByChatId(chatId)
       const chatHistory = messages.map((m) => ({
         role: m.role as "user" | "assistant",
         content: m.content,
