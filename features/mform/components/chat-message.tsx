@@ -1,13 +1,13 @@
 "use client"
 
-import type { Message } from "ai"
+import type { UIMessage } from "ai"
 import { Card } from "@/components/ui/card"
 import ReactMarkdown from "react-markdown"
 import { Button } from "@/components/ui/button"
 import { Download, Play } from "lucide-react"
 
 interface ChatMessageProps {
-  message: Message
+  message: UIMessage
   onPlayAudio?: (text: string) => void
 }
 
