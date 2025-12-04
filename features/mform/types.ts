@@ -47,3 +47,8 @@ export interface GeneratedAsset {
   model?: string
   createdAt: Date
 }
+
+export interface LucyChatInterfaceProps {
+  userId?: string
+  userCredits?: number
+}
