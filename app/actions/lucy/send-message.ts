@@ -84,8 +84,8 @@ export const sendMessage = dataActionWithPermission(
         content: m.content,
       }))
 
-      // Default to GPT-4o, can override via env for providers like Claude
-      const model = process.env.LUCY_DEFAULT_MODEL || "openai/gpt-4o"
+      // Default to GPT-4o, but can test Claude, Gemini, etc.
+      const model = "openai/gpt-4o" // TODO: Make this configurable per user
       const response = await chatWithLucy(chatHistory, currentCredits, model)
 
       const botText = response.text || ""

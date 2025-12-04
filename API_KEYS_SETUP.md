@@ -84,18 +84,6 @@ No API keys needed - Vercel handles routing to:
 - AWS Bedrock
 - xAI Grok
 
-### Connecting Anthropic Claude Directly
-
-Lucy already understands the Anthropic model names exposed by the Vercel AI SDK. To have her answer with Claude instead of GPT:
-
-1. Generate a Claude API key at https://console.anthropic.com.
-2. Add `ANTHROPIC_API_KEY="sk-ant-..."` to your `.env` or Vercel project (server-side secret).
-3. (Optional) expose it for the BYO mform workflow via `NEXT_PUBLIC_ANTHROPIC_API_KEY`.
-4. Choose Claude as the default chat model by setting `LUCY_DEFAULT_MODEL="anthropic/claude-3-5-sonnet-20241022"` (or another Anthropic model slug).
-5. Restart `bun dev` or redeploy so the new environment variables are loaded.
-
-Remove or change `LUCY_DEFAULT_MODEL` any time to switch between Claude, GPT-4o, Gemini, etc.
-
 ## Adding Keys to Vercel
 
 ### Via Vercel Dashboard
