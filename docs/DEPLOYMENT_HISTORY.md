@@ -117,7 +117,6 @@ All previous deployment blockers (React Icons errors, permission validation, pre
 v0's deployment checker continuously reports 40+ "missing exports" including:
 - lib/types/auth/user-context.bean - UserContext
 - lib/types/permission/permission-config.dto - All permission types
-- lib/types/task/enum.bean - All task enums  
 - lib/db/crud/** - All CRUD query/edit classes
 - lib/cache/cache.service - CacheService
 - utils/drizzle.page - Pagination utilities
@@ -143,6 +142,45 @@ v0's deployment checker continuously reports 40+ "missing exports" including:
 
 **Why This Happens:**
 The idea2product codebase uses advanced TypeScript patterns that v0's static analyzer cannot parse correctly. The warnings are a limitation of v0's checker, not actual code problems.
+
+### 2025-12-04 - LucyMessagesQuery Fix
+
+**Status:** ✅ CRITICAL BUILD ERROR FIXED
+
+**Error Found:** 
+`app/actions/lucy/send-message.ts` line 81 was calling `LucyMessagesEdit.getByChatId()` but that method doesn't exist. The method name is `findByChatId()` and it belongs on `LucyMessagesQuery` not `LucyMessagesEdit`.
+
+**Fix Applied:**
+- Changed import from `LucyMessagesEdit` to `LucyMessagesQuery`
+- Changed method call from `getByChatId()` to `findByChatId()`
+- Query classes handle data retrieval, Edit classes handle mutations
+
+**Impact:** This was blocking TypeScript compilation and preventing deployment
+
+**Expected Resolution:** Build should now succeed and cinematic homepage should deploy
+
+**Files Modified:**
+- `app/actions/lucy/send-message.ts` - Fixed import and method call
+
+### 2025-12-04 - Deployment Verification Needed
+
+**Current State:** Code fixes complete but live site not updated
+
+**Live Site Status:** Still showing old homepage with full navigation bar
+
+**Repository Status:** New cinematic black background homepage code committed
+
+**Possible Causes:**
+1. Latest deployment still in progress on Vercel
+2. CDN caching preventing updates from appearing
+3. Build failed with error not visible in v0 warnings
+4. Git commit not pushed or Vercel not triggering on push
+
+**Required Actions:**
+1. Check Vercel deployments dashboard for latest build status
+2. Look for actual TypeScript errors (not v0 false positive warnings)
+3. Try hard refresh or incognito window to bypass cache
+4. Confirm latest commit with LucyMessagesQuery fix is on main branch
 
 ---
 

@@ -79,10 +79,12 @@ export const sendMessage = dataActionWithPermission(
       const currentCredits = 100
 
       const messages = await LucyMessagesQuery.findByChatId(chatId)
-      const chatHistory = messages.map((m) => ({
-        role: m.role as "user" | "assistant",
-        content: m.content,
-      }))
+      const chatHistory = messages
+        .filter((m) => m.content !== null)
+        .map((m) => ({
+          role: m.role as "user" | "assistant",
+          content: m.content as string,
+        }))
 
       // Default to GPT-4o, but can test Claude, Gemini, etc.
       const model = "openai/gpt-4o" // TODO: Make this configurable per user
