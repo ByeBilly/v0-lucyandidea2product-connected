@@ -1,10 +1,10 @@
-import { writeFileSync } from "fs"
-import { join } from "path"
+const { writeFileSync } = require("fs")
+const { join } = require("path")
 
 const buildTime = new Date().toISOString()
 
 // Generate a simple JS file that exports the build time
-const content = `// Auto-generated at build time
+const content = `// Auto-generated at build time - DO NOT EDIT MANUALLY
 export const BUILD_TIME = '${buildTime}'
 `
 

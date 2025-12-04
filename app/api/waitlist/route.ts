@@ -1,6 +1,25 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { createClient } from "@supabase/supabase-js"
 
+const getSupabaseClient = () => {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const serviceRoleKey =
+    process.env.NEXT_PRIVATE_SUPABASE_SERVICE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY
+  const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  const supabaseKey = serviceRoleKey || anonKey
+
+  if (!supabaseUrl || !supabaseKey) {
+    throw new Error("Supabase waitlist storage is not configured")
+  }
+
+  return createClient(supabaseUrl, supabaseKey, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+    },
+  })
+}
+
 export async function POST(request: NextRequest) {
   try {
     const { email, name } = await request.json()
@@ -11,49 +30,44 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Valid email is required" }, { status: 400 })
     }
 
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    const normalizedEmail = email.trim().toLowerCase()
+    const normalizedName = name?.trim() || null
 
-    if (!supabaseUrl || !supabaseKey) {
-      console.log("[v0] Waitlist signup (Supabase not configured):", {
-        email,
-        name,
-        timestamp: new Date().toISOString(),
-      })
+    const supabase = getSupabaseClient()
+
+    // Return existing entry if the email is already on the waitlist
+    const { data: existingEntry, error: existingError } = await supabase
+      .from("waitlist")
+      .select("id, created_at")
+      .eq("email", normalizedEmail)
+      .maybeSingle()
+
+    if (existingError && existingError.code !== "PGRST116") {
+      console.error("[v0] Supabase waitlist lookup error:", existingError)
+      throw existingError
+    }
+
+    if (existingEntry) {
+      console.log("[v0] Waitlist duplicate detected:", normalizedEmail)
 
       return NextResponse.json(
         {
           success: true,
-          message: "Successfully joined the waitlist! We'll contact you soon.",
+          message: "You're already on the waitlist!",
           position: null,
         },
         { status: 200 },
       )
     }
 
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
     // Insert into waitlist
     const { data: insertData, error: insertError } = await supabase
       .from("waitlist")
-      .insert({ email, name, status: "pending" })
+      .insert({ email: normalizedEmail, name: normalizedName, status: "pending" })
       .select()
       .single()
 
     if (insertError) {
-      // Check if it's a duplicate email error
-      if (insertError.code === "23505") {
-        console.log("[v0] Duplicate email:", email)
-        return NextResponse.json(
-          {
-            success: true,
-            message: "You're already on the waitlist!",
-            position: null,
-          },
-          { status: 200 },
-        )
-      }
-
       console.error("[v0] Supabase insert error:", insertError)
       throw insertError
     }
@@ -82,16 +96,29 @@ export async function POST(request: NextRequest) {
       stack: error instanceof Error ? error.stack : undefined,
       error,
     })
-    return NextResponse.json({ error: "Failed to join waitlist. Please try again." }, { status: 500 })
+
+    const needsConfig = error instanceof Error && error.message.includes("Supabase waitlist storage")
+
+    return NextResponse.json(
+      {
+        error: needsConfig
+          ? "Waitlist storage is not configured. Please add Supabase credentials."
+          : "Failed to join waitlist. Please try again.",
+      },
+      { status: needsConfig ? 503 : 500 },
+    )
   }
 }
 
 export async function GET(request: NextRequest) {
   try {
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+    const readableKey =
+      process.env.NEXT_PRIVATE_SUPABASE_SERVICE_KEY ||
+      process.env.SUPABASE_SERVICE_ROLE_KEY ||
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-    if (!supabaseUrl || !supabaseKey) {
+    if (!supabaseUrl || !readableKey) {
       return NextResponse.json(
         {
           signups: [],
@@ -101,7 +128,12 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const supabase = createClient(supabaseUrl, supabaseKey)
+    const supabase = createClient(supabaseUrl, readableKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    })
 
     const { data, error } = await supabase
       .from("waitlist")

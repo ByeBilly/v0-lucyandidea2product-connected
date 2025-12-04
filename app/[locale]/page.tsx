@@ -9,6 +9,16 @@ import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react"
 import { toast } from "sonner"
 import { BUILD_TIME } from "@/lib/build-time"
 
+const buildTimeFormatter = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZone: "UTC",
+  timeZoneName: "short",
+})
+
 export default function LandingPage() {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
@@ -238,17 +248,7 @@ export default function LandingPage() {
               <div>
                 <span className="text-white font-semibold">VisionaryDirector</span> © 2025
               </div>
-              <div>
-                Last Build:{" "}
-                {new Date(BUILD_TIME).toLocaleString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                  hour: "2-digit",
-                  minute: "2-digit",
-                  timeZoneName: "short",
-                })}
-              </div>
+              <div>Last Build: {buildTimeFormatter.format(new Date(BUILD_TIME))}</div>
             </div>
           </div>
         </footer>
