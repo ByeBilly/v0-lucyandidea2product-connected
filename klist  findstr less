@@ -1,0 +1,155 @@
+warning: in the working copy of 'config/permission.merge.json', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/config/permission.merge.json b/config/permission.merge.json[m
+[1mindex a03f380..7d3a122 100644[m
+[1m--- a/config/permission.merge.json[m
+[1m+++ b/config/permission.merge.json[m
+[36m@@ -223,6 +223,62 @@[m
+         "activeStatus": "inactive",[m
+         "rejectAction": "throw"[m
+       },[m
+[32m+[m[32m      "lucySendMessage": {[m
+[32m+[m[32m        "title": "Send Message to Lucy",[m
+[32m+[m[32m        "description": "Send a chat message to Lucy AI",[m
+[32m+[m[32m        "authStatus": "authenticated",[m
+[32m+[m[32m        "activeStatus": "inactive",[m
+[32m+[m[32m        "rejectAction": "throw"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "lucyGenerateImage": {[m
+[32m+[m[32m        "title": "Generate Image via Lucy",[m
+[32m+[m[32m        "description": "Generate an image using Lucy's Gemini integration",[m
+[32m+[m[32m        "authStatus": "authenticated",[m
+[32m+[m[32m        "activeStatus": "inactive",[m
+[32m+[m[32m        "rejectAction": "throw"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "lucyGenerateVideo": {[m
+[32m+[m[32m        "title": "Generate Video via Lucy",[m
+[32m+[m[32m        "description": "Generate a video using Lucy's Gemini integration",[m
+[32m+[m[32m        "authStatus": "authenticated",[m
+[32m+[m[32m        "activeStatus": "inactive",[m
+[32m+[m[32m        "rejectAction": "throw"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "lucyAnimateImage": {[m
+[32m+[m[32m        "title": "Animate Image via Lucy",[m
+[32m+[m[32m        "description": "Animate an uploaded image using Lucy's Gemini integration",[m
+[32m+[m[32m        "authStatus": "authenticated",[m
+[32m+[m[32m        "activeStatus": "inactive",[m
+[32m+[m[32m        "rejectAction": "throw"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "lucyGenerateAudio": {[m
+[32m+[m[32m        "title": "Generate Audio via Lucy",[m
+[32m+[m[32m        "description": "Generate voiceover/audio using Lucy's Gemini integration",[m
+[32m+[m[32m        "authStatus": "authenticated",[m
+[32m+[m[32m        "activeStatus": "inactive",[m
+[32m+[m[32m        "rejectAction": "throw"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "lucyGetChatHistory": {[m
+[32m+[m[32m        "title": "Get Lucy Chat History",[m
+[32m+[m[32m        "description": "Retrieve chat history for the current user",[m
+[32m+[m[32m        "authStatus": "authenticated",[m
+[32m+[m[32m        "activeStatus": "inactive",[m
+[32m+[m[32m        "rejectAction": "throw"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "lucyGetAssets": {[m
+[32m+[m[32m        "title": "Get Lucy Assets",[m
+[32m+[m[32m        "description": "Retrieve generated assets for the current user",[m
+[32m+[m[32m        "authStatus": "authenticated",[m
+[32m+[m[32m        "activeStatus": "inactive",[m
+[32m+[m[32m        "rejectAction": "throw"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "lucyDeleteAsset": {[m
+[32m+[m[32m        "title": "Delete Lucy Asset",[m
+[32m+[m[32m        "description": "Delete a generated asset",[m
+[32m+[m[32m        "authStatus": "authenticated",[m
+[32m+[m[32m        "activeStatus": "inactive",[m
+[32m+[m[32m        "rejectAction": "throw"[m
+[32m+[m[32m      },[m
+       "createRole": {[m
+         "title": "Create role",[m
+         "description": "Create role",[m
+[36m@@ -376,75 +432,19 @@[m
+         "authStatus": "authenticated",[m
+         "activeStatus": "inactive",[m
+         "rejectAction": "throw"[m
+[31m-      },[m
+[31m-      "lucySendMessage": {[m
+[31m-        "title": "Send Message to Lucy",[m
+[31m-        "description": "Send a chat message to Lucy AI",[m
+[31m-        "authStatus": "authenticated",[m
+[31m-        "activeStatus": "inactive",[m
+[31m-        "rejectAction": "throw"[m
+[31m-      },[m
+[31m-      "lucyGenerateImage": {[m
+[31m-        "title": "Generate Image via Lucy",[m
+[31m-        "description": "Generate an image using Lucy's Gemini integration",[m
+[31m-        "authStatus": "authenticated",[m
+[31m-        "activeStatus": "inactive",[m
+[31m-        "rejectAction": "throw"[m
+[31m-      },[m
+[31m-      "lucyGenerateVideo": {[m
+[31m-        "title": "Generate Video via Lucy",[m
+[31m-        "description": "Generate a video using Lucy's Gemini integration",[m
+[31m-        "authStatus": "authenticated",[m
+[31m-        "activeStatus": "inactive",[m
+[31m-        "rejectAction": "throw"[m
+[31m-      },[m
+[31m-      "lucyAnimateImage": {[m
+[31m-        "title": "Animate Image via Lucy",[m
+[31m-        "description": "Animate an uploaded image using Lucy's Gemini integration",[m
+[31m-        "authStatus": "authenticated",[m
+[31m-        "activeStatus": "inactive",[m
+[31m-        "rejectAction": "throw"[m
+[31m-      },[m
+[31m-      "lucyGenerateAudio": {[m
+[31m-        "title": "Generate Audio via Lucy",[m
+[31m-        "description": "Generate voiceover/audio using Lucy's Gemini integration",[m
+[31m-        "authStatus": "authenticated",[m
+[31m-        "activeStatus": "inactive",[m
+[31m-        "rejectAction": "throw"[m
+[31m-      },[m
+[31m-      "lucyGetChatHistory": {[m
+[31m-        "title": "Get Lucy Chat History",[m
+[31m-        "description": "Retrieve chat history for the current user",[m
+[31m-        "authStatus": "authenticated",[m
+[31m-        "activeStatus": "inactive",[m
+[31m-        "rejectAction": "throw"[m
+[31m-      },[m
+[31m-      "lucyGetAssets": {[m
+[31m-        "title": "Get Lucy Assets",[m
+[31m-        "description": "Retrieve generated assets for the current user",[m
+[31m-        "authStatus": "authenticated",[m
+[31m-        "activeStatus": "inactive",[m
+[31m-        "rejectAction": "throw"[m
+[31m-      },[m
+[31m-      "lucyDeleteAsset": {[m
+[31m-        "title": "Delete Lucy Asset",[m
+[31m-        "description": "Delete a generated asset",[m
+[31m-        "authStatus": "authenticated",[m
+[31m-        "activeStatus": "inactive",[m
+[31m-        "rejectAction": "throw"[m
+       }[m
+     }[m
+   },[m
+[31m-  "generatedAt": "2025-12-01T01:09:11.928Z",[m
+[32m+[m[32m  "generatedAt": "2025-12-02T10:17:09.947Z",[m
+   "sourceFiles": [[m
+[31m-    "S:\\dev\\idea2product\\app\\actions\\auth\\auth.permission.json",[m
+[31m-    "S:\\dev\\idea2product\\app\\actions\\billing\\billing.permission.json",[m
+[31m-    "S:\\dev\\idea2product\\app\\actions\\common\\common.permission.json",[m
+[31m-    "S:\\dev\\idea2product\\app\\actions\\permission\\permission.permission.json",[m
+[31m-    "S:\\dev\\idea2product\\app\\actions\\task\\task.permission.json",[m
+[31m-    "S:\\dev\\idea2product\\app\\actions\\tool\\tool.permission.json",[m
+[31m-    "S:\\dev\\idea2product\\app\\actions\\unibee\\unibee.permission.json",[m
+[31m-    "S:\\dev\\idea2product\\app\\actions\\lucy\\lucy.permission.json"[m
+[32m+[m[32m    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\auth\\auth.permission.json",[m
+[32m+[m[32m    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\billing\\billing.permission.json",[m
+[32m+[m[32m    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\common\\common.permission.json",[m
+[32m+[m[32m    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\lucy\\lucy.permission.json",[m
+[32m+[m[32m    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\permission\\permission.permission.json",[m
+[32m+[m[32m    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\task\\task.permission.json",[m
+[32m+[m[32m    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\tool\\tool.permission.json",[m
+[32m+[m[32m    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\unibee\\unibee.permission.json"[m
+   ],[m
+   "totalConfigs": 61[m
+[31m-}[m
+[32m+[m[32m}[m
+\ No newline at end of file[m

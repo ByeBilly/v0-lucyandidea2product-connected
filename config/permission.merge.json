@@ -223,6 +223,62 @@
         "activeStatus": "inactive",
         "rejectAction": "throw"
       },
+      "lucySendMessage": {
+        "title": "Send Message to Lucy",
+        "description": "Send a chat message to Lucy AI",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGenerateImage": {
+        "title": "Generate Image via Lucy",
+        "description": "Generate an image using Lucy's Gemini integration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGenerateVideo": {
+        "title": "Generate Video via Lucy",
+        "description": "Generate a video using Lucy's Gemini integration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyAnimateImage": {
+        "title": "Animate Image via Lucy",
+        "description": "Animate an uploaded image using Lucy's Gemini integration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGenerateAudio": {
+        "title": "Generate Audio via Lucy",
+        "description": "Generate voiceover/audio using Lucy's Gemini integration",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGetChatHistory": {
+        "title": "Get Lucy Chat History",
+        "description": "Retrieve chat history for the current user",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyGetAssets": {
+        "title": "Get Lucy Assets",
+        "description": "Retrieve generated assets for the current user",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
+      "lucyDeleteAsset": {
+        "title": "Delete Lucy Asset",
+        "description": "Delete a generated asset",
+        "authStatus": "authenticated",
+        "activeStatus": "inactive",
+        "rejectAction": "throw"
+      },
       "createRole": {
         "title": "Create role",
         "description": "Create role",
@@ -376,75 +432,19 @@
         "authStatus": "authenticated",
         "activeStatus": "inactive",
         "rejectAction": "throw"
-      },
-      "lucySendMessage": {
-        "title": "Send Message to Lucy",
-        "description": "Send a chat message to Lucy AI",
-        "authStatus": "authenticated",
-        "activeStatus": "inactive",
-        "rejectAction": "throw"
-      },
-      "lucyGenerateImage": {
-        "title": "Generate Image via Lucy",
-        "description": "Generate an image using Lucy's Gemini integration",
-        "authStatus": "authenticated",
-        "activeStatus": "inactive",
-        "rejectAction": "throw"
-      },
-      "lucyGenerateVideo": {
-        "title": "Generate Video via Lucy",
-        "description": "Generate a video using Lucy's Gemini integration",
-        "authStatus": "authenticated",
-        "activeStatus": "inactive",
-        "rejectAction": "throw"
-      },
-      "lucyAnimateImage": {
-        "title": "Animate Image via Lucy",
-        "description": "Animate an uploaded image using Lucy's Gemini integration",
-        "authStatus": "authenticated",
-        "activeStatus": "inactive",
-        "rejectAction": "throw"
-      },
-      "lucyGenerateAudio": {
-        "title": "Generate Audio via Lucy",
-        "description": "Generate voiceover/audio using Lucy's Gemini integration",
-        "authStatus": "authenticated",
-        "activeStatus": "inactive",
-        "rejectAction": "throw"
-      },
-      "lucyGetChatHistory": {
-        "title": "Get Lucy Chat History",
-        "description": "Retrieve chat history for the current user",
-        "authStatus": "authenticated",
-        "activeStatus": "inactive",
-        "rejectAction": "throw"
-      },
-      "lucyGetAssets": {
-        "title": "Get Lucy Assets",
-        "description": "Retrieve generated assets for the current user",
-        "authStatus": "authenticated",
-        "activeStatus": "inactive",
-        "rejectAction": "throw"
-      },
-      "lucyDeleteAsset": {
-        "title": "Delete Lucy Asset",
-        "description": "Delete a generated asset",
-        "authStatus": "authenticated",
-        "activeStatus": "inactive",
-        "rejectAction": "throw"
       }
     }
   },
-  "generatedAt": "2025-12-01T01:09:11.928Z",
+  "generatedAt": "2025-12-02T10:17:09.947Z",
   "sourceFiles": [
-    "S:\\dev\\idea2product\\app\\actions\\auth\\auth.permission.json",
-    "S:\\dev\\idea2product\\app\\actions\\billing\\billing.permission.json",
-    "S:\\dev\\idea2product\\app\\actions\\common\\common.permission.json",
-    "S:\\dev\\idea2product\\app\\actions\\permission\\permission.permission.json",
-    "S:\\dev\\idea2product\\app\\actions\\task\\task.permission.json",
-    "S:\\dev\\idea2product\\app\\actions\\tool\\tool.permission.json",
-    "S:\\dev\\idea2product\\app\\actions\\unibee\\unibee.permission.json",
-    "S:\\dev\\idea2product\\app\\actions\\lucy\\lucy.permission.json"
+    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\auth\\auth.permission.json",
+    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\billing\\billing.permission.json",
+    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\common\\common.permission.json",
+    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\lucy\\lucy.permission.json",
+    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\permission\\permission.permission.json",
+    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\task\\task.permission.json",
+    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\tool\\tool.permission.json",
+    "S:\\dev\\ByeBillyv0-lucyandidea2product-connected\\app\\actions\\unibee\\unibee.permission.json"
   ],
   "totalConfigs": 61
 }

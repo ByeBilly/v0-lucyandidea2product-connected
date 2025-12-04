@@ -15,6 +15,35 @@ This file tracks all deployment attempts, fixes, and system changes. It is appen
 
 ## Deployment Log
 
+### 2025-12-04 - Waitlist Storage Hardening & Model Selection Upgrade
+
+**Goal:** Ensure the landing-page waitlist truly persists to Supabase in all environments and document the new Claude-ready chat controls.
+
+**Changes Made:**
+- Added `.env.local` bootstrap plus documentation for `NEXT_PRIVATE_SUPABASE_SERVICE_KEY` / `SUPABASE_SERVICE_ROLE_KEY`.
+- Refactored `app/api/waitlist/route.ts` to normalize input, short-circuit duplicates, and always prefer the service role key (falls back to anon only if necessary).
+- Extended Lucy’s server action to read `process.env.LUCY_DEFAULT_MODEL`, enabling Anthropic Claude (or any other AI Gateway model) via configuration instead of code edits.
+- Regenerated `lib/build-time.ts` using the refreshed CommonJS script and rendered the timestamp with a shared `Intl.DateTimeFormat` to eliminate hydration drift.
+- Expanded `API_KEYS_SETUP.md`, `BUILD_TIMESTAMP.md`, and `CURRENT_BUILD_STATUS.md` with precise Supabase + Claude instructions.
+
+**Validation:**
+1. `Invoke-RestMethod -Uri http://localhost:3002/api/waitlist -Method Post -Body '{"email":"test@example.com","name":"Test User"}' -ContentType 'application/json'` → success + position numbers.
+2. `mcp_supabase_execute_sql("select email,name,status from public.waitlist order by created_at desc limit 5")` → confirmed pending records.
+3. Manual reload of landing page (bun dev, port 3002) shows clean hydration and waitlist submission to Supabase.
+
+**Outstanding Items:**
+- Permission merge watcher is still failing (`app/actions/auth/auth.permission.json`); needs separate repair.
+- Production deploy still pending until cinematic homepage replaces the legacy public site.
+
+**Files Modified (non-exhaustive):**
+- `app/api/waitlist/route.ts`
+- `app/actions/lucy/send-message.ts`
+- `app/[locale]/page.tsx`
+- `scripts/generate-build-time.js`, `lib/build-time.ts`
+- `API_KEYS_SETUP.md`, `docs/BUILD_TIMESTAMP.md`, `docs/CURRENT_BUILD_STATUS.md`
+
+---
+
 ### 2025-12-03 - Cinematic Homepage Deployment Attempt
 
 **Goal:** Replace generic homepage with cinematic marketing page at `/`, move original to `/builder`
