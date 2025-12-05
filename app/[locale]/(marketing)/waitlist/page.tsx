@@ -22,7 +22,7 @@ export default function WaitlistPage() {
     setIsLoading(true)
 
     try {
-      console.log("[v0] Submitting waitlist form:", { email, name })
+      console.log("[Waitlist] Submitting form:", { email, name })
 
       const response = await fetch("/api/waitlist", {
         method: "POST",
@@ -30,20 +30,23 @@ export default function WaitlistPage() {
         body: JSON.stringify({ email, name }),
       })
 
-      console.log("[v0] Waitlist response status:", response.status)
+      console.log("[Waitlist] Response status:", response.status)
       const data = await response.json()
-      console.log("[v0] Waitlist response data:", data)
+      console.log("[Waitlist] Response data:", data)
 
       if (response.ok) {
         setIsSubmitted(true)
         setPosition(data.position || null)
         toast.success("Successfully joined the waitlist!")
       } else {
-        toast.error(data.error || "Failed to join waitlist")
+        const errorMsg = data.error || "Failed to join waitlist"
+        const detailsMsg = data.details ? ` (${data.details})` : ""
+        toast.error(errorMsg + detailsMsg)
+        console.error("[Waitlist] Server error:", data)
       }
     } catch (error) {
-      console.error("[v0] Waitlist error caught:", error)
-      toast.error("An error occurred. Please try again.")
+      console.error("[Waitlist] Client error:", error)
+      toast.error("Network error. Please check your connection and try again.")
     } finally {
       setIsLoading(false)
     }

@@ -5,6 +5,7 @@
   "scripts": {
     "prebuild": "node scripts/generate-build-time.js",
     "build": "next build",
+    "check-env": "node scripts/check-env.js",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:seed": "npx tsx lib/db/seed.ts",

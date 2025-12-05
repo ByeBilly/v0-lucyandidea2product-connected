@@ -25,6 +25,7 @@ const ROUTE_PERMISSIONS = {
     "/register",
     "/subscribe-plan",
     "/lucy",
+    "/waitlist",
   ],
   admin: ["/admin", "/admin/*"],
 }
