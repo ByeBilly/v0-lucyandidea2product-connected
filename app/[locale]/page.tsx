@@ -5,6 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { Checkbox } from "@/components/ui/checkbox"
 import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react"
 import { toast } from "sonner"
 import { BUILD_TIME } from "@/lib/build-time"
@@ -252,6 +253,48 @@ export default function LandingPage() {
                   required
                   className="h-14 bg-white/5 border-white/10 text-white placeholder:text-slate-500 text-lg focus:border-white/30"
                 />
+              </div>
+
+              {/* Email preference checklist */}
+              <div className="space-y-3 rounded-xl bg-white/5 border border-white/10 p-4">
+                <p className="text-xs text-slate-400 text-left">
+                  Choose how much you&apos;d like to hear from us — these preferences are just for Visionary Director.
+                </p>
+                <div className="space-y-2 text-left">
+                  <label className="flex items-start gap-3 text-xs text-slate-300">
+                    <Checkbox
+                      className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                      defaultChecked
+                    />
+                    <span>Only email me when I get access. No newsletters or marketing.</span>
+                  </label>
+                  <label className="flex items-start gap-3 text-xs text-slate-300">
+                    <Checkbox
+                      className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                    />
+                    <span>Send the occasional launch update so I know how things are going.</span>
+                  </label>
+                  <label className="flex items-start gap-3 text-xs text-slate-300">
+                    <Checkbox
+                      className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                    />
+                    <span>Invite me to early experiments, private previews, and beta features.</span>
+                  </label>
+                  <label className="flex items-start gap-3 text-xs text-slate-300">
+                    <Checkbox
+                      className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                    />
+                    <span>Help me integrate an advanced bot like this into my website, or send me an embed snippet.</span>
+                  </label>
+                  <label className="flex items-start gap-3 text-xs text-slate-300">
+                    <Checkbox
+                      className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                    />
+                    <span>
+                      I&apos;d like someone from the team to contact me about what Visionary Director can do for me now.
+                    </span>
+                  </label>
+                </div>
               </div>
 
               <Button
