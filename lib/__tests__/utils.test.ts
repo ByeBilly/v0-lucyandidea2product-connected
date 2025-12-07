@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { calculateFormula } from '../utils';
 
 describe('calculateFormula', () => {

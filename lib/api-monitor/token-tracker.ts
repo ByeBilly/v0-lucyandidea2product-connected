@@ -10,6 +10,7 @@
  */
 
 import { db } from '@/lib/db'
+import { sql } from 'drizzle-orm'
 
 // Cost per 1M tokens (update regularly!)
 export const TOKEN_COSTS = {
@@ -94,13 +95,13 @@ export async function getUserSpending(
 
   // Query from your database
   // This is pseudo-code - adapt to your DB schema
-  const usage = await db.query(`
+  const usage = await db.execute(sql`
     SELECT SUM(cost) as total
     FROM api_usage_logs
-    WHERE user_id = $1 AND timestamp >= $2
-  `, [userId, startDate])
+    WHERE user_id = ${userId} AND timestamp >= ${startDate}
+  `)
 
-  return usage?.total || 0
+  return (usage[0] as any)?.total || 0
 }
 
 /**
@@ -147,20 +148,12 @@ export async function checkBudget(
 export async function logUsage(record: UsageRecord): Promise<void> {
   try {
     // Store in your database
-    await db.query(`
+    await db.execute(sql`
       INSERT INTO api_usage_logs (
         user_id, model, input_tokens, output_tokens, 
         cost, timestamp, request_id
-      ) VALUES ($1, $2, $3, $4, $5, $6, $7)
-    `, [
-      record.userId,
-      record.model,
-      record.inputTokens,
-      record.outputTokens,
-      record.cost,
-      record.timestamp,
-      record.requestId
-    ])
+      ) VALUES (${record.userId}, ${record.model}, ${record.inputTokens}, ${record.outputTokens}, ${record.cost}, ${record.timestamp}, ${record.requestId})
+    `)
   } catch (error) {
     console.error('Failed to log usage:', error)
     // Don't throw - logging failure shouldn't break the request
@@ -181,16 +174,19 @@ export function estimateTokens(text: string): number {
  */
 export async function getUserBudgetLimits(userId: string): Promise<BudgetLimits> {
   // Query from your database
-  const limits = await db.query(`
+  const limits = await db.execute(sql`
     SELECT daily_max, monthly_max, per_request_max
-    FROM user_budget_limits
-    WHERE user_id = $1
-  `, [userId])
+    FROM user_metric_limits
+    WHERE user_id = ${userId}
+  `)
 
-  return limits || {
-    dailyMax: 10,      // Default: $10/day
-    monthlyMax: 50,    // Default: $50/month
-    perRequestMax: 1,  // Default: $1/request
+  // Cast to any because row type isn't strict here without Drizzle schema
+  const row = limits[0] as any
+
+  return {
+    dailyMax: row?.daily_max ?? 10,      // Default: $10/day
+    monthlyMax: row?.monthly_max ?? 50,    // Default: $50/month
+    perRequestMax: row?.per_request_max ?? 1,  // Default: $1/request
   }
 }
 
@@ -247,6 +243,8 @@ export async function trackAPICall<T>(
     allowed: true
   }
 }
+
+
 
 
 
