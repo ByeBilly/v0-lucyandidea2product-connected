@@ -103,18 +103,12 @@ export default function LandingPage() {
       {/* Content */}
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-6 pt-20 pb-32">
+        <section className="min-h-screen flex items-center justify-center px-6 pt-10 pb-24">
           <div className="max-w-7xl mx-auto text-center space-y-12">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm backdrop-blur-sm">
-              <Sparkles className="h-4 w-4 text-blue-400" />
-              <span className="text-slate-300">Quantum Collaboration Architecture</span>
-            </div>
-
             {/* Main Headline removed per request */}
             <div className="space-y-6">
               {/* Animated Letter Logo */}
-              <div className="flex flex-col items-center mt-16 mb-8">
+              <div className="flex flex-col items-center mt-8 mb-8">
                 <LetterStrip
                   files={["V.mp4", "I.mp4", "S.mp4", "I.mp4", "O.mp4", "N.mp4", "A.mp4", "R.mp4", "Y.mp4"]}
                   height={120}
@@ -129,7 +123,7 @@ export default function LandingPage() {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 pt-8">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 pt-8">
               {/* Ask me button with video graphic */}
               <Button
                 onClick={() => {
@@ -144,7 +138,7 @@ export default function LandingPage() {
                   muted
                   loop
                   playsInline
-                  className="w-full max-w-xs md:max-w-sm lg:max-w-md rounded-lg"
+                  className="w-full max-w-[12rem] md:max-w-[14rem] lg:max-w-[15rem] rounded-lg"
                 >
                   <source src="/buttons/askmebutton.mp4" type="video/mp4" />
                 </video>
@@ -165,7 +159,7 @@ export default function LandingPage() {
                   muted
                   loop
                   playsInline
-                  className="w-full max-w-xs md:max-w-sm lg:max-w-md rounded-lg"
+                  className="w-full max-w-[12rem] md:max-w-[14rem] lg:max-w-[15rem] rounded-lg"
                 >
                   <source src="/buttons/joinwlbutton.mp4" type="video/mp4" />
                 </video>
