@@ -203,3 +203,5 @@ The waitlist signup is now:
 
 **Main action required:** Configure the three Supabase environment variables (see `WAITLIST_QUICKSTART.md` for step-by-step instructions).
 
+
+

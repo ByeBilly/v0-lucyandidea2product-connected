@@ -12,7 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Zap, Mail, Lock, Eye, EyeOff, ArrowRight, Loader2, ArrowLeft } from 'lucide-react';
 import { signIn } from '@/app/actions/auth/sign-in';
-import { createClient } from '@/lib/supabase/client';
+import { OAuthProvidersGrid } from '@/components/oauth-providers-grid';
 import { ActionState } from '@/lib/types/api.bean';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
@@ -262,54 +262,13 @@ export default function LoginPage() {
               </p>
             </div>
 
-            {/* OAuth Login Buttons */}
-            <div className="mt-6 grid grid-cols-2 gap-3">
-              <div>
-                <form
-                  action={async () => {
-                    const redirectTo = `${window.location.origin}/auto-login?type=social-google`;
-                    const client = createClient();
-                    const { error } = await client.auth.signInWithOAuth({
-                      provider: "google",
-                      options: { redirectTo },
-                    });
-                  }}
-                >
-                  <Button
-                    type="submit"
-                    variant="outline"
-                    className="w-full h-12 bg-slate-700/50 border-slate-600 text-white hover:bg-slate-600/50 hover:border-slate-500"
-                    disabled={pending}
-                  >
-                    <span className="sr-only">{t('signInWithGoogle')}</span>
-                    {t('google')}
-                  </Button>
-                </form>
-              </div>
-
-              <div>
-                <form
-                  action={async () => {
-                    const redirectTo = `${window.location.origin}/auto-login?type=social-github`;
-                    const client = createClient();
-                    const { error } = await client.auth.signInWithOAuth({
-                      provider: "github",
-                      options: { redirectTo },
-                    });
-                  }}
-                >
-                  <Button
-                    type="submit"
-                    variant="outline"
-                    className="w-full h-12 bg-slate-700/50 border-slate-600 text-white hover:bg-slate-600/50 hover:border-slate-500"
-                    disabled={pending}
-                  >
-                    <span className="sr-only">{t('signInWithGitHub')}</span>
-                    {t('github')}
-                  </Button>
-                </form>
-              </div>
-            </div>
+            {/* OAuth Login - The Most Options Ever */}
+            <OAuthProvidersGrid 
+              mode="signin"
+              onLoading={(loading) => {
+                // Handle loading state if needed
+              }}
+            />
           </CardContent>
         </Card>
       </div>

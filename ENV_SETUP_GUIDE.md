@@ -86,3 +86,5 @@ After adding the environment variables:
 - Check server logs for backend errors
 - Verify your Supabase project is active and not paused
 
+
+

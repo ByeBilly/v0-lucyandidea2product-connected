@@ -12,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Zap, Mail, Lock, User, Eye, EyeOff, ArrowRight, ArrowLeft } from 'lucide-react';
 import { register as signUp } from '@/app/actions/auth/register-user';
+import { OAuthProvidersGrid } from '@/components/oauth-providers-grid';
 import { ActionState } from '@/lib/types/api.bean';
 import { useTranslations } from 'next-intl';
 import { toast } from 'sonner';
@@ -280,7 +281,15 @@ export default function SignUpPage() {
               </Button>
             </form>
 
-            <div className="text-center">
+            <div className="text-center space-y-4">
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <span className="w-full border-t border-slate-700" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-slate-800 px-2 text-slate-400">{t('or')}</span>
+                </div>
+              </div>
               <p className="text-sm text-slate-400">
                 {t('existingUserPrompt')}{' '}
                 <Link
@@ -291,6 +300,14 @@ export default function SignUpPage() {
                 </Link>
               </p>
             </div>
+
+            {/* OAuth Sign Up - The Most Options Ever */}
+            <OAuthProvidersGrid 
+              mode="signup" 
+              onLoading={(loading) => {
+                // Handle loading state if needed
+              }}
+            />
           </CardContent>
         </Card>
       </div>

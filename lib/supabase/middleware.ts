@@ -135,8 +135,17 @@ export function isBasicRoute(path: string, routes: string[]) {
  */
 export async function updateSessionAndAuth(request: NextRequest) {
   const { supabase, response } = await createSupabaseMiddlewareClient(request)
-  const path = request.nextUrl.pathname
+  let path = request.nextUrl.pathname
   const method = request.method
+
+  // Strip locale prefix from path for permission checks (e.g., /en/waitlist -> /waitlist)
+  const locales = ["en", "zh-CN"]
+  for (const locale of locales) {
+    if (path.startsWith(`/${locale}`)) {
+      path = path.substring(`/${locale}`.length) || "/"
+      break
+    }
+  }
 
   if (!supabase) {
     return response

@@ -82,3 +82,5 @@ Visit http://localhost:3000/en/waitlist and try signing up!
 
 That's it! Your waitlist should work now. 🎉
 
+
+

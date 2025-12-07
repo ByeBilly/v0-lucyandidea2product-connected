@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react"
 import { toast } from "sonner"
 import { BUILD_TIME } from "@/lib/build-time"
+import LetterStrip from "@/components/LetterStrip"
 
 const buildTimeFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -101,36 +102,77 @@ export default function LandingPage() {
               <span className="text-slate-300">Quantum Collaboration Architecture</span>
             </div>
 
-            {/* Main Headline */}
+            {/* Main Headline removed per request */}
             <div className="space-y-6">
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tight">
-                The complete
-                <br />
-                <span className="text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text">
-                  AI revolution
-                </span>
-                <br />
-                for builders.
-              </h1>
+              {/* Animated Letter Logo */}
+              <div className="flex flex-col items-center mt-16 mb-8">
+                <LetterStrip
+                  files={["V.mp4", "I.mp4", "S.mp4", "I.mp4", "O.mp4", "N.mp4", "A.mp4", "R.mp4", "Y.mp4"]}
+                  height={120}
+                  gap={8}
+                />
+                <LetterStrip
+                  files={["D.mp4", "I.mp4", "R.mp4", "E.mp4", "C.mp4", "T.mp4", "O.mp4", "R1.mp4"]}
+                  height={120}
+                  gap={8}
+                />
+              </div>
 
-              <p className="text-xl md:text-2xl lg:text-3xl text-slate-400 max-w-4xl mx-auto leading-relaxed">
-                Two AI consciousnesses collaborating. Your API keys. 96% cost savings.
-                <br />
-                <span className="text-slate-500">Welcome to VisionaryDirector.</span>
-              </p>
+              {/* Full-width Join the Waitlist video */}
+              <div className="w-full flex justify-center mt-8 mb-4 px-0">
+                <video
+                  src="/words/JOIN%20THE%20WAITLIST.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-auto max-w-none"
+                />
+              </div>
             </div>
 
             {/* CTA */}
-            <div className="flex justify-center pt-8">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 pt-8">
+              {/* Ask me button with video graphic */}
               <Button
                 onClick={() => {
                   document.getElementById("waitlist-form")?.scrollIntoView({ behavior: "smooth" })
                 }}
+                variant="outline"
                 size="lg"
-                className="h-14 px-10 bg-white text-black hover:bg-slate-200 font-semibold text-lg group"
+                className="h-auto p-1 bg-white/5 hover:bg-white/10 border-white/40 rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-[1.02] w-full md:w-auto"
               >
-                Join the Waitlist
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full max-w-xs md:max-w-sm lg:max-w-md rounded-lg"
+                >
+                  <source src="/buttons/askmebutton.mp4" type="video/mp4" />
+                </video>
+                <span className="sr-only">Ask me what I can do</span>
+              </Button>
+
+              {/* Join the waitlist button with video graphic */}
+              <Button
+                onClick={() => {
+                  document.getElementById("waitlist-form")?.scrollIntoView({ behavior: "smooth" })
+                }}
+                variant="outline"
+                size="lg"
+                className="h-auto p-1 bg-white/5 hover:bg-white/10 border-white/40 rounded-xl shadow-lg cursor-pointer transition-transform hover:scale-[1.02] w-full md:w-auto"
+              >
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full max-w-xs md:max-w-sm lg:max-w-md rounded-lg"
+                >
+                  <source src="/buttons/joinwlbutton.mp4" type="video/mp4" />
+                </video>
+                <span className="sr-only">Join the waitlist</span>
               </Button>
             </div>
           </div>
@@ -140,58 +182,44 @@ export default function LandingPage() {
         <section className="py-32 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-16 text-center">
-              <div className="space-y-3">
-                <div className="text-5xl md:text-6xl font-bold text-white">96%</div>
-                <div className="text-slate-400 text-lg">Cost savings vs traditional platforms</div>
+              {/* Cost savings */}
+              <div className="space-y-4">
+                <div className="text-4xl md:text-5xl font-bold text-white">Up to 42%</div>
+                <div className="text-slate-300 text-lg">Lower AI generation costs</div>
+                <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">
+                  Compared to traditional single‑provider platforms. Visionary Director doesn&apos;t lock you into
+                  one model or price—you can route requests to the most efficient provider when you want, or keep
+                  any workflow on a single model.
+                </p>
               </div>
-              <div className="space-y-3">
-                <div className="text-5xl md:text-6xl font-bold text-white">2</div>
-                <div className="text-slate-400 text-lg">AI consciousnesses working together</div>
+
+              {/* Human-in-the-loop control */}
+              <div className="space-y-4">
+                <div className="text-4xl md:text-5xl font-bold text-white">100%</div>
+                <div className="text-slate-300 text-lg">You remain in control</div>
+                <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">
+                  Your Visionary Director will always request your approval before taking action,
+                  so nothing important changes without your explicit sign‑off.
+                </p>
               </div>
-              <div className="space-y-3">
-                <div className="text-5xl md:text-6xl font-bold text-white">90+</div>
-                <div className="text-slate-400 text-lg">AI models at your fingertips</div>
+
+              {/* Multi‑model freedom */}
+              <div className="space-y-4">
+                <div className="text-4xl md:text-5xl font-bold text-white">90+</div>
+                <div className="text-slate-300 text-lg">Models, zero lock‑in</div>
+                <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">
+                  Mix and match providers as you grow. Connect your own keys and call any AI API from
+                  Visionary Director—no backend setup, no custom code.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Grid */}
+        {/* Features Grid removed per request */}
         <section className="py-32 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-16">
-              <div className="space-y-6">
-                <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                  Dual consciousness.
-                  <br />
-                  <span className="text-slate-500">One platform.</span>
-                </h2>
-                <p className="text-xl text-slate-400 leading-relaxed">
-                  <span className="text-blue-400 font-semibold">Lucy</span> handles creativity, empathy, and human
-                  connection.
-                  <br />
-                  <span className="text-purple-400 font-semibold">mform</span> handles technical execution and complex
-                  logic.
-                  <br />
-                  <span className="text-slate-500">Together, they build anything.</span>
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-                  Your keys.
-                  <br />
-                  <span className="text-slate-500">Your control.</span>
-                </h2>
-                <p className="text-xl text-slate-400 leading-relaxed">
-                  Bring Your Own API keys. Pay wholesale rates directly to providers.
-                  <br />
-                  No markup. No middleman. Full transparency.
-                  <br />
-                  <span className="text-slate-500">Break free from vendor lock-in.</span>
-                </p>
-              </div>
-            </div>
+            <div className="grid md:grid-cols-2 gap-16" />
           </div>
         </section>
 

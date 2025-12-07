@@ -15,10 +15,15 @@
   "privacyPolicy": "Privacy Policy",
   "signUpButton": "Create Account",
   "signingUp": "Signing Up...",
+  "or": "or",
   "existingUserPrompt": "Already have an account?",
   "signInExistingAccountButton": "Sign in now",
   "userLoggedIn": "User already logged in, redirecting...",
   "anErrorOccurred": "An error occurred",
   "pleaseAgreeToTerms": "Please agree to the Terms of Service and Privacy Policy",
-  "goHome": "Go Home"
+  "goHome": "Go Home",
+  "signUpWithGoogle": "Sign up with Google",
+  "signUpWithGitHub": "Sign up with GitHub",
+  "google": "Google",
+  "github": "GitHub"
 }

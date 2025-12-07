@@ -12,3 +12,6 @@ export const waitlist = pgTable("waitlist", {
   statusIdx: index("idx_waitlist_status").on(table.status),
 }));
 
+
+
+
