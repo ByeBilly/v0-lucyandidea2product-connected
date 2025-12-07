@@ -118,18 +118,6 @@ export default function LandingPage() {
                   gap={8}
                 />
               </div>
-
-              {/* Full-width Join the Waitlist video */}
-              <div className="w-full flex justify-center mt-8 mb-4 px-0">
-                <video
-                  src="/words/JOIN%20THE%20WAITLIST.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-auto max-w-none"
-                />
-              </div>
             </div>
 
             {/* CTA */}
@@ -272,7 +260,9 @@ export default function LandingPage() {
                     <Checkbox
                       className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
                     />
-                    <span>Send the occasional launch update so I know how things are going.</span>
+                    <span>
+                      Send me occasional launch updates only. No spam, no surprises — we dislike noisy inboxes too.
+                    </span>
                   </label>
                   <label className="flex items-start gap-3 text-xs text-slate-300">
                     <Checkbox
@@ -290,8 +280,14 @@ export default function LandingPage() {
                     <Checkbox
                       className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
                     />
+                    <span>I&apos;d like to talk with the Visionary Director team about what we can do for my business now.</span>
+                  </label>
+                  <label className="flex items-start gap-3 text-xs text-slate-300">
+                    <Checkbox
+                      className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                    />
                     <span>
-                      I&apos;d like someone from the team to contact me about what Visionary Director can do for me now.
+                      Hit me up if you&apos;re looking for collaborators — I believe I&apos;ve got something real to bring to the table.
                     </span>
                   </label>
                 </div>

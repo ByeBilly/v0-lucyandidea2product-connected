@@ -1,2 +1,2 @@
-// Auto-generated at build time - DO NOT EDIT MANUALLY
-export const BUILD_TIME = new Date().toISOString()
+// Auto-generated at build time
+export const BUILD_TIME = '2025-12-07T02:15:57.312Z'
