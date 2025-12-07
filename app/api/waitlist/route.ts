@@ -88,7 +88,13 @@ export async function POST(request: NextRequest) {
       stack: error instanceof Error ? error.stack : undefined,
       error,
     })
-    return NextResponse.json({ error: "Failed to join waitlist. Please try again." }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: "Failed to join waitlist. Please try again.",
+        details: error instanceof Error ? error.message : String(error),
+      },
+      { status: 500 }
+    )
   }
 }
 
