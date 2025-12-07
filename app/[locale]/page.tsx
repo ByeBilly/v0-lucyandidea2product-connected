@@ -27,18 +27,26 @@ export default function LandingPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [position, setPosition] = useState<number | null>(null)
+  const [preferences, setPreferences] = useState({
+    onlyAccessEmail: true,
+    launchUpdates: false,
+    earlyExperiments: false,
+    wantBotHelp: false,
+    talkToTeam: false,
+    collaborate: false,
+  })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
 
     try {
-      console.log("[v0] Submitting waitlist form:", { email, name })
+      console.log("[v0] Submitting waitlist form:", { email, name, preferences })
 
       const response = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, name }),
+        body: JSON.stringify({ email, name, preferences }),
       })
 
       console.log("[v0] Waitlist response status:", response.status)
@@ -252,13 +260,20 @@ export default function LandingPage() {
                   <label className="flex items-start gap-3 text-xs text-slate-300">
                     <Checkbox
                       className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
-                      defaultChecked
+                      checked={preferences.onlyAccessEmail}
+                      onCheckedChange={(v) =>
+                        setPreferences((prev) => ({ ...prev, onlyAccessEmail: !!v }))
+                      }
                     />
                     <span>Only email me when I get access. No newsletters or marketing.</span>
                   </label>
                   <label className="flex items-start gap-3 text-xs text-slate-300">
                     <Checkbox
                       className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                      checked={preferences.launchUpdates}
+                      onCheckedChange={(v) =>
+                        setPreferences((prev) => ({ ...prev, launchUpdates: !!v }))
+                      }
                     />
                     <span>
                       Send me occasional launch updates only. No spam, no surprises — we dislike noisy inboxes too.
@@ -267,24 +282,40 @@ export default function LandingPage() {
                   <label className="flex items-start gap-3 text-xs text-slate-300">
                     <Checkbox
                       className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                      checked={preferences.earlyExperiments}
+                      onCheckedChange={(v) =>
+                        setPreferences((prev) => ({ ...prev, earlyExperiments: !!v }))
+                      }
                     />
                     <span>Invite me to early experiments, private previews, and beta features.</span>
                   </label>
                   <label className="flex items-start gap-3 text-xs text-slate-300">
                     <Checkbox
                       className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                      checked={preferences.wantBotHelp}
+                      onCheckedChange={(v) =>
+                        setPreferences((prev) => ({ ...prev, wantBotHelp: !!v }))
+                      }
                     />
                     <span>Help me integrate an advanced bot like this into my website, or send me an embed snippet.</span>
                   </label>
                   <label className="flex items-start gap-3 text-xs text-slate-300">
                     <Checkbox
                       className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                      checked={preferences.talkToTeam}
+                      onCheckedChange={(v) =>
+                        setPreferences((prev) => ({ ...prev, talkToTeam: !!v }))
+                      }
                     />
                     <span>I&apos;d like to talk with the Visionary Director team about what we can do for my business now.</span>
                   </label>
                   <label className="flex items-start gap-3 text-xs text-slate-300">
                     <Checkbox
                       className="mt-0.5 h-5 w-5 border-white/70 data-[state=checked]:bg-white data-[state=checked]:text-black"
+                      checked={preferences.collaborate}
+                      onCheckedChange={(v) =>
+                        setPreferences((prev) => ({ ...prev, collaborate: !!v }))
+                      }
                     />
                     <span>
                       Hit me up if you&apos;re looking for collaborators — I believe I&apos;ve got something real to bring to the table.

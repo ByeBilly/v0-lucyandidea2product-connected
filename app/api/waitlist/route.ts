@@ -3,9 +3,9 @@ import { createClient } from "@supabase/supabase-js"
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, name } = await request.json()
+    const { email, name, preferences } = await request.json()
 
-    console.log("[v0] Waitlist signup attempt:", { email, name })
+    console.log("[v0] Waitlist signup attempt:", { email, name, preferences })
 
     if (!email || !email.includes("@")) {
       return NextResponse.json({ error: "Valid email is required" }, { status: 400 })
@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
       console.log("[v0] Waitlist signup (Supabase not configured):", {
         email,
         name,
+        preferences,
         timestamp: new Date().toISOString(),
       })
 
@@ -33,10 +34,15 @@ export async function POST(request: NextRequest) {
 
     const supabase = createClient(supabaseUrl, supabaseKey)
 
-    // Insert into waitlist
+    // Insert into waitlist, storing preferences JSON into notes column
     const { data: insertData, error: insertError } = await supabase
       .from("waitlist")
-      .insert({ email, name, status: "pending" })
+      .insert({
+        email,
+        name,
+        status: "pending",
+        notes: preferences ? JSON.stringify(preferences) : null,
+      })
       .select()
       .single()
 
