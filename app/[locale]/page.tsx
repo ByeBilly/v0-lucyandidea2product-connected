@@ -9,7 +9,6 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react"
 import { toast } from "sonner"
 import { BUILD_TIME } from "@/lib/build-time"
-import LetterStrip from "@/components/LetterStrip"
 
 const buildTimeFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
