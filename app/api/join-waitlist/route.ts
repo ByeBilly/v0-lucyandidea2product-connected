@@ -126,7 +126,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: errorMessage }, { status: 500 });
     }
 
-    console.log("[Waitlist] Successfully inserted:", data?.id || "no id returned");
+    console.log("[Waitlist] Successfully inserted:", data ? "entry created" : "no data returned");
 
     // Calculate position
     const { count, error: countError } = await supabase
