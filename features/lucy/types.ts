@@ -138,7 +138,22 @@ export interface LucyChatResponse {
   error?: string
 }
 
-export type Asset = LucyAsset // Alias for backward compatibility
+export interface Asset {
+  id: string
+  userId: string
+  chatId?: string
+  type: LucyAssetType
+  url: string
+  storageKey?: string
+  prompt: string
+  cost: number
+  model: string
+  width?: number
+  height?: number
+  duration?: number // For video/audio in seconds
+  mimeType?: string
+  createdAt: Date
+}
 
 export interface LucyChatInterfaceProps {
   userId: string
