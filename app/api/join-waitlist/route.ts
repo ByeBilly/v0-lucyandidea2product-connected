@@ -99,7 +99,7 @@ export async function POST(request: Request) {
         name: name?.trim() || null, 
         status: "pending" 
       })
-      .select("created_at")
+      .select("id, created_at")
       .single();
 
     if (error) {
