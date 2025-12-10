@@ -24,7 +24,7 @@ export default function WaitlistPage() {
     try {
       console.log("[v0] Submitting waitlist form:", { email, name })
 
-      const response = await fetch("/api/waitlist", {
+      const response = await fetch("/api/join-waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, name }),
