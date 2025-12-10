@@ -157,44 +157,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-32 border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-3 gap-16 text-center">
-              {/* Cost savings */}
-              <div className="space-y-4">
-                <div className="text-4xl md:text-5xl font-bold text-white">Up to 42%</div>
-                <div className="text-slate-300 text-lg">Lower AI generation costs</div>
-                <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">
-                  Compared to traditional single‑provider platforms. Visionary Director doesn&apos;t lock you into
-                  one model or price—you can route requests to the most efficient provider when you want, or keep
-                  any workflow on a single model.
-                </p>
-              </div>
-
-              {/* Human-in-the-loop control */}
-              <div className="space-y-4">
-                <div className="text-4xl md:text-5xl font-bold text-white">100%</div>
-                <div className="text-slate-300 text-lg">You remain in control</div>
-                <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">
-                  Your Visionary Director will always request your approval before taking action,
-                  so nothing important changes without your explicit sign‑off.
-                </p>
-              </div>
-
-              {/* Multi‑model freedom */}
-              <div className="space-y-4">
-                <div className="text-4xl md:text-5xl font-bold text-white">90+</div>
-                <div className="text-slate-300 text-lg">Models, zero lock‑in</div>
-                <p className="text-slate-400 text-sm md:text-base leading-relaxed max-w-md mx-auto">
-                  Mix and match providers as you grow. Connect your own keys and call any AI API from
-                  Visionary Director—no backend setup, no custom code.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Features Grid removed per request */}
         <section className="py-32 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-6">

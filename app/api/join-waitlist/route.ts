@@ -54,48 +54,8 @@ export async function POST(request: Request) {
 
     const supabase = getSupabase();
 
-    // Check if email already exists
-    const { data: existing, error: checkError } = await supabase
-      .from("waitlist")
-      .select("id, created_at")
-      .eq("email", email.toLowerCase())
-      .single();
-
-    if (checkError && checkError.code !== "PGRST116") {
-      // PGRST116 is "not found" - that's fine
-      console.error("[Waitlist] Error checking existing email:", {
-        code: checkError.code,
-        message: checkError.message,
-        details: checkError.details,
-        hint: checkError.hint,
-      });
-      
-      const errorMessage = isDevelopment 
-        ? `Check error: ${checkError.message} (code: ${checkError.code})`
-        : "Failed to check waitlist status";
-      
-      return NextResponse.json({ error: errorMessage }, { status: 500 });
-    }
-
-    if (existing) {
-      console.log("[Waitlist] Email already exists:", existing.id);
-      const { count, error: countError } = await supabase
-        .from("waitlist")
-        .select("*", { count: "exact", head: true })
-        .lte("created_at", existing.created_at);
-
-      if (countError) {
-        console.error("[Waitlist] Error calculating position:", countError);
-      }
-
-      return NextResponse.json({ 
-        success: true, 
-        position: count || 1, 
-        alreadyRegistered: true 
-      });
-    }
-
-    // Insert new waitlist entry
+    // Try to insert directly - handle duplicates if they exist
+    // This is more efficient and avoids RLS check issues
     const { data, error } = await supabase
       .from("waitlist")
       .insert({ 
@@ -115,12 +75,37 @@ export async function POST(request: Request) {
         fullError: isDevelopment ? error : undefined,
       });
 
-      // Handle duplicate key error (race condition)
-      if (error.code === "23505") {
-        return NextResponse.json(
-          { error: "This email is already registered" },
-          { status: 409 }
-        );
+      // Handle duplicate key error - email already exists
+      if (error.code === "23505" || error.message?.includes("duplicate") || error.message?.includes("unique")) {
+        console.log("[Waitlist] Email already exists, fetching position");
+        
+        // Fetch the existing entry to get position
+        const { data: existing, error: fetchError } = await supabase
+          .from("waitlist")
+          .select("created_at")
+          .eq("email", email.toLowerCase())
+          .single();
+
+        if (fetchError) {
+          console.error("[Waitlist] Error fetching existing entry:", fetchError);
+          return NextResponse.json(
+            { error: "Email already registered" },
+            { status: 409 }
+          );
+        }
+
+        // Calculate position
+        const { count } = await supabase
+          .from("waitlist")
+          .select("*", { count: "exact", head: true })
+          .lte("created_at", existing.created_at);
+
+        return NextResponse.json({
+          success: true,
+          message: "Email already registered",
+          position: count || 1,
+          alreadyRegistered: true,
+        });
       }
 
       const errorMessage = isDevelopment
