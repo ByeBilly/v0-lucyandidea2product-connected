@@ -158,3 +158,4 @@ This document defines the coding standards, development practices, and operation
 ---
 
 *These rules are mandatory and should be reviewed quarterly for updates. Exceptions require explicit approval and documentation.*
+

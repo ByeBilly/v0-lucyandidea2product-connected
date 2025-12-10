@@ -118,3 +118,4 @@ This document defines the current product behavior, requirements, and specificat
 ---
 
 *This document serves as the single source of truth for product requirements. All development must validate against these specifications.*
+
