@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createServerClient } from "@supabase/ssr";
+import { createClient } from "@supabase/supabase-js";
 
 export const dynamic = "force-dynamic";
 
@@ -30,8 +30,12 @@ function getSupabase() {
     throw new Error(error);
   }
 
-  return createServerClient(supabaseUrl, serviceKey, {
-    cookies: { getAll: () => [], setAll: () => {} },
+  // Use createClient directly for API routes (bypasses RLS with service role key)
+  return createClient(supabaseUrl, serviceKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false,
+    },
   });
 }
 
