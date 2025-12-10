@@ -189,3 +189,4 @@ This document defines the roles, responsibilities, and capabilities of each agen
 
 *This document should be updated when agent roles evolve or new capabilities are added. All agents should be familiar with each other's roles and capabilities.*
 
+
